@@ -1,12 +1,18 @@
-import sqlite3 as sql
-import bcrypt
+import sqlite3
 
+def add_user(email, username, hashed_password, role):
+    conn = sqlite3.connect('.databaseFiles/database.db')
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO users (email, username, password, role) VALUES (?, ?, ?, ?)", (email, username, hashed_password, role))
+    conn.commit()
+    conn.close()
 
-### example
-def getUsers():
-    con = sql.connect(".databaseFiles/database.db")
-    cur = con.cursor()
-    cur.execute("SELECT * FROM id7-tusers")
-    con.close()
-    return cur
-
+def get_user(username):
+    conn = sqlite3.connect('.databaseFiles/database.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
+    user = cursor.fetchone()
+    conn.close()
+    if user:
+        return {"id": user[0], "email": user[1], "username": user[2], "password": user[3], "role": user[4]}
+    return None

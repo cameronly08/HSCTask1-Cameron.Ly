@@ -1,0 +1,836 @@
+2025-01-05 00:37:16,989 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.125:5000
+2025-01-05 00:37:16,989 [33mPress CTRL+C to quit[0m
+2025-01-05 00:37:16,990  * Restarting with stat
+2025-01-05 00:37:17,220  * Debugger is active!
+2025-01-05 00:37:17,221  * Debugger PIN: 102-887-172
+2025-01-05 00:37:31,431 127.0.0.1 - - [05/Jan/2025 00:37:31] "GET / HTTP/1.1" 200 -
+2025-01-05 00:37:31,955 127.0.0.1 - - [05/Jan/2025 00:37:31] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-01-05 00:37:31,956 127.0.0.1 - - [05/Jan/2025 00:37:31] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-01-05 00:37:31,970 127.0.0.1 - - [05/Jan/2025 00:37:31] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-01-05 00:37:32,504 127.0.0.1 - - [05/Jan/2025 00:37:32] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2025-01-05 00:37:32,615 127.0.0.1 - - [05/Jan/2025 00:37:32] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-01-05 00:37:32,944 127.0.0.1 - - [05/Jan/2025 00:37:32] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2025-01-05 00:37:32,947 127.0.0.1 - - [05/Jan/2025 00:37:32] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 00:37:33,047 127.0.0.1 - - [05/Jan/2025 00:37:33] "[33mGET /static/js/static/images/logo.png HTTP/1.1[0m" 404 -
+2025-01-05 00:37:33,060 127.0.0.1 - - [05/Jan/2025 00:37:33] "[33mGET /static/js/static/icons/icon-192x192.png HTTP/1.1[0m" 404 -
+2025-01-05 00:37:33,063 127.0.0.1 - - [05/Jan/2025 00:37:33] "[33mGET /static/js/static/images/favicon.jpg HTTP/1.1[0m" 404 -
+2025-01-05 00:37:33,065 127.0.0.1 - - [05/Jan/2025 00:37:33] "[33mGET /static/js/static/icons/desktop_screenshot.png HTTP/1.1[0m" 404 -
+2025-01-05 00:37:33,183 {"csp-report":{"document-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/","referrer":"https://github.com/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-05 00:37:33,183 127.0.0.1 - - [05/Jan/2025 00:37:33] "POST /csp_report HTTP/1.1" 200 -
+2025-01-05 00:39:04,896 127.0.0.1 - - [05/Jan/2025 00:39:04] "GET / HTTP/1.1" 200 -
+2025-01-05 00:39:05,119 127.0.0.1 - - [05/Jan/2025 00:39:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 00:39:05,445 127.0.0.1 - - [05/Jan/2025 00:39:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-05 00:39:11,044 127.0.0.1 - - [05/Jan/2025 00:39:11] "GET / HTTP/1.1" 200 -
+2025-01-05 00:39:11,199 127.0.0.1 - - [05/Jan/2025 00:39:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 00:39:12,729 127.0.0.1 - - [05/Jan/2025 00:39:12] "GET / HTTP/1.1" 200 -
+2025-01-05 00:39:12,799 127.0.0.1 - - [05/Jan/2025 00:39:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 00:39:45,414 127.0.0.1 - - [05/Jan/2025 00:39:45] "GET / HTTP/1.1" 200 -
+2025-01-05 00:39:45,508 127.0.0.1 - - [05/Jan/2025 00:39:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 00:39:45,510 127.0.0.1 - - [05/Jan/2025 00:39:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 00:39:45,510 127.0.0.1 - - [05/Jan/2025 00:39:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 00:39:45,575 127.0.0.1 - - [05/Jan/2025 00:39:45] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 00:39:45,625 127.0.0.1 - - [05/Jan/2025 00:39:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 00:39:45,772 127.0.0.1 - - [05/Jan/2025 00:39:45] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 00:39:45,966 {"csp-report":{"document-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/","referrer":"","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-05 00:39:45,967 127.0.0.1 - - [05/Jan/2025 00:39:45] "POST /csp_report HTTP/1.1" 200 -
+2025-01-05 00:44:10,427  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/main.py', reloading
+2025-01-05 00:44:10,465  * Restarting with stat
+2025-01-05 00:44:10,699  * Debugger is active!
+2025-01-05 00:44:10,700  * Debugger PIN: 102-887-172
+2025-01-05 00:44:12,815 127.0.0.1 - - [05/Jan/2025 00:44:12] "GET / HTTP/1.1" 200 -
+2025-01-05 00:44:12,960 127.0.0.1 - - [05/Jan/2025 00:44:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 00:44:12,962 127.0.0.1 - - [05/Jan/2025 00:44:12] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 00:44:13,211 127.0.0.1 - - [05/Jan/2025 00:44:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 00:44:13,360 127.0.0.1 - - [05/Jan/2025 00:44:13] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 00:44:13,561 127.0.0.1 - - [05/Jan/2025 00:44:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 00:44:13,846 127.0.0.1 - - [05/Jan/2025 00:44:13] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 00:44:13,848 {"csp-report":{"document-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/","referrer":"","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-05 00:44:13,848 127.0.0.1 - - [05/Jan/2025 00:44:13] "POST /csp_report HTTP/1.1" 200 -
+2025-01-05 00:45:05,979  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/main.py', reloading
+2025-01-05 00:45:06,014  * Restarting with stat
+2025-01-05 00:45:06,248  * Debugger is active!
+2025-01-05 00:45:06,248  * Debugger PIN: 102-887-172
+2025-01-05 00:51:08,617  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/main.py', reloading
+2025-01-05 00:51:08,654  * Restarting with stat
+2025-01-05 00:51:08,859  * Debugger is active!
+2025-01-05 00:51:08,860  * Debugger PIN: 102-887-172
+2025-01-05 00:51:25,699 127.0.0.1 - - [05/Jan/2025 00:51:25] "GET / HTTP/1.1" 200 -
+2025-01-05 00:51:26,018 127.0.0.1 - - [05/Jan/2025 00:51:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 00:51:26,035 127.0.0.1 - - [05/Jan/2025 00:51:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 00:51:26,072 127.0.0.1 - - [05/Jan/2025 00:51:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 00:51:26,191 127.0.0.1 - - [05/Jan/2025 00:51:26] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 00:51:26,313 127.0.0.1 - - [05/Jan/2025 00:51:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 00:51:26,488 127.0.0.1 - - [05/Jan/2025 00:51:26] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 00:51:26,617 {"csp-report":{"document-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/","referrer":"","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-05 00:51:26,617 127.0.0.1 - - [05/Jan/2025 00:51:26] "POST /csp_report HTTP/1.1" 200 -
+2025-01-05 00:51:28,585 127.0.0.1 - - [05/Jan/2025 00:51:28] "GET / HTTP/1.1" 200 -
+2025-01-05 00:51:28,688 127.0.0.1 - - [05/Jan/2025 00:51:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 00:51:28,693 127.0.0.1 - - [05/Jan/2025 00:51:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 00:51:28,696 127.0.0.1 - - [05/Jan/2025 00:51:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 00:51:28,759 127.0.0.1 - - [05/Jan/2025 00:51:28] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 00:51:28,805 127.0.0.1 - - [05/Jan/2025 00:51:28] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 00:51:28,949 127.0.0.1 - - [05/Jan/2025 00:51:28] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 00:51:29,075 {"csp-report":{"document-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/","referrer":"","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-05 00:51:29,075 127.0.0.1 - - [05/Jan/2025 00:51:29] "POST /csp_report HTTP/1.1" 200 -
+2025-01-05 00:51:53,838 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.125:5000
+2025-01-05 00:51:53,838 [33mPress CTRL+C to quit[0m
+2025-01-05 00:51:53,838  * Restarting with stat
+2025-01-05 00:51:54,031  * Debugger is active!
+2025-01-05 00:51:54,032  * Debugger PIN: 102-887-172
+2025-01-05 00:51:55,593 127.0.0.1 - - [05/Jan/2025 00:51:55] "GET /?vscodeBrowserReqId=1736038327953 HTTP/1.1" 200 -
+2025-01-05 00:52:03,830 127.0.0.1 - - [05/Jan/2025 00:52:03] "GET / HTTP/1.1" 200 -
+2025-01-05 00:52:04,103 127.0.0.1 - - [05/Jan/2025 00:52:04] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 00:52:04,106 127.0.0.1 - - [05/Jan/2025 00:52:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 00:52:04,107 127.0.0.1 - - [05/Jan/2025 00:52:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 00:52:04,245 127.0.0.1 - - [05/Jan/2025 00:52:04] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 00:52:04,293 127.0.0.1 - - [05/Jan/2025 00:52:04] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 00:52:05,132 {"csp-report":{"document-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/","referrer":"https://sturdy-carnival-qr5gr9qxr5xh9qpq.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-05 00:52:05,132 127.0.0.1 - - [05/Jan/2025 00:52:05] "POST /csp_report HTTP/1.1" 200 -
+2025-01-05 00:53:48,107 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.125:5000
+2025-01-05 00:53:48,108 [33mPress CTRL+C to quit[0m
+2025-01-05 00:53:48,108  * Restarting with stat
+2025-01-05 00:53:48,293  * Debugger is active!
+2025-01-05 00:53:48,293  * Debugger PIN: 102-887-172
+2025-01-05 00:53:49,649 127.0.0.1 - - [05/Jan/2025 00:53:49] "GET /?vscodeBrowserReqId=1736038441744 HTTP/1.1" 200 -
+2025-01-05 00:53:52,644 127.0.0.1 - - [05/Jan/2025 00:53:52] "GET / HTTP/1.1" 200 -
+2025-01-05 00:53:52,903 127.0.0.1 - - [05/Jan/2025 00:53:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 00:53:53,037 127.0.0.1 - - [05/Jan/2025 00:53:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 00:53:53,038 127.0.0.1 - - [05/Jan/2025 00:53:53] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 00:53:53,320 127.0.0.1 - - [05/Jan/2025 00:53:53] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 00:53:53,357 127.0.0.1 - - [05/Jan/2025 00:53:53] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 00:53:53,884 {"csp-report":{"document-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/","referrer":"https://sturdy-carnival-qr5gr9qxr5xh9qpq.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-05 00:53:53,885 127.0.0.1 - - [05/Jan/2025 00:53:53] "POST /csp_report HTTP/1.1" 200 -
+2025-01-05 00:56:32,779 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.125:5000
+2025-01-05 00:56:32,779 [33mPress CTRL+C to quit[0m
+2025-01-05 00:56:32,779  * Restarting with stat
+2025-01-05 00:56:32,965  * Debugger is active!
+2025-01-05 00:56:32,966  * Debugger PIN: 102-887-172
+2025-01-05 00:56:34,763 127.0.0.1 - - [05/Jan/2025 00:56:34] "GET /?vscodeBrowserReqId=1736038606888 HTTP/1.1" 200 -
+2025-01-05 00:56:36,182 127.0.0.1 - - [05/Jan/2025 00:56:36] "GET / HTTP/1.1" 200 -
+2025-01-05 00:56:36,713 127.0.0.1 - - [05/Jan/2025 00:56:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 00:56:36,748 127.0.0.1 - - [05/Jan/2025 00:56:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 00:56:36,769 127.0.0.1 - - [05/Jan/2025 00:56:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 00:56:36,925 127.0.0.1 - - [05/Jan/2025 00:56:36] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 00:56:36,965 127.0.0.1 - - [05/Jan/2025 00:56:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 00:56:37,524 {"csp-report":{"document-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/","referrer":"https://sturdy-carnival-qr5gr9qxr5xh9qpq.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-05 00:56:37,524 127.0.0.1 - - [05/Jan/2025 00:56:37] "POST /csp_report HTTP/1.1" 200 -
+2025-01-05 00:58:29,364 127.0.0.1 - - [05/Jan/2025 00:58:29] "GET / HTTP/1.1" 200 -
+2025-01-05 00:58:29,727 127.0.0.1 - - [05/Jan/2025 00:58:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 00:58:29,728 127.0.0.1 - - [05/Jan/2025 00:58:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 00:58:29,735 127.0.0.1 - - [05/Jan/2025 00:58:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 00:58:30,006 127.0.0.1 - - [05/Jan/2025 00:58:30] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 00:58:30,239 127.0.0.1 - - [05/Jan/2025 00:58:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 00:58:30,355 127.0.0.1 - - [05/Jan/2025 00:58:30] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 00:58:30,450 {"csp-report":{"document-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/","referrer":"","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-05 00:58:30,450 127.0.0.1 - - [05/Jan/2025 00:58:30] "POST /csp_report HTTP/1.1" 200 -
+2025-01-05 00:58:31,345 127.0.0.1 - - [05/Jan/2025 00:58:31] "GET /signup HTTP/1.1" 200 -
+2025-01-05 00:58:31,420 127.0.0.1 - - [05/Jan/2025 00:58:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 00:58:31,423 127.0.0.1 - - [05/Jan/2025 00:58:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 00:58:31,582 127.0.0.1 - - [05/Jan/2025 00:58:31] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 00:58:31,626 127.0.0.1 - - [05/Jan/2025 00:58:31] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 00:58:31,668 127.0.0.1 - - [05/Jan/2025 00:58:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 00:59:44,378 127.0.0.1 - - [05/Jan/2025 00:59:44] "GET /signup HTTP/1.1" 200 -
+2025-01-05 00:59:44,485 127.0.0.1 - - [05/Jan/2025 00:59:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 00:59:44,542 127.0.0.1 - - [05/Jan/2025 00:59:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 00:59:44,564 127.0.0.1 - - [05/Jan/2025 00:59:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 00:59:44,669 127.0.0.1 - - [05/Jan/2025 00:59:44] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 00:59:44,781 127.0.0.1 - - [05/Jan/2025 00:59:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 00:59:45,031 127.0.0.1 - - [05/Jan/2025 00:59:45] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 00:59:49,426 127.0.0.1 - - [05/Jan/2025 00:59:49] "GET / HTTP/1.1" 200 -
+2025-01-05 00:59:49,505 127.0.0.1 - - [05/Jan/2025 00:59:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 00:59:49,505 127.0.0.1 - - [05/Jan/2025 00:59:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 00:59:49,506 127.0.0.1 - - [05/Jan/2025 00:59:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 00:59:49,560 127.0.0.1 - - [05/Jan/2025 00:59:49] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 00:59:49,740 127.0.0.1 - - [05/Jan/2025 00:59:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 00:59:50,041 {"csp-report":{"document-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/","referrer":"","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-05 00:59:50,041 127.0.0.1 - - [05/Jan/2025 00:59:50] "POST /csp_report HTTP/1.1" 200 -
+2025-01-05 04:41:21,883 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.144:5000
+2025-01-05 04:41:21,884 [33mPress CTRL+C to quit[0m
+2025-01-05 04:41:21,885  * Restarting with stat
+2025-01-05 04:41:22,078  * Debugger is active!
+2025-01-05 04:41:22,079  * Debugger PIN: 101-652-519
+2025-01-05 04:41:44,355 127.0.0.1 - - [05/Jan/2025 04:41:44] "GET /?vscodeBrowserReqId=1736052109468 HTTP/1.1" 200 -
+2025-01-05 04:41:46,447 127.0.0.1 - - [05/Jan/2025 04:41:46] "GET / HTTP/1.1" 200 -
+2025-01-05 04:41:46,587 127.0.0.1 - - [05/Jan/2025 04:41:46] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-05 04:41:46,738 127.0.0.1 - - [05/Jan/2025 04:41:46] "[33mGET /static/js/scripts.js HTTP/1.1[0m" 404 -
+2025-01-05 04:41:46,943 127.0.0.1 - - [05/Jan/2025 04:41:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-05 04:41:51,773 127.0.0.1 - - [05/Jan/2025 04:41:51] "GET / HTTP/1.1" 200 -
+2025-01-05 04:41:51,862 127.0.0.1 - - [05/Jan/2025 04:41:51] "[33mGET /static/js/scripts.js HTTP/1.1[0m" 404 -
+2025-01-05 04:41:52,043 127.0.0.1 - - [05/Jan/2025 04:41:52] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-05 04:41:55,300 127.0.0.1 - - [05/Jan/2025 04:41:55] "GET /signup HTTP/1.1" 200 -
+2025-01-05 04:41:55,434 127.0.0.1 - - [05/Jan/2025 04:41:55] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-01-05 04:41:55,435 127.0.0.1 - - [05/Jan/2025 04:41:55] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-01-05 04:41:55,568 127.0.0.1 - - [05/Jan/2025 04:41:55] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-01-05 04:41:55,702 127.0.0.1 - - [05/Jan/2025 04:41:55] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2025-01-05 04:41:55,757 127.0.0.1 - - [05/Jan/2025 04:41:55] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-01-05 04:43:03,018 127.0.0.1 - - [05/Jan/2025 04:43:03] "GET /signup HTTP/1.1" 200 -
+2025-01-05 04:43:03,144 127.0.0.1 - - [05/Jan/2025 04:43:03] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 04:43:03,195 127.0.0.1 - - [05/Jan/2025 04:43:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 04:43:03,308 127.0.0.1 - - [05/Jan/2025 04:43:03] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 04:43:03,357 127.0.0.1 - - [05/Jan/2025 04:43:03] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 04:43:03,488 127.0.0.1 - - [05/Jan/2025 04:43:03] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 04:43:03,643 127.0.0.1 - - [05/Jan/2025 04:43:03] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2025-01-05 04:43:56,530  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/main.py', reloading
+2025-01-05 04:43:56,562  * Restarting with stat
+2025-01-05 04:43:56,914  * Debugger is active!
+2025-01-05 04:43:56,915  * Debugger PIN: 101-652-519
+2025-01-05 04:44:53,361 127.0.0.1 - - [05/Jan/2025 04:44:53] "[33mGET /signup HTTP/1.1[0m" 404 -
+2025-01-05 04:45:00,656 127.0.0.1 - - [05/Jan/2025 04:45:00] "[33mGET /signup HTTP/1.1[0m" 404 -
+2025-01-05 04:45:15,447 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.144:5000
+2025-01-05 04:45:15,448 [33mPress CTRL+C to quit[0m
+2025-01-05 04:45:15,448  * Restarting with stat
+2025-01-05 04:45:15,682  * Debugger is active!
+2025-01-05 04:45:15,682  * Debugger PIN: 101-652-519
+2025-01-05 04:45:17,851 127.0.0.1 - - [05/Jan/2025 04:45:17] "GET /?vscodeBrowserReqId=1736052330159 HTTP/1.1" 200 -
+2025-01-05 04:45:20,461 127.0.0.1 - - [05/Jan/2025 04:45:20] "GET / HTTP/1.1" 200 -
+2025-01-05 04:45:20,911 127.0.0.1 - - [05/Jan/2025 04:45:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 04:45:20,912 127.0.0.1 - - [05/Jan/2025 04:45:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 04:45:20,913 127.0.0.1 - - [05/Jan/2025 04:45:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 04:45:21,101 127.0.0.1 - - [05/Jan/2025 04:45:21] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 04:45:21,165 127.0.0.1 - - [05/Jan/2025 04:45:21] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 04:45:21,808 127.0.0.1 - - [05/Jan/2025 04:45:21] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 04:45:21,886 {"csp-report":{"document-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/","referrer":"https://sturdy-carnival-qr5gr9qxr5xh9qpq.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://sturdy-carnival-qr5gr9qxr5xh9qpq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-05 04:45:21,887 127.0.0.1 - - [05/Jan/2025 04:45:21] "POST /csp_report HTTP/1.1" 200 -
+2025-01-05 04:47:55,207  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/main.py', reloading
+2025-01-05 04:47:55,249  * Restarting with stat
+2025-01-05 04:47:55,502  * Debugger is active!
+2025-01-05 04:47:55,502  * Debugger PIN: 101-652-519
+2025-01-05 04:48:16,439  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/userManagement.py', reloading
+2025-01-05 04:48:16,471  * Restarting with stat
+2025-01-05 04:48:16,702  * Debugger is active!
+2025-01-05 04:48:16,702  * Debugger PIN: 101-652-519
+2025-01-05 04:54:41,743  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/main.py', reloading
+2025-01-05 04:54:41,780  * Restarting with stat
+2025-01-05 04:56:15,462 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-05 04:56:15,462 [33mPress CTRL+C to quit[0m
+2025-01-05 04:56:15,463  * Restarting with stat
+2025-01-05 04:56:15,699  * Debugger is active!
+2025-01-05 04:56:15,700  * Debugger PIN: 101-652-519
+2025-01-05 04:56:18,132 127.0.0.1 - - [05/Jan/2025 04:56:18] "[33mGET /?vscodeBrowserReqId=1736052990357 HTTP/1.1[0m" 404 -
+2025-01-05 04:56:20,415 127.0.0.1 - - [05/Jan/2025 04:56:20] "[33mGET / HTTP/1.1[0m" 404 -
+2025-01-05 04:56:53,473 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-05 04:56:53,473 [33mPress CTRL+C to quit[0m
+2025-01-05 04:56:53,473  * Restarting with stat
+2025-01-05 04:56:53,713  * Debugger is active!
+2025-01-05 04:56:53,713  * Debugger PIN: 101-652-519
+2025-01-05 04:56:56,528 127.0.0.1 - - [05/Jan/2025 04:56:56] "[33mGET /?vscodeBrowserReqId=1736053028833 HTTP/1.1[0m" 404 -
+2025-01-05 04:57:39,608 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-05 04:57:39,608 [33mPress CTRL+C to quit[0m
+2025-01-05 04:57:39,608  * Restarting with stat
+2025-01-05 04:57:39,836  * Debugger is active!
+2025-01-05 04:57:39,837  * Debugger PIN: 101-652-519
+2025-01-05 04:57:41,350 127.0.0.1 - - [05/Jan/2025 04:57:41] "[33mGET /?vscodeBrowserReqId=1736053073786 HTTP/1.1[0m" 404 -
+2025-01-05 04:57:43,015 127.0.0.1 - - [05/Jan/2025 04:57:43] "[33mGET / HTTP/1.1[0m" 404 -
+2025-01-05 04:59:11,688 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-05 04:59:11,688 [33mPress CTRL+C to quit[0m
+2025-01-05 04:59:11,689  * Restarting with stat
+2025-01-05 04:59:11,917  * Debugger is active!
+2025-01-05 04:59:11,918  * Debugger PIN: 101-652-519
+2025-01-05 04:59:13,381 127.0.0.1 - - [05/Jan/2025 04:59:13] "[33mGET /?vscodeBrowserReqId=1736053165624 HTTP/1.1[0m" 404 -
+2025-01-05 05:01:30,823 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.144:5000
+2025-01-05 05:01:30,824 [33mPress CTRL+C to quit[0m
+2025-01-05 05:01:30,824  * Restarting with stat
+2025-01-05 05:01:30,990  * Debugger is active!
+2025-01-05 05:01:30,990  * Debugger PIN: 101-652-519
+2025-01-05 05:01:34,310 127.0.0.1 - - [05/Jan/2025 05:01:34] "GET /?vscodeBrowserReqId=1736053306436 HTTP/1.1" 200 -
+2025-01-05 05:01:34,633 127.0.0.1 - - [05/Jan/2025 05:01:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:01:34,655 127.0.0.1 - - [05/Jan/2025 05:01:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:01:34,683 127.0.0.1 - - [05/Jan/2025 05:01:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:01:35,023 127.0.0.1 - - [05/Jan/2025 05:01:35] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:01:35,121 127.0.0.1 - - [05/Jan/2025 05:01:35] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:01:35,572 127.0.0.1 - - [05/Jan/2025 05:01:35] "GET / HTTP/1.1" 200 -
+2025-01-05 05:01:35,933 127.0.0.1 - - [05/Jan/2025 05:01:35] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:01:35,939 127.0.0.1 - - [05/Jan/2025 05:01:35] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:01:36,076 127.0.0.1 - - [05/Jan/2025 05:01:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:01:36,189 127.0.0.1 - - [05/Jan/2025 05:01:36] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:01:36,235 127.0.0.1 - - [05/Jan/2025 05:01:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:01:37,004 127.0.0.1 - - [05/Jan/2025 05:01:37] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 05:01:40,164 127.0.0.1 - - [05/Jan/2025 05:01:40] "[33mGET /form.html HTTP/1.1[0m" 404 -
+2025-01-05 05:03:34,407  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/main.py', reloading
+2025-01-05 05:03:34,443  * Restarting with stat
+2025-01-05 05:03:34,605  * Debugger is active!
+2025-01-05 05:03:34,606  * Debugger PIN: 101-652-519
+2025-01-05 05:04:13,133  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/main.py', reloading
+2025-01-05 05:04:13,161  * Restarting with stat
+2025-01-05 05:04:13,321  * Debugger is active!
+2025-01-05 05:04:13,321  * Debugger PIN: 101-652-519
+2025-01-05 05:04:28,612  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/main.py', reloading
+2025-01-05 05:04:28,639  * Restarting with stat
+2025-01-05 05:04:28,809  * Debugger is active!
+2025-01-05 05:04:28,810  * Debugger PIN: 101-652-519
+2025-01-05 05:04:41,248  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/main.py', reloading
+2025-01-05 05:04:41,276  * Restarting with stat
+2025-01-05 05:04:41,437  * Debugger is active!
+2025-01-05 05:04:41,438  * Debugger PIN: 101-652-519
+2025-01-05 05:04:55,166  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/main.py', reloading
+2025-01-05 05:04:55,193  * Restarting with stat
+2025-01-05 05:04:55,363  * Debugger is active!
+2025-01-05 05:04:55,363  * Debugger PIN: 101-652-519
+2025-01-05 05:05:01,188 127.0.0.1 - - [05/Jan/2025 05:05:01] "GET / HTTP/1.1" 200 -
+2025-01-05 05:05:01,398 127.0.0.1 - - [05/Jan/2025 05:05:01] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:05:01,529 127.0.0.1 - - [05/Jan/2025 05:05:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:05:01,534 127.0.0.1 - - [05/Jan/2025 05:05:01] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:05:01,790 127.0.0.1 - - [05/Jan/2025 05:05:01] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:05:02,134 127.0.0.1 - - [05/Jan/2025 05:05:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:05:02,438 127.0.0.1 - - [05/Jan/2025 05:05:02] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 05:07:36,521 127.0.0.1 - - [05/Jan/2025 05:07:36] "GET / HTTP/1.1" 200 -
+2025-01-05 05:07:36,733 127.0.0.1 - - [05/Jan/2025 05:07:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:36,875 127.0.0.1 - - [05/Jan/2025 05:07:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:36,964 127.0.0.1 - - [05/Jan/2025 05:07:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:37,240 127.0.0.1 - - [05/Jan/2025 05:07:37] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:37,356 127.0.0.1 - - [05/Jan/2025 05:07:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:37,665 127.0.0.1 - - [05/Jan/2025 05:07:37] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 05:07:39,388 127.0.0.1 - - [05/Jan/2025 05:07:39] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:07:39,516 127.0.0.1 - - [05/Jan/2025 05:07:39] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:39,656 127.0.0.1 - - [05/Jan/2025 05:07:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:39,661 127.0.0.1 - - [05/Jan/2025 05:07:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:39,738 127.0.0.1 - - [05/Jan/2025 05:07:39] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:39,787 127.0.0.1 - - [05/Jan/2025 05:07:39] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:40,513 127.0.0.1 - - [05/Jan/2025 05:07:40] "GET / HTTP/1.1" 200 -
+2025-01-05 05:07:40,625 127.0.0.1 - - [05/Jan/2025 05:07:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:40,631 127.0.0.1 - - [05/Jan/2025 05:07:40] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:40,632 127.0.0.1 - - [05/Jan/2025 05:07:40] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:40,708 127.0.0.1 - - [05/Jan/2025 05:07:40] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:40,754 127.0.0.1 - - [05/Jan/2025 05:07:40] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:41,334 127.0.0.1 - - [05/Jan/2025 05:07:41] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:07:41,462 127.0.0.1 - - [05/Jan/2025 05:07:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:41,463 127.0.0.1 - - [05/Jan/2025 05:07:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:41,464 127.0.0.1 - - [05/Jan/2025 05:07:41] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:41,540 127.0.0.1 - - [05/Jan/2025 05:07:41] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:41,594 127.0.0.1 - - [05/Jan/2025 05:07:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:41,865 127.0.0.1 - - [05/Jan/2025 05:07:41] "[33mGET /login HTTP/1.1[0m" 404 -
+2025-01-05 05:07:44,241 127.0.0.1 - - [05/Jan/2025 05:07:44] "GET / HTTP/1.1" 200 -
+2025-01-05 05:07:44,358 127.0.0.1 - - [05/Jan/2025 05:07:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:44,359 127.0.0.1 - - [05/Jan/2025 05:07:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:44,363 127.0.0.1 - - [05/Jan/2025 05:07:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:44,419 127.0.0.1 - - [05/Jan/2025 05:07:44] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:44,468 127.0.0.1 - - [05/Jan/2025 05:07:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:45,048 127.0.0.1 - - [05/Jan/2025 05:07:45] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:07:45,189 127.0.0.1 - - [05/Jan/2025 05:07:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:45,190 127.0.0.1 - - [05/Jan/2025 05:07:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:45,190 127.0.0.1 - - [05/Jan/2025 05:07:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:45,263 127.0.0.1 - - [05/Jan/2025 05:07:45] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:45,306 127.0.0.1 - - [05/Jan/2025 05:07:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:45,630 127.0.0.1 - - [05/Jan/2025 05:07:45] "GET / HTTP/1.1" 200 -
+2025-01-05 05:07:45,754 127.0.0.1 - - [05/Jan/2025 05:07:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:45,756 127.0.0.1 - - [05/Jan/2025 05:07:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:45,770 127.0.0.1 - - [05/Jan/2025 05:07:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:45,818 127.0.0.1 - - [05/Jan/2025 05:07:45] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:45,866 127.0.0.1 - - [05/Jan/2025 05:07:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:47,478 127.0.0.1 - - [05/Jan/2025 05:07:47] "GET / HTTP/1.1" 200 -
+2025-01-05 05:07:47,598 127.0.0.1 - - [05/Jan/2025 05:07:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:47,599 127.0.0.1 - - [05/Jan/2025 05:07:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:47,601 127.0.0.1 - - [05/Jan/2025 05:07:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:47,666 127.0.0.1 - - [05/Jan/2025 05:07:47] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:47,710 127.0.0.1 - - [05/Jan/2025 05:07:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:48,227 127.0.0.1 - - [05/Jan/2025 05:07:48] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:07:48,359 127.0.0.1 - - [05/Jan/2025 05:07:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:48,361 127.0.0.1 - - [05/Jan/2025 05:07:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:48,363 127.0.0.1 - - [05/Jan/2025 05:07:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:48,426 127.0.0.1 - - [05/Jan/2025 05:07:48] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:48,469 127.0.0.1 - - [05/Jan/2025 05:07:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:49,027 127.0.0.1 - - [05/Jan/2025 05:07:49] "GET / HTTP/1.1" 200 -
+2025-01-05 05:07:49,150 127.0.0.1 - - [05/Jan/2025 05:07:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:49,151 127.0.0.1 - - [05/Jan/2025 05:07:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:07:49,154 127.0.0.1 - - [05/Jan/2025 05:07:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:49,214 127.0.0.1 - - [05/Jan/2025 05:07:49] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:07:49,267 127.0.0.1 - - [05/Jan/2025 05:07:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:08:37,026 127.0.0.1 - - [05/Jan/2025 05:08:37] "GET / HTTP/1.1" 200 -
+2025-01-05 05:08:37,135 127.0.0.1 - - [05/Jan/2025 05:08:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:08:37,136 127.0.0.1 - - [05/Jan/2025 05:08:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:08:37,136 127.0.0.1 - - [05/Jan/2025 05:08:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:08:37,202 127.0.0.1 - - [05/Jan/2025 05:08:37] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:08:37,244 127.0.0.1 - - [05/Jan/2025 05:08:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:08:37,410 127.0.0.1 - - [05/Jan/2025 05:08:37] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 05:08:52,240 127.0.0.1 - - [05/Jan/2025 05:08:52] "GET / HTTP/1.1" 200 -
+2025-01-05 05:08:52,356 127.0.0.1 - - [05/Jan/2025 05:08:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:08:52,358 127.0.0.1 - - [05/Jan/2025 05:08:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:08:52,359 127.0.0.1 - - [05/Jan/2025 05:08:52] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:08:52,424 127.0.0.1 - - [05/Jan/2025 05:08:52] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:08:52,465 127.0.0.1 - - [05/Jan/2025 05:08:52] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:08:53,014 127.0.0.1 - - [05/Jan/2025 05:08:53] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:08:53,128 127.0.0.1 - - [05/Jan/2025 05:08:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:08:53,130 127.0.0.1 - - [05/Jan/2025 05:08:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:08:53,133 127.0.0.1 - - [05/Jan/2025 05:08:53] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:08:53,205 127.0.0.1 - - [05/Jan/2025 05:08:53] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:08:53,248 127.0.0.1 - - [05/Jan/2025 05:08:53] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:10:05,163  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/main.py', reloading
+2025-01-05 05:10:05,191  * Restarting with stat
+2025-01-05 05:10:05,418  * Debugger is active!
+2025-01-05 05:10:05,419  * Debugger PIN: 101-652-519
+2025-01-05 05:10:23,750  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/userManagement.py', reloading
+2025-01-05 05:10:23,779  * Restarting with stat
+2025-01-05 05:10:23,940  * Debugger is active!
+2025-01-05 05:10:23,941  * Debugger PIN: 101-652-519
+2025-01-05 05:13:29,117 127.0.0.1 - - [05/Jan/2025 05:13:29] "GET / HTTP/1.1" 200 -
+2025-01-05 05:13:29,354 127.0.0.1 - - [05/Jan/2025 05:13:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:13:29,490 127.0.0.1 - - [05/Jan/2025 05:13:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:13:29,492 127.0.0.1 - - [05/Jan/2025 05:13:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:13:29,775 127.0.0.1 - - [05/Jan/2025 05:13:29] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:13:29,886 127.0.0.1 - - [05/Jan/2025 05:13:29] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:13:30,498 127.0.0.1 - - [05/Jan/2025 05:13:30] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:13:30,638 127.0.0.1 - - [05/Jan/2025 05:13:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:13:30,806 127.0.0.1 - - [05/Jan/2025 05:13:30] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:13:30,806 127.0.0.1 - - [05/Jan/2025 05:13:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:13:30,881 127.0.0.1 - - [05/Jan/2025 05:13:30] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:13:30,924 127.0.0.1 - - [05/Jan/2025 05:13:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:17:59,463  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/main.py', reloading
+2025-01-05 05:17:59,493  * Restarting with stat
+2025-01-05 05:17:59,659  * Debugger is active!
+2025-01-05 05:17:59,660  * Debugger PIN: 101-652-519
+2025-01-05 05:18:37,901  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/main.py', reloading
+2025-01-05 05:18:37,928  * Restarting with stat
+2025-01-05 05:18:38,144  * Debugger is active!
+2025-01-05 05:18:38,144  * Debugger PIN: 101-652-519
+2025-01-05 05:18:59,764 127.0.0.1 - - [05/Jan/2025 05:18:59] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:19:00,117 127.0.0.1 - - [05/Jan/2025 05:19:00] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:19:00,124 127.0.0.1 - - [05/Jan/2025 05:19:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:19:00,281 127.0.0.1 - - [05/Jan/2025 05:19:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:19:00,582 127.0.0.1 - - [05/Jan/2025 05:19:00] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:19:00,704 127.0.0.1 - - [05/Jan/2025 05:19:00] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:19:01,128 127.0.0.1 - - [05/Jan/2025 05:19:01] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 05:19:03,144 127.0.0.1 - - [05/Jan/2025 05:19:03] "GET / HTTP/1.1" 200 -
+2025-01-05 05:19:03,272 127.0.0.1 - - [05/Jan/2025 05:19:03] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:19:03,273 127.0.0.1 - - [05/Jan/2025 05:19:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:19:03,274 127.0.0.1 - - [05/Jan/2025 05:19:03] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:19:03,353 127.0.0.1 - - [05/Jan/2025 05:19:03] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:19:03,410 127.0.0.1 - - [05/Jan/2025 05:19:03] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:19:03,948 127.0.0.1 - - [05/Jan/2025 05:19:03] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:19:04,175 127.0.0.1 - - [05/Jan/2025 05:19:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:19:04,178 127.0.0.1 - - [05/Jan/2025 05:19:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:19:04,179 127.0.0.1 - - [05/Jan/2025 05:19:04] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:19:04,267 127.0.0.1 - - [05/Jan/2025 05:19:04] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:19:04,446 127.0.0.1 - - [05/Jan/2025 05:19:04] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:19:50,379 127.0.0.1 - - [05/Jan/2025 05:19:50] "POST /signup HTTP/1.1" 200 -
+2025-01-05 05:19:50,582 127.0.0.1 - - [05/Jan/2025 05:19:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:19:50,583 127.0.0.1 - - [05/Jan/2025 05:19:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:19:50,584 127.0.0.1 - - [05/Jan/2025 05:19:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:19:50,653 127.0.0.1 - - [05/Jan/2025 05:19:50] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:19:50,701 127.0.0.1 - - [05/Jan/2025 05:19:50] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:20:45,955 127.0.0.1 - - [05/Jan/2025 05:20:45] "GET / HTTP/1.1" 200 -
+2025-01-05 05:20:46,058 127.0.0.1 - - [05/Jan/2025 05:20:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:20:46,236 127.0.0.1 - - [05/Jan/2025 05:20:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:20:46,239 127.0.0.1 - - [05/Jan/2025 05:20:46] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:20:46,300 127.0.0.1 - - [05/Jan/2025 05:20:46] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:20:46,345 127.0.0.1 - - [05/Jan/2025 05:20:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:20:47,629 127.0.0.1 - - [05/Jan/2025 05:20:47] "[33mGET /login HTTP/1.1[0m" 404 -
+2025-01-05 05:20:48,849 127.0.0.1 - - [05/Jan/2025 05:20:48] "GET / HTTP/1.1" 200 -
+2025-01-05 05:20:49,503 127.0.0.1 - - [05/Jan/2025 05:20:49] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:20:49,653 127.0.0.1 - - [05/Jan/2025 05:20:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:20:49,655 127.0.0.1 - - [05/Jan/2025 05:20:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:20:49,656 127.0.0.1 - - [05/Jan/2025 05:20:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:20:49,724 127.0.0.1 - - [05/Jan/2025 05:20:49] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:20:49,763 127.0.0.1 - - [05/Jan/2025 05:20:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:21:52,447 127.0.0.1 - - [05/Jan/2025 05:21:52] "GET / HTTP/1.1" 200 -
+2025-01-05 05:21:52,590 127.0.0.1 - - [05/Jan/2025 05:21:52] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:21:52,675 127.0.0.1 - - [05/Jan/2025 05:21:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:21:52,837 127.0.0.1 - - [05/Jan/2025 05:21:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:21:52,898 127.0.0.1 - - [05/Jan/2025 05:21:52] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:21:53,159 127.0.0.1 - - [05/Jan/2025 05:21:53] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:21:53,472 127.0.0.1 - - [05/Jan/2025 05:21:53] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:21:53,579 127.0.0.1 - - [05/Jan/2025 05:21:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:21:53,583 127.0.0.1 - - [05/Jan/2025 05:21:53] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:21:53,585 127.0.0.1 - - [05/Jan/2025 05:21:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:21:53,647 127.0.0.1 - - [05/Jan/2025 05:21:53] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:21:53,699 127.0.0.1 - - [05/Jan/2025 05:21:53] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:22:35,132 127.0.0.1 - - [05/Jan/2025 05:22:35] "POST /signup HTTP/1.1" 200 -
+2025-01-05 05:22:35,258 127.0.0.1 - - [05/Jan/2025 05:22:35] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:22:35,259 127.0.0.1 - - [05/Jan/2025 05:22:35] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:22:35,260 127.0.0.1 - - [05/Jan/2025 05:22:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:22:35,333 127.0.0.1 - - [05/Jan/2025 05:22:35] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:22:35,378 127.0.0.1 - - [05/Jan/2025 05:22:35] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:23:01,683 127.0.0.1 - - [05/Jan/2025 05:23:01] "POST /signup HTTP/1.1" 200 -
+2025-01-05 05:23:01,798 127.0.0.1 - - [05/Jan/2025 05:23:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:23:01,798 127.0.0.1 - - [05/Jan/2025 05:23:01] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:23:01,799 127.0.0.1 - - [05/Jan/2025 05:23:01] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:23:01,862 127.0.0.1 - - [05/Jan/2025 05:23:01] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:23:01,906 127.0.0.1 - - [05/Jan/2025 05:23:01] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:23:58,130 127.0.0.1 - - [05/Jan/2025 05:23:58] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:23:58,717 127.0.0.1 - - [05/Jan/2025 05:23:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:23:58,728 127.0.0.1 - - [05/Jan/2025 05:23:58] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:23:58,861 127.0.0.1 - - [05/Jan/2025 05:23:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:23:58,969 127.0.0.1 - - [05/Jan/2025 05:23:58] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:23:59,083 127.0.0.1 - - [05/Jan/2025 05:23:59] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:24:27,698 127.0.0.1 - - [05/Jan/2025 05:24:27] "GET /?vscodeBrowserReqId=1736054679865 HTTP/1.1" 200 -
+2025-01-05 05:24:27,878 127.0.0.1 - - [05/Jan/2025 05:24:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:24:27,893 127.0.0.1 - - [05/Jan/2025 05:24:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:24:27,905 127.0.0.1 - - [05/Jan/2025 05:24:27] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:24:28,005 127.0.0.1 - - [05/Jan/2025 05:24:28] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:24:28,062 127.0.0.1 - - [05/Jan/2025 05:24:28] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:24:34,015 127.0.0.1 - - [05/Jan/2025 05:24:34] "GET / HTTP/1.1" 200 -
+2025-01-05 05:24:34,107 127.0.0.1 - - [05/Jan/2025 05:24:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:24:34,108 127.0.0.1 - - [05/Jan/2025 05:24:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:24:34,135 127.0.0.1 - - [05/Jan/2025 05:24:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:24:34,228 127.0.0.1 - - [05/Jan/2025 05:24:34] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:24:34,280 127.0.0.1 - - [05/Jan/2025 05:24:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:24:37,020 127.0.0.1 - - [05/Jan/2025 05:24:37] "GET / HTTP/1.1" 200 -
+2025-01-05 05:24:37,298 127.0.0.1 - - [05/Jan/2025 05:24:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:24:37,298 127.0.0.1 - - [05/Jan/2025 05:24:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:24:37,299 127.0.0.1 - - [05/Jan/2025 05:24:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:24:37,411 127.0.0.1 - - [05/Jan/2025 05:24:37] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:24:37,456 127.0.0.1 - - [05/Jan/2025 05:24:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:24:38,622 127.0.0.1 - - [05/Jan/2025 05:24:38] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:24:38,730 127.0.0.1 - - [05/Jan/2025 05:24:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:24:38,736 127.0.0.1 - - [05/Jan/2025 05:24:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:24:38,737 127.0.0.1 - - [05/Jan/2025 05:24:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:24:38,806 127.0.0.1 - - [05/Jan/2025 05:24:38] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:24:38,858 127.0.0.1 - - [05/Jan/2025 05:24:38] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:25:22,160 127.0.0.1 - - [05/Jan/2025 05:25:22] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:25:22,277 127.0.0.1 - - [05/Jan/2025 05:25:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:25:22,278 127.0.0.1 - - [05/Jan/2025 05:25:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:25:22,279 127.0.0.1 - - [05/Jan/2025 05:25:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:25:22,355 127.0.0.1 - - [05/Jan/2025 05:25:22] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:25:22,406 127.0.0.1 - - [05/Jan/2025 05:25:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:25:22,538 127.0.0.1 - - [05/Jan/2025 05:25:22] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 05:25:54,451 127.0.0.1 - - [05/Jan/2025 05:25:54] "POST /signup HTTP/1.1" 200 -
+2025-01-05 05:25:54,585 127.0.0.1 - - [05/Jan/2025 05:25:54] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:25:54,586 127.0.0.1 - - [05/Jan/2025 05:25:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:25:54,586 127.0.0.1 - - [05/Jan/2025 05:25:54] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:25:54,662 127.0.0.1 - - [05/Jan/2025 05:25:54] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:25:54,706 127.0.0.1 - - [05/Jan/2025 05:25:54] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:28:33,364  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/main.py', reloading
+2025-01-05 05:28:33,392  * Restarting with stat
+2025-01-05 05:28:33,549  * Debugger is active!
+2025-01-05 05:28:33,549  * Debugger PIN: 101-652-519
+2025-01-05 05:28:35,674 Error inserting user: no such table: users
+2025-01-05 05:28:35,682 127.0.0.1 - - [05/Jan/2025 05:28:35] "POST /signup HTTP/1.1" 200 -
+2025-01-05 05:28:35,861 127.0.0.1 - - [05/Jan/2025 05:28:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:28:36,053 127.0.0.1 - - [05/Jan/2025 05:28:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:28:36,070 127.0.0.1 - - [05/Jan/2025 05:28:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:28:36,197 127.0.0.1 - - [05/Jan/2025 05:28:36] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:28:36,522 127.0.0.1 - - [05/Jan/2025 05:28:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:28:36,852 127.0.0.1 - - [05/Jan/2025 05:28:36] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 05:28:38,123 127.0.0.1 - - [05/Jan/2025 05:28:38] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:28:38,243 127.0.0.1 - - [05/Jan/2025 05:28:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:28:38,266 127.0.0.1 - - [05/Jan/2025 05:28:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:28:38,407 127.0.0.1 - - [05/Jan/2025 05:28:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:28:38,476 127.0.0.1 - - [05/Jan/2025 05:28:38] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:28:38,525 127.0.0.1 - - [05/Jan/2025 05:28:38] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:28:56,088 Error inserting user: no such table: users
+2025-01-05 05:28:56,089 127.0.0.1 - - [05/Jan/2025 05:28:56] "POST /signup HTTP/1.1" 200 -
+2025-01-05 05:28:56,203 127.0.0.1 - - [05/Jan/2025 05:28:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:28:56,203 127.0.0.1 - - [05/Jan/2025 05:28:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:28:56,204 127.0.0.1 - - [05/Jan/2025 05:28:56] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:28:56,272 127.0.0.1 - - [05/Jan/2025 05:28:56] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:28:56,330 127.0.0.1 - - [05/Jan/2025 05:28:56] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:39:31,968 Error inserting user: no such table: users
+2025-01-05 05:39:31,968 127.0.0.1 - - [05/Jan/2025 05:39:31] "POST /signup HTTP/1.1" 200 -
+2025-01-05 05:39:32,383 127.0.0.1 - - [05/Jan/2025 05:39:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:39:32,435 127.0.0.1 - - [05/Jan/2025 05:39:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:39:32,436 127.0.0.1 - - [05/Jan/2025 05:39:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:39:32,661 127.0.0.1 - - [05/Jan/2025 05:39:32] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:39:32,767 127.0.0.1 - - [05/Jan/2025 05:39:32] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:39:33,130 127.0.0.1 - - [05/Jan/2025 05:39:33] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 05:39:33,818 127.0.0.1 - - [05/Jan/2025 05:39:33] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:39:33,913 127.0.0.1 - - [05/Jan/2025 05:39:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:39:33,915 127.0.0.1 - - [05/Jan/2025 05:39:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:39:33,916 127.0.0.1 - - [05/Jan/2025 05:39:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:39:33,976 127.0.0.1 - - [05/Jan/2025 05:39:33] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:39:34,020 127.0.0.1 - - [05/Jan/2025 05:39:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:43:40,381 127.0.0.1 - - [05/Jan/2025 05:43:40] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:43:40,554 127.0.0.1 - - [05/Jan/2025 05:43:40] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:43:40,691 127.0.0.1 - - [05/Jan/2025 05:43:40] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:43:40,767 127.0.0.1 - - [05/Jan/2025 05:43:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:43:40,892 127.0.0.1 - - [05/Jan/2025 05:43:40] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:43:41,000 127.0.0.1 - - [05/Jan/2025 05:43:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:43:41,273 127.0.0.1 - - [05/Jan/2025 05:43:41] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 05:43:43,198 127.0.0.1 - - [05/Jan/2025 05:43:43] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:43:43,310 127.0.0.1 - - [05/Jan/2025 05:43:43] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:43:43,315 127.0.0.1 - - [05/Jan/2025 05:43:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:43:43,316 127.0.0.1 - - [05/Jan/2025 05:43:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:43:43,388 127.0.0.1 - - [05/Jan/2025 05:43:43] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:43:43,438 127.0.0.1 - - [05/Jan/2025 05:43:43] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:43:43,581 127.0.0.1 - - [05/Jan/2025 05:43:43] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 05:44:17,355 127.0.0.1 - - [05/Jan/2025 05:44:17] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:44:17,452 127.0.0.1 - - [05/Jan/2025 05:44:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:44:17,454 127.0.0.1 - - [05/Jan/2025 05:44:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:44:17,455 127.0.0.1 - - [05/Jan/2025 05:44:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:44:17,528 127.0.0.1 - - [05/Jan/2025 05:44:17] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:44:17,573 127.0.0.1 - - [05/Jan/2025 05:44:17] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:44:17,712 127.0.0.1 - - [05/Jan/2025 05:44:17] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 05:44:18,558 127.0.0.1 - - [05/Jan/2025 05:44:18] "GET / HTTP/1.1" 200 -
+2025-01-05 05:44:18,716 127.0.0.1 - - [05/Jan/2025 05:44:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:44:18,723 127.0.0.1 - - [05/Jan/2025 05:44:18] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:44:18,726 127.0.0.1 - - [05/Jan/2025 05:44:18] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:44:18,806 127.0.0.1 - - [05/Jan/2025 05:44:18] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:44:18,858 127.0.0.1 - - [05/Jan/2025 05:44:18] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:44:19,453 127.0.0.1 - - [05/Jan/2025 05:44:19] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:44:19,629 127.0.0.1 - - [05/Jan/2025 05:44:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:44:19,633 127.0.0.1 - - [05/Jan/2025 05:44:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:44:19,636 127.0.0.1 - - [05/Jan/2025 05:44:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:44:19,709 127.0.0.1 - - [05/Jan/2025 05:44:19] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:44:19,755 127.0.0.1 - - [05/Jan/2025 05:44:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:44:29,774 127.0.0.1 - - [05/Jan/2025 05:44:29] "GET /?vscodeBrowserReqId=1736055882243 HTTP/1.1" 200 -
+2025-01-05 05:44:29,898 127.0.0.1 - - [05/Jan/2025 05:44:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:44:29,904 127.0.0.1 - - [05/Jan/2025 05:44:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:44:29,974 127.0.0.1 - - [05/Jan/2025 05:44:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:44:30,050 127.0.0.1 - - [05/Jan/2025 05:44:30] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:44:30,195 127.0.0.1 - - [05/Jan/2025 05:44:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:44:32,339 Error inserting user: no such table: users
+2025-01-05 05:44:32,340 127.0.0.1 - - [05/Jan/2025 05:44:32] "POST /signup HTTP/1.1" 200 -
+2025-01-05 05:44:32,463 127.0.0.1 - - [05/Jan/2025 05:44:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:44:32,465 127.0.0.1 - - [05/Jan/2025 05:44:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:44:32,472 127.0.0.1 - - [05/Jan/2025 05:44:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:44:32,548 127.0.0.1 - - [05/Jan/2025 05:44:32] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:44:32,602 127.0.0.1 - - [05/Jan/2025 05:44:32] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:45:22,537  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/init_db.py', reloading
+2025-01-05 05:45:22,569  * Restarting with stat
+2025-01-05 05:45:22,753  * Debugger is active!
+2025-01-05 05:45:22,754  * Debugger PIN: 101-652-519
+2025-01-05 05:45:41,973 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.144:5000
+2025-01-05 05:45:41,974 [33mPress CTRL+C to quit[0m
+2025-01-05 05:45:41,974  * Restarting with stat
+2025-01-05 05:45:42,136  * Debugger is active!
+2025-01-05 05:45:42,136  * Debugger PIN: 101-652-519
+2025-01-05 05:45:44,362 127.0.0.1 - - [05/Jan/2025 05:45:44] "GET /?vscodeBrowserReqId=1736055956553 HTTP/1.1" 200 -
+2025-01-05 05:45:44,539 127.0.0.1 - - [05/Jan/2025 05:45:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:45:44,635 127.0.0.1 - - [05/Jan/2025 05:45:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:45:44,728 127.0.0.1 - - [05/Jan/2025 05:45:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:45:44,869 127.0.0.1 - - [05/Jan/2025 05:45:44] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:45:45,068 127.0.0.1 - - [05/Jan/2025 05:45:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:46:02,149 127.0.0.1 - - [05/Jan/2025 05:46:02] "GET / HTTP/1.1" 200 -
+2025-01-05 05:46:02,271 127.0.0.1 - - [05/Jan/2025 05:46:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:46:02,274 127.0.0.1 - - [05/Jan/2025 05:46:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:46:02,276 127.0.0.1 - - [05/Jan/2025 05:46:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:46:02,350 127.0.0.1 - - [05/Jan/2025 05:46:02] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:46:02,392 127.0.0.1 - - [05/Jan/2025 05:46:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:46:02,760 127.0.0.1 - - [05/Jan/2025 05:46:02] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:46:02,957 127.0.0.1 - - [05/Jan/2025 05:46:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:46:02,960 127.0.0.1 - - [05/Jan/2025 05:46:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:46:02,960 127.0.0.1 - - [05/Jan/2025 05:46:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:46:03,027 127.0.0.1 - - [05/Jan/2025 05:46:03] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:46:03,089 127.0.0.1 - - [05/Jan/2025 05:46:03] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:46:13,227 127.0.0.1 - - [05/Jan/2025 05:46:13] "[32mPOST /signup HTTP/1.1[0m" 302 -
+2025-01-05 05:46:13,286 127.0.0.1 - - [05/Jan/2025 05:46:13] "GET /index.html HTTP/1.1" 200 -
+2025-01-05 05:46:13,401 127.0.0.1 - - [05/Jan/2025 05:46:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:46:13,403 127.0.0.1 - - [05/Jan/2025 05:46:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:46:13,413 127.0.0.1 - - [05/Jan/2025 05:46:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:46:13,459 127.0.0.1 - - [05/Jan/2025 05:46:13] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:46:13,516 127.0.0.1 - - [05/Jan/2025 05:46:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:46:32,627 127.0.0.1 - - [05/Jan/2025 05:46:32] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:46:32,774 127.0.0.1 - - [05/Jan/2025 05:46:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:46:32,775 127.0.0.1 - - [05/Jan/2025 05:46:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:46:32,776 127.0.0.1 - - [05/Jan/2025 05:46:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:46:32,841 127.0.0.1 - - [05/Jan/2025 05:46:32] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:46:32,896 127.0.0.1 - - [05/Jan/2025 05:46:32] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:46:33,229 127.0.0.1 - - [05/Jan/2025 05:46:33] "[33mGET /login HTTP/1.1[0m" 404 -
+2025-01-05 05:46:33,458 127.0.0.1 - - [05/Jan/2025 05:46:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-05 05:46:52,912 127.0.0.1 - - [05/Jan/2025 05:46:52] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:46:54,182 127.0.0.1 - - [05/Jan/2025 05:46:54] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:46:54,302 127.0.0.1 - - [05/Jan/2025 05:46:54] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:46:54,304 127.0.0.1 - - [05/Jan/2025 05:46:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:46:54,305 127.0.0.1 - - [05/Jan/2025 05:46:54] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:46:54,374 127.0.0.1 - - [05/Jan/2025 05:46:54] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:46:54,420 127.0.0.1 - - [05/Jan/2025 05:46:54] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:47:02,540 127.0.0.1 - - [05/Jan/2025 05:47:02] "POST /signup HTTP/1.1" 200 -
+2025-01-05 05:47:02,650 127.0.0.1 - - [05/Jan/2025 05:47:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:47:02,650 127.0.0.1 - - [05/Jan/2025 05:47:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:47:02,652 127.0.0.1 - - [05/Jan/2025 05:47:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:47:02,724 127.0.0.1 - - [05/Jan/2025 05:47:02] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:47:02,767 127.0.0.1 - - [05/Jan/2025 05:47:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:47:18,070 127.0.0.1 - - [05/Jan/2025 05:47:18] "POST /signup HTTP/1.1" 200 -
+2025-01-05 05:47:18,180 127.0.0.1 - - [05/Jan/2025 05:47:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:47:18,181 127.0.0.1 - - [05/Jan/2025 05:47:18] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:47:18,182 127.0.0.1 - - [05/Jan/2025 05:47:18] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:47:18,257 127.0.0.1 - - [05/Jan/2025 05:47:18] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:47:18,303 127.0.0.1 - - [05/Jan/2025 05:47:18] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:47:33,761 127.0.0.1 - - [05/Jan/2025 05:47:33] "[32mPOST /signup HTTP/1.1[0m" 302 -
+2025-01-05 05:47:33,809 127.0.0.1 - - [05/Jan/2025 05:47:33] "GET /index.html HTTP/1.1" 200 -
+2025-01-05 05:47:33,934 127.0.0.1 - - [05/Jan/2025 05:47:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:47:33,934 127.0.0.1 - - [05/Jan/2025 05:47:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:47:33,935 127.0.0.1 - - [05/Jan/2025 05:47:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:47:34,007 127.0.0.1 - - [05/Jan/2025 05:47:34] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:47:34,051 127.0.0.1 - - [05/Jan/2025 05:47:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:50:13,289 127.0.0.1 - - [05/Jan/2025 05:50:13] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:50:13,626 127.0.0.1 - - [05/Jan/2025 05:50:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:50:13,636 127.0.0.1 - - [05/Jan/2025 05:50:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:50:13,653 127.0.0.1 - - [05/Jan/2025 05:50:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:50:13,758 127.0.0.1 - - [05/Jan/2025 05:50:13] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:50:13,874 127.0.0.1 - - [05/Jan/2025 05:50:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:50:27,682 Error inserting user: no such table: users
+2025-01-05 05:50:27,682 127.0.0.1 - - [05/Jan/2025 05:50:27] "POST /signup HTTP/1.1" 200 -
+2025-01-05 05:50:27,805 127.0.0.1 - - [05/Jan/2025 05:50:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:50:27,807 127.0.0.1 - - [05/Jan/2025 05:50:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:50:27,957 127.0.0.1 - - [05/Jan/2025 05:50:27] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:50:28,182 127.0.0.1 - - [05/Jan/2025 05:50:28] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:50:28,234 127.0.0.1 - - [05/Jan/2025 05:50:28] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:51:15,794  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/userManagement.py', reloading
+2025-01-05 05:51:15,824  * Restarting with stat
+2025-01-05 05:52:16,549 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.144:5000
+2025-01-05 05:52:16,549 [33mPress CTRL+C to quit[0m
+2025-01-05 05:52:16,550  * Restarting with stat
+2025-01-05 05:52:16,706  * Debugger is active!
+2025-01-05 05:52:16,706  * Debugger PIN: 101-652-519
+2025-01-05 05:52:19,011 127.0.0.1 - - [05/Jan/2025 05:52:19] "GET /?vscodeBrowserReqId=1736056351322 HTTP/1.1" 200 -
+2025-01-05 05:52:19,318 127.0.0.1 - - [05/Jan/2025 05:52:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:52:19,318 127.0.0.1 - - [05/Jan/2025 05:52:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:52:19,355 127.0.0.1 - - [05/Jan/2025 05:52:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:52:19,479 127.0.0.1 - - [05/Jan/2025 05:52:19] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:52:19,529 127.0.0.1 - - [05/Jan/2025 05:52:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:52:20,376 127.0.0.1 - - [05/Jan/2025 05:52:20] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:52:20,516 127.0.0.1 - - [05/Jan/2025 05:52:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:52:20,518 127.0.0.1 - - [05/Jan/2025 05:52:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:52:20,650 127.0.0.1 - - [05/Jan/2025 05:52:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:52:20,725 127.0.0.1 - - [05/Jan/2025 05:52:20] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:52:20,772 127.0.0.1 - - [05/Jan/2025 05:52:20] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:52:20,923 127.0.0.1 - - [05/Jan/2025 05:52:20] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 05:52:37,124 127.0.0.1 - - [05/Jan/2025 05:52:37] "POST /signup HTTP/1.1" 200 -
+2025-01-05 05:52:37,235 127.0.0.1 - - [05/Jan/2025 05:52:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:52:37,236 127.0.0.1 - - [05/Jan/2025 05:52:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:52:37,238 127.0.0.1 - - [05/Jan/2025 05:52:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:52:37,299 127.0.0.1 - - [05/Jan/2025 05:52:37] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:52:37,348 127.0.0.1 - - [05/Jan/2025 05:52:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:52:53,383 127.0.0.1 - - [05/Jan/2025 05:52:53] "[32mPOST /signup HTTP/1.1[0m" 302 -
+2025-01-05 05:52:53,440 127.0.0.1 - - [05/Jan/2025 05:52:53] "GET /index.html HTTP/1.1" 200 -
+2025-01-05 05:52:53,548 127.0.0.1 - - [05/Jan/2025 05:52:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:52:53,550 127.0.0.1 - - [05/Jan/2025 05:52:53] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:52:53,552 127.0.0.1 - - [05/Jan/2025 05:52:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:52:53,623 127.0.0.1 - - [05/Jan/2025 05:52:53] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:52:53,670 127.0.0.1 - - [05/Jan/2025 05:52:53] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:53:05,267 127.0.0.1 - - [05/Jan/2025 05:53:05] "GET / HTTP/1.1" 200 -
+2025-01-05 05:53:05,383 127.0.0.1 - - [05/Jan/2025 05:53:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:53:05,386 127.0.0.1 - - [05/Jan/2025 05:53:05] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:53:05,389 127.0.0.1 - - [05/Jan/2025 05:53:05] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:53:05,454 127.0.0.1 - - [05/Jan/2025 05:53:05] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:53:05,505 127.0.0.1 - - [05/Jan/2025 05:53:05] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:53:30,896 127.0.0.1 - - [05/Jan/2025 05:53:30] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:53:31,023 127.0.0.1 - - [05/Jan/2025 05:53:31] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:53:31,024 127.0.0.1 - - [05/Jan/2025 05:53:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:53:31,024 127.0.0.1 - - [05/Jan/2025 05:53:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:53:31,096 127.0.0.1 - - [05/Jan/2025 05:53:31] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:53:31,152 127.0.0.1 - - [05/Jan/2025 05:53:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:53:31,928 127.0.0.1 - - [05/Jan/2025 05:53:31] "GET / HTTP/1.1" 200 -
+2025-01-05 05:53:32,061 127.0.0.1 - - [05/Jan/2025 05:53:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:53:32,061 127.0.0.1 - - [05/Jan/2025 05:53:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:53:32,062 127.0.0.1 - - [05/Jan/2025 05:53:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:53:32,132 127.0.0.1 - - [05/Jan/2025 05:53:32] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:53:32,185 127.0.0.1 - - [05/Jan/2025 05:53:32] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 05:53:32,921 127.0.0.1 - - [05/Jan/2025 05:53:32] "GET /signup HTTP/1.1" 200 -
+2025-01-05 05:53:33,031 127.0.0.1 - - [05/Jan/2025 05:53:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 05:53:33,032 127.0.0.1 - - [05/Jan/2025 05:53:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 05:53:33,038 127.0.0.1 - - [05/Jan/2025 05:53:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 05:53:33,110 127.0.0.1 - - [05/Jan/2025 05:53:33] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 05:53:33,155 127.0.0.1 - - [05/Jan/2025 05:53:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 06:00:43,818 127.0.0.1 - - [05/Jan/2025 06:00:43] "GET / HTTP/1.1" 200 -
+2025-01-05 06:00:44,114 127.0.0.1 - - [05/Jan/2025 06:00:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 06:00:44,235 127.0.0.1 - - [05/Jan/2025 06:00:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 06:00:44,235 127.0.0.1 - - [05/Jan/2025 06:00:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 06:00:44,518 127.0.0.1 - - [05/Jan/2025 06:00:44] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 06:00:44,709 127.0.0.1 - - [05/Jan/2025 06:00:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 06:07:29,075  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/main.py', reloading
+2025-01-05 06:07:29,102  * Restarting with stat
+2025-01-05 06:08:14,457 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.144:5000
+2025-01-05 06:08:14,457 [33mPress CTRL+C to quit[0m
+2025-01-05 06:08:14,458  * Restarting with stat
+2025-01-05 06:08:14,613  * Debugger is active!
+2025-01-05 06:08:14,613  * Debugger PIN: 101-652-519
+2025-01-05 06:08:16,936 127.0.0.1 - - [05/Jan/2025 06:08:16] "GET /?vscodeBrowserReqId=1736057309056 HTTP/1.1" 200 -
+2025-01-05 06:08:17,293 127.0.0.1 - - [05/Jan/2025 06:08:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 06:08:17,294 127.0.0.1 - - [05/Jan/2025 06:08:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 06:08:17,297 127.0.0.1 - - [05/Jan/2025 06:08:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 06:08:17,377 127.0.0.1 - - [05/Jan/2025 06:08:17] "GET / HTTP/1.1" 200 -
+2025-01-05 06:08:17,383 127.0.0.1 - - [05/Jan/2025 06:08:17] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 06:08:17,601 127.0.0.1 - - [05/Jan/2025 06:08:17] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 06:08:17,625 127.0.0.1 - - [05/Jan/2025 06:08:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 06:08:17,626 127.0.0.1 - - [05/Jan/2025 06:08:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 06:08:17,626 127.0.0.1 - - [05/Jan/2025 06:08:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 06:08:17,731 127.0.0.1 - - [05/Jan/2025 06:08:17] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 06:08:17,774 127.0.0.1 - - [05/Jan/2025 06:08:17] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 06:08:18,326 127.0.0.1 - - [05/Jan/2025 06:08:18] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 06:08:19,039 127.0.0.1 - - [05/Jan/2025 06:08:19] "GET /signup HTTP/1.1" 200 -
+2025-01-05 06:08:19,157 127.0.0.1 - - [05/Jan/2025 06:08:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 06:08:19,158 127.0.0.1 - - [05/Jan/2025 06:08:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 06:08:19,164 127.0.0.1 - - [05/Jan/2025 06:08:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 06:08:19,236 127.0.0.1 - - [05/Jan/2025 06:08:19] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 06:08:19,286 127.0.0.1 - - [05/Jan/2025 06:08:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 06:08:42,004 127.0.0.1 - - [05/Jan/2025 06:08:42] "[32mPOST /signup HTTP/1.1[0m" 302 -
+2025-01-05 06:08:42,061 127.0.0.1 - - [05/Jan/2025 06:08:42] "GET /index.html HTTP/1.1" 200 -
+2025-01-05 06:08:42,179 127.0.0.1 - - [05/Jan/2025 06:08:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 06:08:42,179 127.0.0.1 - - [05/Jan/2025 06:08:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 06:08:42,181 127.0.0.1 - - [05/Jan/2025 06:08:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 06:08:42,266 127.0.0.1 - - [05/Jan/2025 06:08:42] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 06:08:42,313 127.0.0.1 - - [05/Jan/2025 06:08:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 06:14:56,586 127.0.0.1 - - [05/Jan/2025 06:14:56] "GET /signup HTTP/1.1" 200 -
+2025-01-05 06:14:56,941 127.0.0.1 - - [05/Jan/2025 06:14:56] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 06:14:56,963 127.0.0.1 - - [05/Jan/2025 06:14:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 06:14:56,973 127.0.0.1 - - [05/Jan/2025 06:14:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 06:14:57,189 127.0.0.1 - - [05/Jan/2025 06:14:57] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 06:14:57,297 127.0.0.1 - - [05/Jan/2025 06:14:57] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 06:14:57,981 127.0.0.1 - - [05/Jan/2025 06:14:57] "GET / HTTP/1.1" 200 -
+2025-01-05 06:14:58,098 127.0.0.1 - - [05/Jan/2025 06:14:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 06:14:58,099 127.0.0.1 - - [05/Jan/2025 06:14:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 06:14:58,235 127.0.0.1 - - [05/Jan/2025 06:14:58] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 06:14:58,290 127.0.0.1 - - [05/Jan/2025 06:14:58] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 06:14:58,338 127.0.0.1 - - [05/Jan/2025 06:14:58] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 06:15:31,465 127.0.0.1 - - [05/Jan/2025 06:15:31] "GET / HTTP/1.1" 200 -
+2025-01-05 06:15:31,588 127.0.0.1 - - [05/Jan/2025 06:15:31] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 06:15:31,592 127.0.0.1 - - [05/Jan/2025 06:15:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 06:15:31,592 127.0.0.1 - - [05/Jan/2025 06:15:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 06:15:31,804 127.0.0.1 - - [05/Jan/2025 06:15:31] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 06:15:31,855 127.0.0.1 - - [05/Jan/2025 06:15:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 06:15:32,011 127.0.0.1 - - [05/Jan/2025 06:15:32] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-05 06:15:32,418 127.0.0.1 - - [05/Jan/2025 06:15:32] "GET /signup HTTP/1.1" 200 -
+2025-01-05 06:15:32,524 127.0.0.1 - - [05/Jan/2025 06:15:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 06:15:32,526 127.0.0.1 - - [05/Jan/2025 06:15:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 06:15:32,527 127.0.0.1 - - [05/Jan/2025 06:15:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 06:15:32,598 127.0.0.1 - - [05/Jan/2025 06:15:32] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 06:15:32,644 127.0.0.1 - - [05/Jan/2025 06:15:32] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 06:15:33,363 127.0.0.1 - - [05/Jan/2025 06:15:33] "GET / HTTP/1.1" 200 -
+2025-01-05 06:15:33,486 127.0.0.1 - - [05/Jan/2025 06:15:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 06:15:33,489 127.0.0.1 - - [05/Jan/2025 06:15:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 06:15:33,490 127.0.0.1 - - [05/Jan/2025 06:15:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 06:15:33,549 127.0.0.1 - - [05/Jan/2025 06:15:33] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 06:15:33,597 127.0.0.1 - - [05/Jan/2025 06:15:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 06:15:36,021 127.0.0.1 - - [05/Jan/2025 06:15:36] "GET /signup HTTP/1.1" 200 -
+2025-01-05 06:15:36,138 127.0.0.1 - - [05/Jan/2025 06:15:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 06:15:36,142 127.0.0.1 - - [05/Jan/2025 06:15:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 06:15:36,147 127.0.0.1 - - [05/Jan/2025 06:15:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 06:15:36,210 127.0.0.1 - - [05/Jan/2025 06:15:36] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 06:15:36,255 127.0.0.1 - - [05/Jan/2025 06:15:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 06:15:48,183 127.0.0.1 - - [05/Jan/2025 06:15:48] "POST /signup HTTP/1.1" 200 -
+2025-01-05 06:15:48,299 127.0.0.1 - - [05/Jan/2025 06:15:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 06:15:48,300 127.0.0.1 - - [05/Jan/2025 06:15:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 06:15:48,302 127.0.0.1 - - [05/Jan/2025 06:15:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 06:15:48,376 127.0.0.1 - - [05/Jan/2025 06:15:48] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 06:15:48,418 127.0.0.1 - - [05/Jan/2025 06:15:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-05 06:16:04,516 127.0.0.1 - - [05/Jan/2025 06:16:04] "[32mPOST /signup HTTP/1.1[0m" 302 -
+2025-01-05 06:16:04,582 127.0.0.1 - - [05/Jan/2025 06:16:04] "GET /index.html HTTP/1.1" 200 -
+2025-01-05 06:16:04,719 127.0.0.1 - - [05/Jan/2025 06:16:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-05 06:16:04,721 127.0.0.1 - - [05/Jan/2025 06:16:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-05 06:16:04,723 127.0.0.1 - - [05/Jan/2025 06:16:04] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-05 06:16:04,790 127.0.0.1 - - [05/Jan/2025 06:16:04] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-05 06:16:04,836 127.0.0.1 - - [05/Jan/2025 06:16:04] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
