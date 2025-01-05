@@ -1,18 +1,44 @@
-# Sprint 1 Backlog - Authentication and Self-Signup
+# **Sprint 1: User Sign-Up System**
 
-### Tasks:
+## **Backlog Tasks**
 
-1. **Set up user registration**:
-   - Create sign-up form with fields: email, username, password, and role.
-2. **Implement authentication and session management**:
-   - Use JWT or Firebase Auth for secure user sessions.
-   - Set session expiration to 24 hours.
-3. **Password handling and validation**:
-   - Implement bcrypt hashing for secure password storage.
-   - Add password strength validation.
-4. **UI for sign-up and login**:
-   - Design basic UI forms for sign-up and login.
-   - Ensure mobile responsiveness.
-5. **Testing**:
-   - Write unit tests for registration and login.
-   - Test edge cases (e.g., invalid email format, weak password).
+~~1. Create a sign-up form with the following fields:~~
+
+- Username
+- Email
+- Password
+- Role (user/admin)
+
+~~2. Implement front-end validation for:~~
+
+- Password length (8-12 characters)
+- At least one uppercase, one lowercase, and one special character.
+
+~~3. Integrate a ** Sign-In** button.~~
+
+~~4. Design a responsive UI with mobile-friendly layout.~~
+
+~~5. Create a backend route for `/signup`:~~
+
+- Hash passwords using `bcrypt` or `passlib`.
+
+- Validate username uniqueness and email format.
+- Store user roles securely in a database or structured data.
+
+~~6. Implement input sanitization for security.~~
+
+## **Increment**
+
+- Developed a **user-friendly sign-up page** with a **Google Sign-In** button.
+- Implemented password requirements and validation.
+- Passwords are securely hashed before storage.
+- Role selection is functional and ready for further role-based access control.
+
+## **Review**
+
+- **Form Validation**:  
+  Verified that password constraints and validation logic work as expected.
+- **Security**:  
+  Checked that passwords are hashed and stored securely.
+- **UI**:  
+  The sign-up page is mobile-friendly and includes Sign-In button.
