@@ -20,3 +20,5 @@
   -- password TEXT NOT NULL,
   --  role TEXT NOT NULL
 -- );
+
+-- ALTER TABLE users ADD COLUMN totp_secret TEXT;   

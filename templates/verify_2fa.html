@@ -1,0 +1,16 @@
+{% extends "layout.html" %} {% block title %}Verify 2FA{% endblock %} {% block
+content %}
+<div class="container mt-5">
+  <h1>Verify 2FA</h1>
+  {% if error %}
+  <div class="alert alert-danger" role="alert">{{ error }}</div>
+  {% endif %}
+  <form method="POST" action="/verify_2fa">
+    <div class="form-group">
+      <label for="code">2FA Code</label>
+      <input type="text" class="form-control" id="code" name="code" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Verify</button>
+  </form>
+</div>
+{% endblock %}
