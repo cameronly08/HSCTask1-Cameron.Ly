@@ -1,7 +1,7 @@
 
 import logging
 import re
-from datetime import timedelta
+from datetime import timedelta, datetime
 import os
 
 from flask import Flask, redirect, render_template, request, flash, session, url_for
@@ -115,8 +115,9 @@ def verify_2fa():
 def dashboard():
     """Render the user dashboard."""
     if 'username' in session:
+        logs = dbHandler.get_recent_logs()
         app_log.debug("Session active for user: %s", session['username'])
-        return render_template("dashboard.html", username=session['username'], email=session['email'], role=session['role'])
+        return render_template("dashboard.html", username=session['username'], email=session['email'], role=session['role'],logs=logs)
     else:
         app_log.debug("Session expired or not found.")
         flash("You need to log in first.")
@@ -148,6 +149,27 @@ def home():
             flash("Invalid username or password")
             return render_template("/index.html")
 
+
+@app.route("/create_log", methods=["GET", "POST"])
+def create_log():
+    if 'username' not in session:
+        flash("You need to log in first.")
+        return redirect(url_for('login'))
+    
+    if request.method == "GET":
+        current_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        return render_template("create_log.html", current_datetime=current_datetime)
+    if request.method == "POST":
+        date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        developer_name = session['username']
+        project = request.form["project"]
+        content = request.form["content"]
+        code_snippet = request.form["code_snippet"]
+        
+        dbHandler.add_log(date, developer_name, project, content, code_snippet)
+        flash("Log created successfully!")
+        return redirect(url_for("dashboard"))
+    
 if __name__ == "__main__":
     app.config["TEMPLATES_AUTO_RELOAD"] = True
     app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 0
