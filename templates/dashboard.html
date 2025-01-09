@@ -8,14 +8,36 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <style>
+      .log-content {
+        max-height: 100px;
+        overflow: hidden;
+        position: relative;
+      }
+      .log-content.expanded {
+        max-height: none;
+      }
+      .read-more {
+        display: block;
+        text-align: right;
+        cursor: pointer;
+        color: blue;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">MyApp</a>
+      <a class="navbar-brand" href="{{ url_for('home_logged_in') }}">MyApp</a>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/logout">Logout</a>
+            <a class="nav-link" href="{{ url_for('home_logged_in') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
           </li>
         </ul>
       </div>
@@ -42,6 +64,12 @@
             <li class="list-group-item">
               <a href="/activities">Recent Activities</a>
             </li>
+            <li class="list-group-item">
+              <a href="/create_log">Create New Log</a>
+            </li>
+            <li class="list-group-item">
+              <a href="{{ url_for('home_logged_in') }}">Home</a>
+            </li>
           </ul>
         </div>
         <div class="col-md-4">
@@ -51,7 +79,42 @@
           </ul>
         </div>
       </div>
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h3>Recent Logs</h3>
+          <ul class="list-group">
+            {% for log in logs %}
+            <li class="list-group-item">
+              <strong
+                >{{ log.date }} - {{ log.developer_name }} - {{ log.project
+                }}</strong
+              ><br />
+              <div class="log-content" id="log-content-{{ loop.index }}">
+                {{ log.content }}
+                <pre>{{ log.code_snippet }}</pre>
+              </div>
+              <span class="read-more" onclick="toggleReadMore({{ loop.index }})"
+                >Read more</span
+              >
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
     </div>
+    <script>
+      function toggleReadMore(index) {
+        var content = document.getElementById("log-content-" + index);
+        var readMore = content.nextElementSibling;
+        if (content.classList.contains("expanded")) {
+          content.classList.remove("expanded");
+          readMore.textContent = "Read more";
+        } else {
+          content.classList.add("expanded");
+          readMore.textContent = "Read less";
+        }
+      }
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

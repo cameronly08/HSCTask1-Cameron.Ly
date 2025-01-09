@@ -22,3 +22,12 @@
 -- );
 
 -- ALTER TABLE users ADD COLUMN totp_secret TEXT;   
+
+
+--CREATE TABLE IF NOT EXISTS logs (
+--   id INTEGER PRIMARY KEY AUTOINCREMENT,
+--    date TEXT NOT NULL,
+--    developer_name TEXT NOT NULL,
+--    project TEXT NOT NULL,
+--    content TEXT NOT NULL,
+--    code_snippet TEXT);
