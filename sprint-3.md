@@ -4,9 +4,10 @@
 
 ~~- Implement a form to create new logs.~~
 
-- Store logs with date, developer name, project, and content.
-- Enhance the dashboard to list and preview recent logs.
-- Add a code snippet section in logs for improved readability.
+- ~~Store logs with date, developer name, project, and content.~~
+- ~~Enhance the dashboard to list and preview recent logs.~~
+- ~~Add a code snippet section in logs for improved readability.~~
+- ~~Able to search through logs and sort results~~
 
 #### Increment:
 

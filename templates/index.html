@@ -1,8 +1,24 @@
-{% extends "layout.html" %}
-
-{% block title %}Home{% endblock %}
-
-{% block content %}
-<h1>Welcome to My Website</h1>
-<p>This is the home page.</p>
+{% extends "layout.html" %} {% block title %}Welcome to Data Logger API{%
+endblock %} {% block content %}
+<div class="container mt-5">
+  <h1>Manage, Monitor, and Debug Like a Pro</h1>
+  <p>
+    Welcome to Data Logger API, your ultimate tool for managing, monitoring, and
+    debugging your applications.
+  </p>
+  <div class="mt-4">
+    <a href="{{ url_for('login') }}" class="btn btn-primary">Log In</a>
+    <a href="{{ url_for('signup') }}" class="btn btn-secondary">Sign Up</a>
+  </div>
+  <div class="mt-5">
+    <h2>Sample Log</h2>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <strong>2023-10-01 12:00:00 - John Doe - Sample Project</strong><br />
+        Sample log content goes here.<br />
+        <pre>Sample code snippet...</pre>
+      </li>
+    </ul>
+  </div>
+</div>
 {% endblock %}

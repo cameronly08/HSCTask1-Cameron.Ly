@@ -52,9 +52,16 @@ content %}
         id="code_snippet"
         name="code_snippet"
         rows="5"
+        placeholder="Enter your code snippet here..."
       ></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Create Log</button>
   </form>
 </div>
+{% endblock %} {% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css"
+/>
 {% endblock %}
