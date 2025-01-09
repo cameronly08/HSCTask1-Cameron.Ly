@@ -85,3 +85,39 @@ def register_main_routes(app):
         total_logs = len(logs)  # Assuming search_logs returns all matching logs
         print(f"Logs passed to template: {logs}")  # Debug print
         return render_template("home_logged_in.html", username=session['username'], email=session['email'], role=session['role'], logs=logs, page=page, per_page=per_page, total_logs=total_logs)
+
+    @app.route("/edit_log/<int:log_id>", methods=["GET", "POST"])
+    def edit_log(log_id):
+        if 'username' not in session:
+            flash("You need to log in first.")
+            return redirect(url_for('login'))
+
+        log = dbHandler.get_log_by_id(log_id)
+        if not log or not dbHandler.is_log_editable(log_id, session['username']):
+            flash("You do not have permission to edit this log.")
+            return redirect(url_for('dashboard'))
+
+        if request.method == "GET":
+            return render_template("edit_log.html", log=log)
+        if request.method == "POST":
+            project = request.form["project"]
+            content = request.form["content"]
+            code_snippet = request.form["code_snippet"]
+            
+            dbHandler.update_log(log_id, project, content, code_snippet)
+            flash("Log updated successfully!")
+            return redirect(url_for("dashboard"))
+
+    @app.route("/delete_log/<int:log_id>", methods=["POST"])
+    def delete_log(log_id):
+        if 'username' not in session:
+            flash("You need to log in first.")
+            return redirect(url_for('login'))
+
+        if not dbHandler.is_log_deletable(log_id, session['username']):
+            flash("You do not have permission to delete this log.")
+            return redirect(url_for('dashboard'))
+
+        dbHandler.delete_log(log_id)
+        flash("Log deleted successfully!")
+        return redirect(url_for("dashboard"))

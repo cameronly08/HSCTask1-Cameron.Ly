@@ -16,7 +16,6 @@ app = Flask(__name__)
 app.secret_key = b"_53oi3uriq9pifpff;apl"
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=30)
 
-# Register Routes
 register_auth_routes(app)
 register_main_routes(app)
 
