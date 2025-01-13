@@ -1,5 +1,6 @@
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timedelta
+import secrets
 
 class DatabaseError(Exception):
     pass
@@ -66,23 +67,25 @@ def set_totp_secret(username, secret):
     except sqlite3.Error as e:
         raise DatabaseError(f"Database error: {e}") from e
 
-def add_log(date, developer_name, project, content, code_snippet):
+# Updated add_log function to include repository_link
+def add_log(date, developer_name, project, content, code_snippet, repository_link=None):
     try:
         conn = sqlite3.connect('.databaseFiles/database.db')
         cursor = conn.cursor()
         cursor.execute(
-            "INSERT INTO logs (date, developer_name, project, content, code_snippet) VALUES (?, ?, ?, ?, ?)",
-            (date, developer_name, project, content, code_snippet)
+            "INSERT INTO logs (date, developer_name, project, content, code_snippet, repository_link) VALUES (?, ?, ?, ?, ?, ?)",
+            (date, developer_name, project, content, code_snippet, repository_link)
         )
         conn.commit()
         conn.close()
     except sqlite3.Error as e:
         raise DatabaseError(f"Database error: {e}") from e
 
-def get_recent_logs():
+# Updated get_recent_logs function to include repository_link
+def get_recent_logs(username):
     conn = sqlite3.connect('.databaseFiles/database.db')
     cursor = conn.cursor()
-    cursor.execute("SELECT id, date, developer_name, project, content, code_snippet, last_edited FROM logs ORDER BY date DESC LIMIT 10")
+    cursor.execute("SELECT id, date, developer_name, project, content, code_snippet, last_edited, repository_link FROM logs WHERE developer_name = ? ORDER BY date DESC LIMIT 10", (username,))
     logs = cursor.fetchall()
     conn.close()
     
@@ -97,19 +100,19 @@ def get_recent_logs():
             "date": log[1],
             "developer_name": log[2],
             "project": log[3],
-            "content": log[4],
-            "code_snippet": log[5],
+            "content": truncated_content,
+            "code_snippet": truncated_code_snippet,
             "last_edited": log[6],
-            "truncated_content": truncated_content,
-            "truncated_code_snippet": truncated_code_snippet
+            "repository_link": log[7]
         })
     
     return truncated_logs
 
+# Updated search_logs function to include repository_link
 def search_logs(developer=None, date=None, project=None, sort_by='date', sort_order='asc'):
     conn = sqlite3.connect('.databaseFiles/database.db')
     cursor = conn.cursor()
-    query = "SELECT id, date, developer_name, project, content, code_snippet, last_edited FROM logs WHERE 1=1"
+    query = "SELECT id, date, developer_name, project, content, code_snippet, last_edited, repository_link FROM logs WHERE 1=1"
     params = []
     if developer:
         query += " AND developer_name LIKE ?"
@@ -124,12 +127,13 @@ def search_logs(developer=None, date=None, project=None, sort_by='date', sort_or
     cursor.execute(query, params)
     logs = cursor.fetchall()
     conn.close()
-    return [{"id": log[0], "date": log[1], "developer_name": log[2], "project": log[3], "content": log[4], "code_snippet": log[5], "last_edited": log[6]} for log in logs]
+    return [{"id": log[0], "date": log[1], "developer_name": log[2], "project": log[3], "content": log[4], "code_snippet": log[5], "last_edited": log[6], "repository_link": log[7]} for log in logs]
 
+# Updated get_logs_paginated function to include repository_link
 def get_logs_paginated(page, per_page):
     """Fetch logs with pagination and truncated content."""
     offset = (page - 1) * per_page
-    query = "SELECT id, date, developer_name, project, content, code_snippet, last_edited FROM logs ORDER BY date DESC LIMIT ? OFFSET ?"
+    query = "SELECT id, date, developer_name, project, content, code_snippet, last_edited, repository_link FROM logs ORDER BY date DESC LIMIT ? OFFSET ?"
     logs = execute_query(query, (per_page, offset))
     formatted_logs = []
     for log in logs:
@@ -141,6 +145,7 @@ def get_logs_paginated(page, per_page):
             "content": log[4],
             "code_snippet": log[5],
             "last_edited": log[6],
+            "repository_link": log[7],
             "truncated_content": truncate_content(log[4], 150),
             "truncated_code_snippet": truncate_content(log[5], 80)
         })
@@ -158,6 +163,7 @@ def truncate_content(content, length=100):
         return content[:length] + "..."
     return content
 
+# Updated get_log_by_id function to include repository_link
 def get_log_by_id(log_id):
     conn = sqlite3.connect('.databaseFiles/database.db')
     cursor = conn.cursor()
@@ -174,17 +180,19 @@ def get_log_by_id(log_id):
             "code_snippet": log[5],
             "is_approved": log[6],
             "is_archived": log[7],
-            "last_edited": log[8]
+            "last_edited": log[8],
+            "repository_link": log[9]
         }
     return None
 
-def update_log(log_id, project, content, code_snippet):
+# Updated update_log function to include repository_link
+def update_log(log_id, project, content, code_snippet, repository_link=None):
     try:
         conn = sqlite3.connect('.databaseFiles/database.db')
         cursor = conn.cursor()
         cursor.execute(
-            "UPDATE logs SET project = ?, content = ?, code_snippet = ?, last_edited = ? WHERE id = ?",
-            (project, content, code_snippet, datetime.now(), log_id)
+            "UPDATE logs SET project = ?, content = ?, code_snippet = ?, repository_link = ?, last_edited = ? WHERE id = ?",
+            (project, content, code_snippet, repository_link, datetime.now(), log_id)
         )
         conn.commit()
         conn.close()
@@ -212,3 +220,95 @@ def is_log_deletable(log_id, username):
     if log and log['developer_name'] == username and not log['is_approved'] and not log['is_archived']:
         return True
     return False
+
+# New functions for password reset
+def store_reset_token(email, token, expiration):
+    try:
+        conn = sqlite3.connect('.databaseFiles/database.db')
+        cursor = conn.cursor()
+        cursor.execute(
+            "INSERT INTO password_resets (email, token, expiration) VALUES (?, ?, ?)",
+            (email, token, expiration)
+        )
+        conn.commit()
+        conn.close()
+    except sqlite3.Error as e:
+        raise DatabaseError(f"Database error: {e}") from e
+
+def get_reset_token(token):
+    conn = sqlite3.connect('.databaseFiles/database.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT email, expiration FROM password_resets WHERE token = ?", (token,))
+    reset = cursor.fetchone()
+    conn.close()
+    if reset:
+        return {"email": reset[0], "expiration": reset[1]}
+    return None
+
+def update_password(email, new_password):
+    try:
+        conn = sqlite3.connect('.databaseFiles/database.db')
+        cursor = conn.cursor()
+        cursor.execute("UPDATE users SET password = ? WHERE email = ?", (new_password, email))
+        conn.commit()
+        conn.close()
+    except sqlite3.Error as e:
+        raise DatabaseError(f"Database error: {e}") from e
+    
+
+def update_user_profile(current_username, new_email, new_username, new_password):
+    try:
+        conn = sqlite3.connect('.databaseFiles/database.db')
+        cursor = conn.cursor()
+        if new_password:
+            cursor.execute(
+                "UPDATE users SET email = ?, username = ?, password = ? WHERE username = ?",
+                (new_email, new_username, new_password, current_username)
+            )
+        else:
+            cursor.execute(
+                "UPDATE users SET email = ?, username = ? WHERE username = ?",
+                (new_email, new_username, current_username)
+            )
+        conn.commit()
+        conn.close()
+    except sqlite3.Error as e:
+        raise DatabaseError(f"Database error: {e}") from e
+    
+
+def get_user_stats(username):
+    conn = sqlite3.connect('.databaseFiles/database.db')
+    cursor = conn.cursor()
+    
+    # Fetch number of logins
+    cursor.execute("SELECT COUNT(*) FROM logins WHERE username = ?", (username,))
+    num_logins = cursor.fetchone()[0]
+    
+    # Fetch number of logs created by the user
+    cursor.execute("SELECT COUNT(*) FROM logs WHERE developer_name = ?", (username,))
+    num_logs = cursor.fetchone()[0]
+    
+    # Fetch recent activity trends (example: number of logs per project)
+    cursor.execute("SELECT project, COUNT(*) FROM logs WHERE developer_name = ? GROUP BY project", (username,))
+    activity_trends = cursor.fetchall()
+    
+    conn.close()
+    
+    return {
+        "num_logins": num_logins,
+        "num_logs": num_logs,
+        "activity_trends": activity_trends
+    }
+
+
+def get_top_projects(username):
+    conn = sqlite3.connect('.databaseFiles/database.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT project, COUNT(*) FROM logs WHERE developer_name = ? GROUP BY project ORDER BY COUNT(*) DESC LIMIT 5", (username,))
+    projects = cursor.fetchall()
+    conn.close()
+    
+    # Convert projects to a list of tuples
+    project_list = [(project[0], project[1]) for project in projects]
+    
+    return project_list

@@ -5,7 +5,7 @@
 - **Email Verification**: (Scrapped)
   - Implement registration email verification with a unique token.
   - Users must verify their email before logging in.
-- **Password Recovery**:
+- ~~**Password Recovery**:~~
 
   - Users can reset passwords using a link sent to their email.
   - Implement token-based password reset with expiration.
@@ -45,6 +45,7 @@
 
   - password recovery, and log editing/deleting with constraints implemented.
   - Features tested for functionality and security.
+  - Additionally added an analytics page for user stats
 
 - **Testing & QA**:
 
@@ -52,5 +53,5 @@
   - Log editing/deleting tested for permission constraints.
 
 - **Challenges**:
-  - Configuring email service proved way too conflicting, therefore scrapped in order to meet the due date.
+  - Configuring email service proved too conflicting, therefore scrapped in order to meet the due date.
   - Token expiry handling and UI updates took longer than expected.

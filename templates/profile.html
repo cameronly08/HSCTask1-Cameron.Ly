@@ -1,0 +1,50 @@
+{% extends "layout.html" %} {% block title %}Profile{% endblock %} {% block
+content %}
+<div class="container mt-5">
+  <h1>Profile</h1>
+  {% if user %}
+  <form method="POST" action="{{ url_for('update_profile') }}">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        value="{{ user.email }}"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        name="username"
+        value="{{ user.username }}"
+        required
+      />
+      {% if username_error %}
+      <div class="alert alert-danger mt-2">{{ username_error }}</div>
+      {% endif %}
+    </div>
+    <div class="form-group">
+      <label for="password">New Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+      />
+      {% if password_error %}
+      <div class="alert alert-danger mt-2">{{ password_error }}</div>
+      {% endif %}
+    </div>
+    <button type="submit" class="btn btn-primary">Update Profile</button>
+  </form>
+  {% else %}
+  <p>No user information available.</p>
+  {% endif %}
+</div>
+{% endblock %}
