@@ -31,3 +31,25 @@
 --    project TEXT NOT NULL,
 --    content TEXT NOT NULL,
 --    code_snippet TEXT);
+
+
+--ALTER TABLE users ADD COLUMN verification_token TEXT;
+--ALTER TABLE users ADD COLUMN is_verified BOOLEAN DEFAULT FALSE;
+
+--ALTER TABLE logs ADD COLUMN is_approved BOOLEAN DEFAULT FALSE;
+--ALTER TABLE logs ADD COLUMN is_archived BOOLEAN DEFAULT FALSE;
+--ALTER TABLE logs ADD COLUMN last_edited TIMESTAMP;
+
+--CREATE TABLE password_resets (
+--    id INTEGER PRIMARY KEY AUTOINCREMENT,
+--    email TEXT NOT NULL,
+--    token TEXT NOT NULL,
+--    expiration DATETIME NOT NULL
+
+
+--CREATE TABLE logins (
+--    id INTEGER PRIMARY KEY AUTOINCREMENT,
+--    username TEXT NOT NULL,
+--    login_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+--ALTER TABLE logs ADD COLUMN repository_link TEXT; 

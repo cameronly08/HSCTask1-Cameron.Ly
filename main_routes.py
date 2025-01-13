@@ -1,6 +1,7 @@
 from flask import render_template, request, redirect, url_for, flash, session
 from datetime import datetime
 import userManagement as dbHandler
+import bcrypt
 
 def register_main_routes(app):
     @app.route("/", methods=["GET"])
@@ -16,11 +17,30 @@ def register_main_routes(app):
     def dashboard():
         """Render the user dashboard."""
         if 'username' in session:
-            logs = dbHandler.get_recent_logs()
-            return render_template("dashboard.html", username=session['username'], email=session['email'], role=session['role'], logs=logs)
+            username = session['username']
+            email = session['email']
+            role = session['role']
+            
+            logs = dbHandler.get_recent_logs(username)
+            stats = dbHandler.get_user_stats(username)
+            
+            return render_template("dashboard.html", username=username, email=email, role=role, logs=logs, stats=stats)
         else:
             flash("You need to log in first.")
             return redirect(url_for('login'))
+        
+    @app.route("/analytics")
+    def analytics():
+        if 'username' not in session:
+            flash("You need to log in first.")
+            return redirect(url_for('login'))
+        
+        user = dbHandler.get_user(session['username'])
+        stats = dbHandler.get_user_stats(user['username'])
+        recent_logs = dbHandler.get_recent_logs(user['username'])
+        top_projects = dbHandler.get_top_projects(user['username'])
+        
+        return render_template("analytics.html", user=user, stats=stats)
 
     @app.route("/create_log", methods=["GET", "POST"])
     def create_log():
@@ -37,8 +57,9 @@ def register_main_routes(app):
             project = request.form["project"]
             content = request.form["content"]
             code_snippet = request.form["code_snippet"]
+            repository = request.form.get("repository_link")
             
-            dbHandler.add_log(date, developer_name, project, content, code_snippet)
+            dbHandler.add_log(date, developer_name, project, content, code_snippet, repository_link)
             flash("Log created successfully!")
             return redirect(url_for("dashboard"))
 
@@ -85,3 +106,88 @@ def register_main_routes(app):
         total_logs = len(logs)  # Assuming search_logs returns all matching logs
         print(f"Logs passed to template: {logs}")  # Debug print
         return render_template("home_logged_in.html", username=session['username'], email=session['email'], role=session['role'], logs=logs, page=page, per_page=per_page, total_logs=total_logs)
+
+    @app.route("/edit_log/<int:log_id>", methods=["GET", "POST"])
+    def edit_log(log_id):
+        if 'username' not in session:
+            flash("You need to log in first.")
+            return redirect(url_for('login'))
+
+        log = dbHandler.get_log_by_id(log_id)
+        if not log or not dbHandler.is_log_editable(log_id, session['username']):
+            flash("You do not have permission to edit this log.")
+            return redirect(url_for('dashboard'))
+
+        if request.method == "GET":
+            return render_template("edit_log.html", log=log)
+        if request.method == "POST":
+            project = request.form["project"]
+            content = request.form["content"]
+            code_snippet = request.form["code_snippet"]
+            
+            dbHandler.update_log(log_id, project, content, code_snippet)
+            flash("Log updated successfully!")
+            return redirect(url_for("dashboard"))
+
+    @app.route("/delete_log/<int:log_id>", methods=["POST"])
+    def delete_log(log_id):
+        if 'username' not in session:
+            flash("You need to log in first.")
+            return redirect(url_for('login'))
+
+        if not dbHandler.is_log_deletable(log_id, session['username']):
+            flash("You do not have permission to delete this log.")
+            return redirect(url_for('dashboard'))
+
+        dbHandler.delete_log(log_id)
+        flash("Log deleted successfully!")
+        return redirect(url_for("dashboard"))
+    
+    @app.route("/profile", methods=["GET"])
+    def profile():
+        if 'username' not in session:
+            flash("You need to log in first.")
+            return redirect(url_for('login'))
+        
+        user = dbHandler.get_user(session['username'])
+        return render_template("profile.html", user=user)
+
+    @app.route("/update_profile", methods=["POST"])
+    def update_profile():
+        if 'username' not in session:
+            flash("You need to log in first.")
+            return redirect(url_for('login'))
+        
+        email = request.form["email"]
+        new_username = request.form["username"]
+        new_password = request.form["password"]
+        current_username = session['username']
+        
+        username_error = None
+        password_error = None
+        
+        try:
+            if new_username != current_username and dbHandler.get_user(new_username):
+                username_error = "Username is already taken."
+            
+            # Validate the new password if provided
+            if new_password:
+                validation_result = validate_password(new_password)
+                if validation_result != "Password is valid.":
+                    password_error = validation_result
+                else:
+                    hashed_password = bcrypt.hashpw(new_password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+            else:
+                hashed_password = None
+            
+            if username_error or password_error:
+                user = dbHandler.get_user(current_username)
+                return render_template("profile.html", user=user, username_error=username_error, password_error=password_error)
+            
+            dbHandler.update_user_profile(current_username, email, new_username, hashed_password)
+            flash("Profile updated successfully.")
+            session['username'] = new_username  # Update session username if changed
+        except Exception as e:
+            flash(f"An error occurred: {e}")
+        
+        return redirect(url_for('profile'))

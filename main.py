@@ -1,8 +1,9 @@
 import logging
 from datetime import timedelta
 from flask import Flask
-from auth_routes import register_auth_routes
-from main_routes import register_main_routes
+from flask_mail import Mail
+import auth_routes
+import main_routes
 
 app_log = logging.getLogger(__name__)
 logging.basicConfig(
@@ -16,9 +17,13 @@ app = Flask(__name__)
 app.secret_key = b"_53oi3uriq9pifpff;apl"
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=30)
 
-# Register Routes
-register_auth_routes(app)
-register_main_routes(app)
+# Initialize Flask-Mail
+mail = Mail()
+auth_routes.init_mail(app)
+
+# Register routes
+auth_routes.register_auth_routes(app)
+main_routes.register_main_routes(app)
 
 if __name__ == "__main__":
     app.config["TEMPLATES_AUTO_RELOAD"] = True
