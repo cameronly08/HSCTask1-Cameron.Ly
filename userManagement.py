@@ -1,9 +1,12 @@
+"""
+This module provides database interaction functions for the developer logging application.
+"""
+
 import sqlite3
-from datetime import datetime, timedelta
-import secrets
+from datetime import datetime
 
 class DatabaseError(Exception):
-    pass
+    """Custom exception for database errors."""
 
 def execute_query(query, params=None):
     """Execute a query and return the results."""
@@ -25,6 +28,7 @@ def execute_query(query, params=None):
             conn.close()
 
 def get_user(username):
+    """Fetch a user by username."""
     conn = sqlite3.connect('.databaseFiles/database.db')
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
@@ -35,6 +39,7 @@ def get_user(username):
     return None
 
 def get_user_by_email(email):
+    """Fetch a user by email."""
     conn = sqlite3.connect('.databaseFiles/database.db')
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM users WHERE email = ?", (email,))
@@ -45,6 +50,7 @@ def get_user_by_email(email):
     return None
 
 def add_user(email, username, password, role, totp_secret):
+    """Add a new user to the database."""
     try:
         conn = sqlite3.connect('.databaseFiles/database.db')
         cursor = conn.cursor()
@@ -58,6 +64,7 @@ def add_user(email, username, password, role, totp_secret):
         raise DatabaseError(f"Database error: {e}") from e
 
 def set_totp_secret(username, secret):
+    """Set the TOTP secret for a user."""
     try:
         conn = sqlite3.connect('.databaseFiles/database.db')
         cursor = conn.cursor()
@@ -67,8 +74,8 @@ def set_totp_secret(username, secret):
     except sqlite3.Error as e:
         raise DatabaseError(f"Database error: {e}") from e
 
-# Updated add_log function to include repository_link
 def add_log(date, developer_name, project, content, code_snippet, repository_link=None):
+    """Add a new log entry."""
     try:
         conn = sqlite3.connect('.databaseFiles/database.db')
         cursor = conn.cursor()
@@ -81,15 +88,14 @@ def add_log(date, developer_name, project, content, code_snippet, repository_lin
     except sqlite3.Error as e:
         raise DatabaseError(f"Database error: {e}") from e
 
-# Updated get_recent_logs function to include repository_link
 def get_recent_logs(username):
+    """Fetch recent logs for a user."""
     conn = sqlite3.connect('.databaseFiles/database.db')
     cursor = conn.cursor()
     cursor.execute("SELECT id, date, developer_name, project, content, code_snippet, last_edited, repository_link FROM logs WHERE developer_name = ? ORDER BY date DESC LIMIT 10", (username,))
     logs = cursor.fetchall()
     conn.close()
     
-    # Truncate content and code_snippet
     truncated_logs = []
     for log in logs:
         truncated_content = log[4][:100] + '...' if len(log[4]) > 100 else log[4]
@@ -108,8 +114,8 @@ def get_recent_logs(username):
     
     return truncated_logs
 
-# Updated search_logs function to include repository_link
 def search_logs(developer=None, date=None, project=None, sort_by='date', sort_order='asc'):
+    """Search logs based on various criteria."""
     conn = sqlite3.connect('.databaseFiles/database.db')
     cursor = conn.cursor()
     query = "SELECT id, date, developer_name, project, content, code_snippet, last_edited, repository_link FROM logs WHERE 1=1"
@@ -129,7 +135,6 @@ def search_logs(developer=None, date=None, project=None, sort_by='date', sort_or
     conn.close()
     return [{"id": log[0], "date": log[1], "developer_name": log[2], "project": log[3], "content": log[4], "code_snippet": log[5], "last_edited": log[6], "repository_link": log[7]} for log in logs]
 
-# Updated get_logs_paginated function to include repository_link
 def get_logs_paginated(page, per_page):
     """Fetch logs with pagination and truncated content."""
     offset = (page - 1) * per_page
@@ -163,8 +168,8 @@ def truncate_content(content, length=100):
         return content[:length] + "..."
     return content
 
-# Updated get_log_by_id function to include repository_link
 def get_log_by_id(log_id):
+    """Fetch a log by its ID."""
     conn = sqlite3.connect('.databaseFiles/database.db')
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM logs WHERE id = ?", (log_id,))
@@ -185,8 +190,8 @@ def get_log_by_id(log_id):
         }
     return None
 
-# Updated update_log function to include repository_link
 def update_log(log_id, project, content, code_snippet, repository_link=None):
+    """Update a log entry."""
     try:
         conn = sqlite3.connect('.databaseFiles/database.db')
         cursor = conn.cursor()
@@ -200,6 +205,7 @@ def update_log(log_id, project, content, code_snippet, repository_link=None):
         raise DatabaseError(f"Database error: {e}") from e
 
 def delete_log(log_id):
+    """Delete a log entry."""
     try:
         conn = sqlite3.connect('.databaseFiles/database.db')
         cursor = conn.cursor()
@@ -210,19 +216,21 @@ def delete_log(log_id):
         raise DatabaseError(f"Database error: {e}") from e
 
 def is_log_editable(log_id, username):
+    """Check if a log is editable by a user."""
     log = get_log_by_id(log_id)
     if log and log['developer_name'] == username and not log['is_approved'] and not log['is_archived']:
         return True
     return False
 
 def is_log_deletable(log_id, username):
+    """Check if a log is deletable by a user."""
     log = get_log_by_id(log_id)
     if log and log['developer_name'] == username and not log['is_approved'] and not log['is_archived']:
         return True
     return False
 
-# New functions for password reset
 def store_reset_token(email, token, expiration):
+    """Store a password reset token."""
     try:
         conn = sqlite3.connect('.databaseFiles/database.db')
         cursor = conn.cursor()
@@ -236,6 +244,7 @@ def store_reset_token(email, token, expiration):
         raise DatabaseError(f"Database error: {e}") from e
 
 def get_reset_token(token):
+    """Fetch a password reset token."""
     conn = sqlite3.connect('.databaseFiles/database.db')
     cursor = conn.cursor()
     cursor.execute("SELECT email, expiration FROM password_resets WHERE token = ?", (token,))
@@ -246,6 +255,7 @@ def get_reset_token(token):
     return None
 
 def update_password(email, new_password):
+    """Update a user's password."""
     try:
         conn = sqlite3.connect('.databaseFiles/database.db')
         cursor = conn.cursor()
@@ -254,9 +264,9 @@ def update_password(email, new_password):
         conn.close()
     except sqlite3.Error as e:
         raise DatabaseError(f"Database error: {e}") from e
-    
 
 def update_user_profile(current_username, new_email, new_username, new_password):
+    """Update a user's profile."""
     try:
         conn = sqlite3.connect('.databaseFiles/database.db')
         cursor = conn.cursor()
@@ -274,21 +284,18 @@ def update_user_profile(current_username, new_email, new_username, new_password)
         conn.close()
     except sqlite3.Error as e:
         raise DatabaseError(f"Database error: {e}") from e
-    
 
 def get_user_stats(username):
+    """Fetch user statistics."""
     conn = sqlite3.connect('.databaseFiles/database.db')
     cursor = conn.cursor()
     
-    # Fetch number of logins
     cursor.execute("SELECT COUNT(*) FROM logins WHERE username = ?", (username,))
     num_logins = cursor.fetchone()[0]
     
-    # Fetch number of logs created by the user
     cursor.execute("SELECT COUNT(*) FROM logs WHERE developer_name = ?", (username,))
     num_logs = cursor.fetchone()[0]
     
-    # Fetch recent activity trends (example: number of logs per project)
     cursor.execute("SELECT project, COUNT(*) FROM logs WHERE developer_name = ? GROUP BY project", (username,))
     activity_trends = cursor.fetchall()
     
@@ -300,15 +307,14 @@ def get_user_stats(username):
         "activity_trends": activity_trends
     }
 
-
 def get_top_projects(username):
+    """Fetch top projects for a user."""
     conn = sqlite3.connect('.databaseFiles/database.db')
     cursor = conn.cursor()
     cursor.execute("SELECT project, COUNT(*) FROM logs WHERE developer_name = ? GROUP BY project ORDER BY COUNT(*) DESC LIMIT 5", (username,))
     projects = cursor.fetchall()
     conn.close()
     
-    # Convert projects to a list of tuples
     project_list = [(project[0], project[1]) for project in projects]
     
     return project_list

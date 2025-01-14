@@ -90,7 +90,10 @@
                 {{ log.content }}
                 <pre>{{ log.code_snippet }}</pre>
               </div>
-              <span class="read-more" onclick="toggleReadMore({{ loop.index }})"
+              <span
+                class="read-more"
+                onclick="toggleReadMore('{{ loop.index }}')"
+                id="read-more-{{ loop.index }}"
                 >Read more</span
               >
               <br />
@@ -150,7 +153,7 @@
     <script>
       function toggleReadMore(index) {
         var content = document.getElementById("log-content-" + index);
-        var readMore = content.nextElementSibling;
+        var readMore = document.getElementById("read-more-" + index);
         if (content.classList.contains("expanded")) {
           content.classList.remove("expanded");
           readMore.textContent = "Read more";

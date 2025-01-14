@@ -2,6 +2,7 @@ from flask import render_template, request, redirect, url_for, flash, session
 from datetime import datetime
 import userManagement as dbHandler
 import bcrypt
+from utils import validate_password
 
 def register_main_routes(app):
     @app.route("/", methods=["GET"])
@@ -40,7 +41,7 @@ def register_main_routes(app):
         recent_logs = dbHandler.get_recent_logs(user['username'])
         top_projects = dbHandler.get_top_projects(user['username'])
         
-        return render_template("analytics.html", user=user, stats=stats)
+        return render_template("analytics.html", user=user, stats=stats, recent_logs=recent_logs, top_projects=top_projects)
 
     @app.route("/create_log", methods=["GET", "POST"])
     def create_log():
@@ -59,7 +60,7 @@ def register_main_routes(app):
             code_snippet = request.form["code_snippet"]
             repository = request.form.get("repository_link")
             
-            dbHandler.add_log(date, developer_name, project, content, code_snippet, repository_link)
+            dbHandler.add_log(date, developer_name, project, content, code_snippet, repository)
             flash("Log created successfully!")
             return redirect(url_for("dashboard"))
 
@@ -166,6 +167,7 @@ def register_main_routes(app):
         username_error = None
         password_error = None
         
+        hashed_password = None
         try:
             if new_username != current_username and dbHandler.get_user(new_username):
                 username_error = "Username is already taken."
@@ -177,8 +179,6 @@ def register_main_routes(app):
                     password_error = validation_result
                 else:
                     hashed_password = bcrypt.hashpw(new_password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
-            else:
-                hashed_password = None
             
             if username_error or password_error:
                 user = dbHandler.get_user(current_username)
@@ -187,7 +187,11 @@ def register_main_routes(app):
             dbHandler.update_user_profile(current_username, email, new_username, hashed_password)
             flash("Profile updated successfully.")
             session['username'] = new_username  # Update session username if changed
-        except Exception as e:
+        except ValueError as e:
+            flash(f"Value error occurred: {e}")
+        except KeyError as e:
+            flash(f"Key error occurred: {e}")
+        except dbHandler.DatabaseError as e:
             flash(f"An error occurred: {e}")
         
         return redirect(url_for('profile'))
