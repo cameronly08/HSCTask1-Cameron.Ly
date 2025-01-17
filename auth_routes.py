@@ -139,9 +139,12 @@ def register_auth_routes(app):
                     flash("Password reset link has been sent to your email.")
                 else:
                     flash("Email not found.")
+            except sqlite3.Error as e:
+                app_log.error(f"Database error during password reset request: {e}")
+                flash("A database error occurred. Please try again later.")
             except Exception as e:
-                app_log.error(f"Error during password reset request: {e}")
-                flash("An error occurred. Please try again later.")
+                app_log.error(f"Unexpected error during password reset request: {e}")
+                flash("An unexpected error occurred. Please try again later.")
         return render_template("forgot_password.html")
 
     @app.route("/reset_password/<token>", methods=["GET", "POST"])
