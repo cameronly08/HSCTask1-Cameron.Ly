@@ -56,6 +56,9 @@
       <div class="log-content">
         {{ log.content }}
         <pre>{{ log.code_snippet }}</pre>
+        {% if log.repository_link %}
+        <a href="{{ log.repository_link }}" target="_blank">Repository Link</a>
+        {% endif %}
       </div>
     </li>
     {% endfor %} {% else %}
