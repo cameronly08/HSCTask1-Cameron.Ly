@@ -140,7 +140,7 @@ def register_auth_routes(app):
                 else:
                     flash("Email not found.")
             except sqlite3.Error as e:
-                app_log.error(f"Database error during password reset request: {e}")
+                app_log.error("Database error during password reset request: %s", e)
                 flash("A database error occurred. Please try again later.")
             except Exception as e:
                 app_log.error(f"Unexpected error during password reset request: {e}")

@@ -2159,3 +2159,244 @@
 2025-01-17 00:36:35,684 DEBUG: User stats: {'num_logins': 0, 'num_logs': 0, 'activity_trends': []}
 2025-01-17 00:36:35,684 DEBUG: Returning user stats: {'num_logins': 0, 'num_logs': 0, 'activity_trends': []}
 2025-01-17 00:36:35,685 INFO: 127.0.0.1 - - [17/Jan/2025 00:36:35] "GET /api/user_stats?username=cam HTTP/1.1" 200 -
+2025-01-18 04:50:32,517 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.120:5000
+2025-01-18 04:50:32,517 INFO: [33mPress CTRL+C to quit[0m
+2025-01-18 04:50:32,518 INFO:  * Restarting with stat
+2025-01-18 04:50:32,779 WARNING:  * Debugger is active!
+2025-01-18 04:50:32,780 INFO:  * Debugger PIN: 728-071-023
+2025-01-18 04:50:53,038 INFO: 127.0.0.1 - - [18/Jan/2025 04:50:53] "GET / HTTP/1.1" 200 -
+2025-01-18 04:50:53,405 INFO: 127.0.0.1 - - [18/Jan/2025 04:50:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-18 04:50:53,405 INFO: 127.0.0.1 - - [18/Jan/2025 04:50:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-18 04:50:53,415 INFO: 127.0.0.1 - - [18/Jan/2025 04:50:53] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-18 04:50:53,745 INFO: 127.0.0.1 - - [18/Jan/2025 04:50:53] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-18 04:50:53,951 INFO: 127.0.0.1 - - [18/Jan/2025 04:50:53] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-18 04:51:15,704 INFO: 127.0.0.1 - - [18/Jan/2025 04:51:15] "GET / HTTP/1.1" 200 -
+2025-01-18 04:51:15,808 INFO: 127.0.0.1 - - [18/Jan/2025 04:51:15] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-01-18 04:51:15,951 INFO: 127.0.0.1 - - [18/Jan/2025 04:51:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-18 04:51:15,961 INFO: 127.0.0.1 - - [18/Jan/2025 04:51:15] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-01-18 04:51:16,075 INFO: 127.0.0.1 - - [18/Jan/2025 04:51:16] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-18 04:51:16,126 INFO: 127.0.0.1 - - [18/Jan/2025 04:51:16] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-18 04:51:16,279 INFO: 127.0.0.1 - - [18/Jan/2025 04:51:16] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2025-01-18 04:56:01,261 DEBUG: UserStats endpoint called
+2025-01-18 04:56:01,262 DEBUG: Username is required
+2025-01-18 04:56:01,269 INFO: 127.0.0.1 - - [18/Jan/2025 04:56:01] "[35m[1mGET /api/user_stats HTTP/1.1[0m" 500 -
+2025-01-18 04:56:04,546 INFO: 127.0.0.1 - - [18/Jan/2025 04:56:04] "[33mGET /api/user_stats=test2 HTTP/1.1[0m" 404 -
+2025-01-18 04:56:04,912 INFO: 127.0.0.1 - - [18/Jan/2025 04:56:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-18 04:56:07,586 INFO: 127.0.0.1 - - [18/Jan/2025 04:56:07] "[33mGET /api/user_stats=test2 HTTP/1.1[0m" 404 -
+2025-01-18 04:56:13,064 DEBUG: UserStats endpoint called
+2025-01-18 04:56:13,064 DEBUG: Username is required
+2025-01-18 04:56:13,069 INFO: 127.0.0.1 - - [18/Jan/2025 04:56:13] "[35m[1mGET /api/user_stats?test2 HTTP/1.1[0m" 500 -
+2025-01-18 04:56:13,184 INFO: 127.0.0.1 - - [18/Jan/2025 04:56:13] "[36mGET /api/user_stats?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-18 04:56:13,485 INFO: 127.0.0.1 - - [18/Jan/2025 04:56:13] "[36mGET /api/user_stats?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-18 04:56:13,630 INFO: 127.0.0.1 - - [18/Jan/2025 04:56:13] "GET /api/user_stats?__debugger__=yes&cmd=resource&f=console.png&s=zjyhqKEmpf4CGGhtzicl HTTP/1.1" 200 -
+2025-01-18 04:56:13,764 INFO: 127.0.0.1 - - [18/Jan/2025 04:56:13] "[36mGET /api/user_stats?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-18 04:56:37,247 INFO:  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/api_routes.py', reloading
+2025-01-18 04:56:37,288 INFO:  * Restarting with stat
+2025-01-18 04:57:12,512 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.120:5000
+2025-01-18 04:57:12,512 INFO: [33mPress CTRL+C to quit[0m
+2025-01-18 04:57:12,513 INFO:  * Restarting with stat
+2025-01-18 04:57:12,782 WARNING:  * Debugger is active!
+2025-01-18 04:57:12,783 INFO:  * Debugger PIN: 728-071-023
+2025-01-18 04:57:14,812 INFO: 127.0.0.1 - - [18/Jan/2025 04:57:14] "[33mGET /api/user_stats=test2 HTTP/1.1[0m" 404 -
+2025-01-18 04:57:16,478 INFO: 127.0.0.1 - - [18/Jan/2025 04:57:16] "[33mGET /api/user_stats=test2 HTTP/1.1[0m" 404 -
+2025-01-18 04:57:17,083 INFO: 127.0.0.1 - - [18/Jan/2025 04:57:17] "GET /?vscodeBrowserReqId=1737176261776 HTTP/1.1" 200 -
+2025-01-18 04:57:17,451 INFO: 127.0.0.1 - - [18/Jan/2025 04:57:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-18 04:57:17,451 INFO: 127.0.0.1 - - [18/Jan/2025 04:57:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-18 04:57:17,595 INFO: 127.0.0.1 - - [18/Jan/2025 04:57:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-18 04:57:17,802 INFO: 127.0.0.1 - - [18/Jan/2025 04:57:17] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-18 04:57:17,853 INFO: 127.0.0.1 - - [18/Jan/2025 04:57:17] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-18 04:59:53,933 INFO: 127.0.0.1 - - [18/Jan/2025 04:59:53] "[33mGET /api/user_stats=test2 HTTP/1.1[0m" 404 -
+2025-01-18 04:59:57,731 DEBUG: UserStats endpoint called
+2025-01-18 04:59:57,731 DEBUG: Username is required
+2025-01-18 04:59:57,738 INFO: 127.0.0.1 - - [18/Jan/2025 04:59:57] "[35m[1mGET /api/user_stats?test2 HTTP/1.1[0m" 500 -
+2025-01-18 04:59:57,918 INFO: 127.0.0.1 - - [18/Jan/2025 04:59:57] "[36mGET /api/user_stats?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-18 04:59:58,049 INFO: 127.0.0.1 - - [18/Jan/2025 04:59:58] "[36mGET /api/user_stats?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-18 04:59:58,228 INFO: 127.0.0.1 - - [18/Jan/2025 04:59:58] "GET /api/user_stats?__debugger__=yes&cmd=resource&f=console.png&s=j08wAdx9QvF2lVfN7hUE HTTP/1.1" 200 -
+2025-01-18 04:59:58,576 INFO: 127.0.0.1 - - [18/Jan/2025 04:59:58] "[36mGET /api/user_stats?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-18 05:00:12,624 DEBUG: UserStats endpoint called
+2025-01-18 05:00:12,624 DEBUG: Username is required
+2025-01-18 05:00:12,629 INFO: 127.0.0.1 - - [18/Jan/2025 05:00:12] "[35m[1mGET /api/user_stats HTTP/1.1[0m" 500 -
+2025-01-18 05:00:12,700 DEBUG: UserStats endpoint called
+2025-01-18 05:00:12,700 DEBUG: Username is required
+2025-01-18 05:00:12,705 INFO: 127.0.0.1 - - [18/Jan/2025 05:00:12] "[35m[1mGET /api/user_stats HTTP/1.1[0m" 500 -
+2025-01-18 05:00:12,805 INFO: 127.0.0.1 - - [18/Jan/2025 05:00:12] "[36mGET /api/user_stats?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-18 05:00:12,814 INFO: 127.0.0.1 - - [18/Jan/2025 05:00:12] "[36mGET /api/user_stats?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-18 05:00:13,031 INFO: 127.0.0.1 - - [18/Jan/2025 05:00:13] "[36mGET /api/user_stats?__debugger__=yes&cmd=resource&f=console.png&s=j08wAdx9QvF2lVfN7hUE HTTP/1.1[0m" 304 -
+2025-01-18 05:00:50,131 DEBUG: UserStats endpoint called
+2025-01-18 05:00:50,131 DEBUG: Username from query parameters: test2
+2025-01-18 05:00:50,133 DEBUG: User found: {'id': 10, 'email': 'test2user@gmail.com', 'username': 'test2', 'password': '$2b$12$CBR5VmTUeGJmfk9RMKfoOOmDp8mXBBOzCx31.2gOcPQjzCCssb5NW', 'role': 'User', 'totp_secret': 'FPETK54CHVA2Z65N5GRF7WPMX3TPXI4E', 'is_verified': None}
+2025-01-18 05:00:50,134 DEBUG: User stats: {'num_logins': 3, 'num_logs': 5, 'activity_trends': [('Project example test 1', 5)]}
+2025-01-18 05:00:50,134 DEBUG: Returning user stats: {'num_logins': 3, 'num_logs': 5, 'activity_trends': [('Project example test 1', 5)]}
+2025-01-18 05:00:50,134 INFO: 127.0.0.1 - - [18/Jan/2025 05:00:50] "GET /api/user_stats?username=test2 HTTP/1.1" 200 -
+2025-01-18 05:01:21,556 INFO:  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/api_routes.py', reloading
+2025-01-18 05:01:21,598 INFO:  * Restarting with stat
+2025-01-18 05:01:21,875 WARNING:  * Debugger is active!
+2025-01-18 05:01:21,885 INFO:  * Debugger PIN: 728-071-023
+2025-01-18 05:01:24,536 DEBUG: UserStats endpoint called
+2025-01-18 05:01:24,536 DEBUG: Username from query parameters: test2
+2025-01-18 05:01:24,537 DEBUG: User found: {'id': 10, 'email': 'test2user@gmail.com', 'username': 'test2', 'password': '$2b$12$CBR5VmTUeGJmfk9RMKfoOOmDp8mXBBOzCx31.2gOcPQjzCCssb5NW', 'role': 'User', 'totp_secret': 'FPETK54CHVA2Z65N5GRF7WPMX3TPXI4E', 'is_verified': None}
+2025-01-18 05:01:24,537 DEBUG: User stats: {'num_logins': 3, 'num_logs': 5, 'activity_trends': [('Project example test 1', 5)]}
+2025-01-18 05:01:24,537 DEBUG: Returning user stats: {'num_logins': 3, 'num_logs': 5, 'activity_trends': [('Project example test 1', 5)]}
+2025-01-18 05:01:24,538 INFO: 127.0.0.1 - - [18/Jan/2025 05:01:24] "GET /api/user_stats?username=test2 HTTP/1.1" 200 -
+2025-01-18 05:01:44,061 DEBUG: GetLogs endpoint called
+2025-01-18 05:01:44,062 DEBUG: Login required: User not in session
+2025-01-18 05:01:44,070 INFO: 127.0.0.1 - - [18/Jan/2025 05:01:44] "[35m[1mGET /api/get_logs?username=test2 HTTP/1.1[0m" 500 -
+2025-01-18 05:01:44,262 INFO: 127.0.0.1 - - [18/Jan/2025 05:01:44] "GET /api/get_logs?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-01-18 05:01:44,347 INFO: 127.0.0.1 - - [18/Jan/2025 05:01:44] "GET /api/get_logs?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-01-18 05:01:44,596 INFO: 127.0.0.1 - - [18/Jan/2025 05:01:44] "GET /api/get_logs?__debugger__=yes&cmd=resource&f=console.png&s=LpLQPJB7scZqRad7TcgS HTTP/1.1" 200 -
+2025-01-18 05:01:44,773 INFO: 127.0.0.1 - - [18/Jan/2025 05:01:44] "GET /api/get_logs?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-01-18 05:04:21,757 DEBUG: GetLogs endpoint called
+2025-01-18 05:04:21,757 DEBUG: Login required: User not in session
+2025-01-18 05:04:21,763 INFO: 127.0.0.1 - - [18/Jan/2025 05:04:21] "[35m[1mGET /api/get_logs?username=test2 HTTP/1.1[0m" 500 -
+2025-01-18 05:04:22,108 INFO: 127.0.0.1 - - [18/Jan/2025 05:04:22] "[36mGET /api/get_logs?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-18 05:04:22,127 INFO: 127.0.0.1 - - [18/Jan/2025 05:04:22] "[36mGET /api/get_logs?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-18 05:04:22,272 INFO: 127.0.0.1 - - [18/Jan/2025 05:04:22] "[36mGET /api/get_logs?__debugger__=yes&cmd=resource&f=console.png&s=LpLQPJB7scZqRad7TcgS HTTP/1.1[0m" 304 -
+2025-01-18 05:04:22,420 INFO: 127.0.0.1 - - [18/Jan/2025 05:04:22] "[36mGET /api/get_logs?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-18 05:10:28,361 INFO:  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/api_routes.py', reloading
+2025-01-18 05:10:28,412 INFO:  * Restarting with stat
+2025-01-18 05:10:28,678 WARNING:  * Debugger is active!
+2025-01-18 05:10:28,678 INFO:  * Debugger PIN: 728-071-023
+2025-01-18 05:10:30,531 DEBUG: GetLogs endpoint called
+2025-01-18 05:10:30,531 DEBUG: Login required: User not in session
+2025-01-18 05:10:30,538 INFO: 127.0.0.1 - - [18/Jan/2025 05:10:30] "[35m[1mGET /api/get_logs?username=test2 HTTP/1.1[0m" 500 -
+2025-01-18 05:10:30,913 INFO: 127.0.0.1 - - [18/Jan/2025 05:10:30] "[36mGET /api/get_logs?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-18 05:10:30,925 INFO: 127.0.0.1 - - [18/Jan/2025 05:10:30] "[36mGET /api/get_logs?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-18 05:10:31,111 INFO: 127.0.0.1 - - [18/Jan/2025 05:10:31] "GET /api/get_logs?__debugger__=yes&cmd=resource&f=console.png&s=MOCZc7tQlxsU2Fk5obOw HTTP/1.1" 200 -
+2025-01-18 05:10:31,386 INFO: 127.0.0.1 - - [18/Jan/2025 05:10:31] "[36mGET /api/get_logs?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-18 05:10:55,696 DEBUG: UserStats endpoint called
+2025-01-18 05:10:55,696 DEBUG: Username from query parameters: test2
+2025-01-18 05:10:55,697 DEBUG: User found: {'id': 10, 'email': 'test2user@gmail.com', 'username': 'test2', 'password': '$2b$12$CBR5VmTUeGJmfk9RMKfoOOmDp8mXBBOzCx31.2gOcPQjzCCssb5NW', 'role': 'User', 'totp_secret': 'FPETK54CHVA2Z65N5GRF7WPMX3TPXI4E', 'is_verified': None}
+2025-01-18 05:10:55,697 DEBUG: User stats: {'num_logins': 3, 'num_logs': 5, 'activity_trends': [('Project example test 1', 5)]}
+2025-01-18 05:10:55,697 DEBUG: Returning user stats: {'num_logins': 3, 'num_logs': 5, 'activity_trends': [('Project example test 1', 5)]}
+2025-01-18 05:10:55,698 INFO: 127.0.0.1 - - [18/Jan/2025 05:10:55] "GET /api/user_stats?username=test2 HTTP/1.1" 200 -
+2025-01-18 05:11:02,439 DEBUG: UserStats endpoint called
+2025-01-18 05:11:02,439 DEBUG: Username from query parameters: cam
+2025-01-18 05:11:02,439 DEBUG: User found: {'id': 27, 'email': 'testuser1@gmail.com', 'username': 'cam', 'password': '$2b$12$gr2VQYSq1Y0uGcIisl7pzOyOJGWMHIroDd4wU/073jBqOkSvo6Iee', 'role': 'User', 'totp_secret': 'XBFYSTOKN6333HTAHTTDITC6NW7UUJTL', 'is_verified': None}
+2025-01-18 05:11:02,440 DEBUG: User stats: {'num_logins': 0, 'num_logs': 0, 'activity_trends': []}
+2025-01-18 05:11:02,440 DEBUG: Returning user stats: {'num_logins': 0, 'num_logs': 0, 'activity_trends': []}
+2025-01-18 05:11:02,440 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:02] "GET /api/user_stats?username=cam HTTP/1.1" 200 -
+2025-01-18 05:11:11,233 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:11] "GET / HTTP/1.1" 200 -
+2025-01-18 05:11:11,694 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-18 05:11:11,833 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:11] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-18 05:11:11,844 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:11] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-18 05:11:11,936 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:11] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-18 05:11:12,152 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:12] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-18 05:11:14,062 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:14] "GET /login HTTP/1.1" 200 -
+2025-01-18 05:11:14,190 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:14] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-18 05:11:14,194 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-18 05:11:14,195 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-18 05:11:14,263 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:14] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-18 05:11:14,314 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:14] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-18 05:11:20,276 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:20] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-01-18 05:11:20,333 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:20] "GET /verify_2fa HTTP/1.1" 200 -
+2025-01-18 05:11:20,595 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-18 05:11:20,596 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-18 05:11:20,597 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-18 05:11:20,718 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:20] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-18 05:11:20,764 INFO: 127.0.0.1 - - [18/Jan/2025 05:11:20] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-18 05:12:52,192 INFO: 127.0.0.1 - - [18/Jan/2025 05:12:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-01-18 05:12:52,532 INFO: 127.0.0.1 - - [18/Jan/2025 05:12:52] "GET /verify_2fa HTTP/1.1" 200 -
+2025-01-18 05:12:52,740 INFO: 127.0.0.1 - - [18/Jan/2025 05:12:52] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-18 05:12:52,743 INFO: 127.0.0.1 - - [18/Jan/2025 05:12:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-18 05:12:52,890 INFO: 127.0.0.1 - - [18/Jan/2025 05:12:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-18 05:12:53,128 INFO: 127.0.0.1 - - [18/Jan/2025 05:12:53] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-18 05:12:53,319 INFO: 127.0.0.1 - - [18/Jan/2025 05:12:53] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-18 05:13:20,716 INFO: 127.0.0.1 - - [18/Jan/2025 05:13:20] "[32mPOST /verify_2fa HTTP/1.1[0m" 302 -
+2025-01-18 05:13:20,778 INFO: 127.0.0.1 - - [18/Jan/2025 05:13:20] "GET /dashboard HTTP/1.1" 200 -
+2025-01-18 05:13:31,586 INFO: 127.0.0.1 - - [18/Jan/2025 05:13:31] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 05:13:31,645 INFO: 127.0.0.1 - - [18/Jan/2025 05:13:31] "GET /home_logged_in HTTP/1.1" 200 -
+2025-01-18 05:13:32,185 INFO: 127.0.0.1 - - [18/Jan/2025 05:13:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-18 05:13:32,212 INFO: 127.0.0.1 - - [18/Jan/2025 05:13:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-18 05:13:32,222 INFO: 127.0.0.1 - - [18/Jan/2025 05:13:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-18 05:13:32,293 INFO: 127.0.0.1 - - [18/Jan/2025 05:13:32] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-18 05:13:32,348 INFO: 127.0.0.1 - - [18/Jan/2025 05:13:32] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-18 05:13:33,831 DEBUG: UserStats endpoint called
+2025-01-18 05:13:33,831 DEBUG: Username from query parameters: test2
+2025-01-18 05:13:33,831 DEBUG: User found: {'id': 10, 'email': 'test2user@gmail.com', 'username': 'test2', 'password': '$2b$12$CBR5VmTUeGJmfk9RMKfoOOmDp8mXBBOzCx31.2gOcPQjzCCssb5NW', 'role': 'User', 'totp_secret': 'FPETK54CHVA2Z65N5GRF7WPMX3TPXI4E', 'is_verified': None}
+2025-01-18 05:13:33,832 DEBUG: User stats: {'num_logins': 5, 'num_logs': 5, 'activity_trends': [('Project example test 1', 5)]}
+2025-01-18 05:13:33,832 DEBUG: Returning user stats: {'num_logins': 5, 'num_logs': 5, 'activity_trends': [('Project example test 1', 5)]}
+2025-01-18 05:13:33,832 INFO: 127.0.0.1 - - [18/Jan/2025 05:13:33] "GET /api/user_stats?username=test2 HTTP/1.1" 200 -
+2025-01-18 05:13:41,347 DEBUG: GetLogs endpoint called
+2025-01-18 05:13:41,348 DEBUG: Logs retrieved successfully for user: test2
+2025-01-18 05:13:41,353 INFO: 127.0.0.1 - - [18/Jan/2025 05:13:41] "[35m[1mGET /api/get_logs?username=test2 HTTP/1.1[0m" 500 -
+2025-01-18 05:13:41,482 INFO: 127.0.0.1 - - [18/Jan/2025 05:13:41] "[36mGET /api/get_logs?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-18 05:13:41,482 INFO: 127.0.0.1 - - [18/Jan/2025 05:13:41] "[36mGET /api/get_logs?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-18 05:13:41,594 INFO: 127.0.0.1 - - [18/Jan/2025 05:13:41] "[36mGET /api/get_logs?__debugger__=yes&cmd=resource&f=console.png&s=MOCZc7tQlxsU2Fk5obOw HTTP/1.1[0m" 304 -
+2025-01-18 05:14:32,382 INFO:  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/api_routes.py', reloading
+2025-01-18 05:14:32,435 INFO:  * Restarting with stat
+2025-01-18 05:15:16,706 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.120:5000
+2025-01-18 05:15:16,706 INFO: [33mPress CTRL+C to quit[0m
+2025-01-18 05:15:16,707 INFO:  * Restarting with stat
+2025-01-18 05:15:16,993 WARNING:  * Debugger is active!
+2025-01-18 05:15:16,994 INFO:  * Debugger PIN: 728-071-023
+2025-01-18 05:15:21,833 INFO: 127.0.0.1 - - [18/Jan/2025 05:15:21] "[32mGET /?vscodeBrowserReqId=1737177346261 HTTP/1.1[0m" 302 -
+2025-01-18 05:15:22,116 INFO: 127.0.0.1 - - [18/Jan/2025 05:15:22] "GET /home_logged_in HTTP/1.1" 200 -
+2025-01-18 05:15:22,345 INFO: 127.0.0.1 - - [18/Jan/2025 05:15:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-18 05:15:22,456 INFO: 127.0.0.1 - - [18/Jan/2025 05:15:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-18 05:15:22,486 INFO: 127.0.0.1 - - [18/Jan/2025 05:15:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-18 05:15:22,569 INFO: 127.0.0.1 - - [18/Jan/2025 05:15:22] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-18 05:15:22,760 INFO: 127.0.0.1 - - [18/Jan/2025 05:15:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-18 05:15:32,958 INFO: 127.0.0.1 - - [18/Jan/2025 05:15:32] "[33mGET /api/user_stat?username=test2 HTTP/1.1[0m" 404 -
+2025-01-18 05:15:36,863 DEBUG: UserStats endpoint called
+2025-01-18 05:15:36,863 DEBUG: Username from query parameters: test2
+2025-01-18 05:15:36,864 DEBUG: User found: {'id': 10, 'email': 'test2user@gmail.com', 'username': 'test2', 'password': '$2b$12$CBR5VmTUeGJmfk9RMKfoOOmDp8mXBBOzCx31.2gOcPQjzCCssb5NW', 'role': 'User', 'totp_secret': 'FPETK54CHVA2Z65N5GRF7WPMX3TPXI4E', 'is_verified': None}
+2025-01-18 05:15:36,864 DEBUG: User stats: {'num_logins': 5, 'num_logs': 5, 'activity_trends': [('Project example test 1', 5)]}
+2025-01-18 05:15:36,864 DEBUG: Returning user stats: {'num_logins': 5, 'num_logs': 5, 'activity_trends': [('Project example test 1', 5)]}
+2025-01-18 05:15:36,865 INFO: 127.0.0.1 - - [18/Jan/2025 05:15:36] "GET /api/user_stats?username=test2 HTTP/1.1" 200 -
+2025-01-18 05:17:58,203 INFO: 127.0.0.1 - - [18/Jan/2025 05:17:58] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 05:17:58,571 INFO: 127.0.0.1 - - [18/Jan/2025 05:17:58] "GET /home_logged_in HTTP/1.1" 200 -
+2025-01-18 05:17:58,935 INFO: 127.0.0.1 - - [18/Jan/2025 05:17:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-18 05:17:59,003 INFO: 127.0.0.1 - - [18/Jan/2025 05:17:59] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-18 05:17:59,013 INFO: 127.0.0.1 - - [18/Jan/2025 05:17:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-18 05:17:59,094 INFO: 127.0.0.1 - - [18/Jan/2025 05:17:59] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-18 05:17:59,165 INFO: 127.0.0.1 - - [18/Jan/2025 05:17:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-18 05:18:00,965 INFO: 127.0.0.1 - - [18/Jan/2025 05:18:00] "GET /dashboard HTTP/1.1" 200 -
+2025-01-18 05:18:34,067 INFO: 127.0.0.1 - - [18/Jan/2025 05:18:34] "GET /analytics HTTP/1.1" 200 -
+2025-01-18 05:18:34,209 INFO: 127.0.0.1 - - [18/Jan/2025 05:18:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-18 05:18:34,211 INFO: 127.0.0.1 - - [18/Jan/2025 05:18:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-18 05:18:34,213 INFO: 127.0.0.1 - - [18/Jan/2025 05:18:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-18 05:18:34,286 INFO: 127.0.0.1 - - [18/Jan/2025 05:18:34] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-18 05:18:34,340 INFO: 127.0.0.1 - - [18/Jan/2025 05:18:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-18 05:21:01,300 INFO: 127.0.0.1 - - [18/Jan/2025 05:21:01] "GET /analytics HTTP/1.1" 200 -
+2025-01-18 05:21:01,759 INFO: 127.0.0.1 - - [18/Jan/2025 05:21:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-18 05:21:01,772 INFO: 127.0.0.1 - - [18/Jan/2025 05:21:01] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-18 05:21:01,791 INFO: 127.0.0.1 - - [18/Jan/2025 05:21:01] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-18 05:21:02,079 INFO: 127.0.0.1 - - [18/Jan/2025 05:21:02] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-18 05:21:02,203 INFO: 127.0.0.1 - - [18/Jan/2025 05:21:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-18 05:21:02,436 INFO: 127.0.0.1 - - [18/Jan/2025 05:21:02] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-18 05:23:20,193 INFO: 127.0.0.1 - - [18/Jan/2025 05:23:20] "GET /analytics HTTP/1.1" 200 -
+2025-01-18 05:23:20,476 INFO: 127.0.0.1 - - [18/Jan/2025 05:23:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-18 05:23:20,521 INFO: 127.0.0.1 - - [18/Jan/2025 05:23:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-18 05:23:20,521 INFO: 127.0.0.1 - - [18/Jan/2025 05:23:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-18 05:23:20,915 INFO: 127.0.0.1 - - [18/Jan/2025 05:23:20] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-18 05:23:21,269 INFO: 127.0.0.1 - - [18/Jan/2025 05:23:21] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-18 05:23:21,446 INFO: 127.0.0.1 - - [18/Jan/2025 05:23:21] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-18 05:25:12,027 INFO: 127.0.0.1 - - [18/Jan/2025 05:25:12] "GET /analytics HTTP/1.1" 200 -
+2025-01-18 05:25:12,330 INFO: 127.0.0.1 - - [18/Jan/2025 05:25:12] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-18 05:25:12,330 INFO: 127.0.0.1 - - [18/Jan/2025 05:25:12] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-18 05:25:12,331 INFO: 127.0.0.1 - - [18/Jan/2025 05:25:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-18 05:25:12,559 INFO: 127.0.0.1 - - [18/Jan/2025 05:25:12] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-18 05:25:12,684 INFO: 127.0.0.1 - - [18/Jan/2025 05:25:12] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-18 05:25:13,231 INFO: 127.0.0.1 - - [18/Jan/2025 05:25:13] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-18 05:25:37,940 INFO: 127.0.0.1 - - [18/Jan/2025 05:25:37] "GET /analytics HTTP/1.1" 200 -
+2025-01-18 05:25:38,267 INFO: 127.0.0.1 - - [18/Jan/2025 05:25:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-18 05:25:38,268 INFO: 127.0.0.1 - - [18/Jan/2025 05:25:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-18 05:25:38,406 INFO: 127.0.0.1 - - [18/Jan/2025 05:25:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-18 05:25:38,544 INFO: 127.0.0.1 - - [18/Jan/2025 05:25:38] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-18 05:25:38,591 INFO: 127.0.0.1 - - [18/Jan/2025 05:25:38] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-18 05:26:05,563 INFO: 127.0.0.1 - - [18/Jan/2025 05:26:05] "GET /analytics HTTP/1.1" 200 -
+2025-01-18 05:26:05,691 INFO: 127.0.0.1 - - [18/Jan/2025 05:26:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-18 05:26:05,696 INFO: 127.0.0.1 - - [18/Jan/2025 05:26:05] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-18 05:26:05,833 INFO: 127.0.0.1 - - [18/Jan/2025 05:26:05] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-18 05:26:05,920 INFO: 127.0.0.1 - - [18/Jan/2025 05:26:05] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-18 05:26:05,971 INFO: 127.0.0.1 - - [18/Jan/2025 05:26:05] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-18 05:26:06,148 INFO: 127.0.0.1 - - [18/Jan/2025 05:26:06] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
