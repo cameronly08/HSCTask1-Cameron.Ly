@@ -142,8 +142,11 @@ def register_auth_routes(app):
             except sqlite3.Error as e:
                 app_log.error("Database error during password reset request: %s", e)
                 flash("A database error occurred. Please try again later.")
-            except Exception as e:
-                app_log.error(f"Unexpected error during password reset request: {e}")
+            except (ConnectionError, TimeoutError) as e:
+                app_log.error("Network error during password reset request: %s", e)
+                flash("A network error occurred. Please try again later.")
+            except ValueError as e:
+                app_log.error("Value error during password reset request: %s", e)
                 flash("An unexpected error occurred. Please try again later.")
         return render_template("forgot_password.html")
 
@@ -161,9 +164,15 @@ def register_auth_routes(app):
                 dbHandler.update_password(reset["email"], hashed_password)
                 flash("Your password has been reset successfully.")
                 return redirect(url_for('login'))
-        except Exception as e:
-            app_log.error(f"Error during password reset: {e}")
-            flash("An error occurred. Please try again later.")
+        except sqlite3.Error as e:
+            app_log.error("Database error during password reset: %s", e)
+            flash("A database error occurred. Please try again later.")
+        except ValueError as e:
+            app_log.error("Value error during password reset: %s", e)
+            flash("An unexpected error occurred. Please try again later.")
+        except (ConnectionError, TimeoutError) as e:
+            app_log.error("Network error during password reset: %s", e)
+            flash("A network error occurred. Please try again later.")
         
         return render_template("reset_password.html", token=token)
     
