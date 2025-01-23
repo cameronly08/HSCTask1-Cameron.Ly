@@ -4,12 +4,13 @@ import pyotp
 import os
 import qrcode
 import logging
-from datetime import datetime, timedelta
-from flask_mail import Mail, Message
-import secrets
+from flask_mail import Mail
 from utils import validate_password
 import userManagement as dbHandler
 import sqlite3
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, SubmitField
+from wtforms.validators import DataRequired, Email
 
 app_log = logging.getLogger(__name__)
 
@@ -25,6 +26,12 @@ def init_mail(app):
     mail.init_app(app)
 
 def register_auth_routes(app):
+
+    class LoginForm(FlaskForm):
+        email = StringField('Email', validators=[DataRequired(), Email()])
+        password = PasswordField('Password', validators=[DataRequired()])
+        submit = SubmitField('Login')
+
     @app.route("/signup", methods=["GET", "POST"])
     def signup():
         """Handle user signup."""
@@ -71,11 +78,10 @@ def register_auth_routes(app):
     @app.route("/login", methods=["GET", "POST"])
     def login():
         """Handle user login."""
-        if request.method == "GET":
-            return render_template("login.html")
-        if request.method == "POST":
-            username_or_email = request.form["username_or_email"]
-            password = request.form["password"]   
+        form = LoginForm()
+        if form.validate_on_submit():
+            username_or_email = form.email.data
+            password = form.password.data
             if "@" in username_or_email:
                 user = dbHandler.get_user_by_email(username_or_email)
             else:
@@ -90,7 +96,8 @@ def register_auth_routes(app):
                 return redirect(url_for('verify_2fa'))
             else:
                 flash("Invalid username/email or password")
-                return render_template("login.html", error="Invalid username/email or password")
+                return render_template("login.html", form=form, error="Invalid username/email or password")
+        return render_template("login.html", form=form)
 
     @app.route("/verify_2fa", methods=["GET", "POST"])
     def verify_2fa():
@@ -122,60 +129,6 @@ def register_auth_routes(app):
         flash("You have been logged out.")
         return redirect(url_for('login'))
 
-    @app.route("/forgot_password", methods=["GET", "POST"])
-    def forgot_password():
-        if request.method == "POST":
-            email = request.form["email"]
-            try:
-                user = dbHandler.get_user_by_email(email)
-                if user:
-                    token = secrets.token_urlsafe(16)
-                    expiration = datetime.now() + timedelta(hours=1)
-                    dbHandler.store_reset_token(email, token, expiration)
-                    reset_link = url_for('reset_password', token=token, _external=True)
-                    msg = Message('Password Reset Request', sender='your-email@gmail.com', recipients=[email])
-                    msg.body = f'Click the link to reset your password: {reset_link}'
-                    mail.send(msg)
-                    flash("Password reset link has been sent to your email.")
-                else:
-                    flash("Email not found.")
-            except sqlite3.Error as e:
-                app_log.error("Database error during password reset request: %s", e)
-                flash("A database error occurred. Please try again later.")
-            except (ConnectionError, TimeoutError) as e:
-                app_log.error("Network error during password reset request: %s", e)
-                flash("A network error occurred. Please try again later.")
-            except ValueError as e:
-                app_log.error("Value error during password reset request: %s", e)
-                flash("An unexpected error occurred. Please try again later.")
-        return render_template("forgot_password.html")
-
-    @app.route("/reset_password/<token>", methods=["GET", "POST"])
-    def reset_password(token):
-        try:
-            reset = dbHandler.get_reset_token(token)
-            if not reset or datetime.now() > reset["expiration"]:
-                flash("Invalid or expired token.")
-                return redirect(url_for('forgot_password'))
-            
-            if request.method == "POST":
-                new_password = request.form["password"]
-                hashed_password = bcrypt.hashpw(new_password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
-                dbHandler.update_password(reset["email"], hashed_password)
-                flash("Your password has been reset successfully.")
-                return redirect(url_for('login'))
-        except sqlite3.Error as e:
-            app_log.error("Database error during password reset: %s", e)
-            flash("A database error occurred. Please try again later.")
-        except ValueError as e:
-            app_log.error("Value error during password reset: %s", e)
-            flash("An unexpected error occurred. Please try again later.")
-        except (ConnectionError, TimeoutError) as e:
-            app_log.error("Network error during password reset: %s", e)
-            flash("A network error occurred. Please try again later.")
-        
-        return render_template("reset_password.html", token=token)
-    
     def log_user_login(username):
         conn = sqlite3.connect('.databaseFiles/database.db')
         cursor = conn.cursor()
