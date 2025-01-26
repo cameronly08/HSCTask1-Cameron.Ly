@@ -5,7 +5,8 @@ content %}
   {% if error %}
   <div class="alert alert-danger" role="alert">{{ error }}</div>
   {% endif %}
-  <form method="POST" action="/login">
+  <form method="POST" action="{{ url_for('login') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
     <div class="form-group">
       <label for="username_or_email">Username or Email</label>
       <input

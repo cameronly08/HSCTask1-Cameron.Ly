@@ -2,7 +2,8 @@
 content %}
 <div class="container mt-5">
   <h1>Create Log</h1>
-  <form method="POST" action="/create_log">
+  <form method="POST" action="{{ url_for('create_log') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
     <div class="form-group">
       <label for="current_datetime">Current Date and Time:</label>
       <input

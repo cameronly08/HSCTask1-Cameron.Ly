@@ -1,8 +1,8 @@
 import logging
 from datetime import timedelta
 from flask import Flask
-from flask_mail import Mail
 from flask_wtf.csrf import CSRFProtect
+from flask_mail import Mail
 import auth_routes
 import main_routes
 import api_routes
@@ -20,9 +20,8 @@ logging.basicConfig(
 app = Flask(__name__)
 app.secret_key = b"_53oi3uriq9pifpff;apl"
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=30)
-app.config['SESSION_COOKIE_HTTPONLY'] = True
-app.config['SESSION_COOKIE_SECURE'] = True
 
+# Initialize CSRF protection
 csrf = CSRFProtect(app)
 
 # Configure Flask-Mail

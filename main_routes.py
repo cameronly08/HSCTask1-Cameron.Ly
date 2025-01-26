@@ -2,7 +2,7 @@ from flask import render_template, request, redirect, url_for, flash, session
 from datetime import datetime
 import userManagement as dbHandler
 import bcrypt
-from utils import validate_password
+from utils import validate_password, basic_sanitize_input
 
 def register_main_routes(app):
     @app.route("/", methods=["GET"])
@@ -55,10 +55,10 @@ def register_main_routes(app):
         if request.method == "POST":
             date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             developer_name = session['username']
-            project = request.form["project"]
-            content = request.form["content"]
-            code_snippet = request.form["code_snippet"]
-            repository = request.form.get("repository_link")
+            project = basic_sanitize_input(request.form["project"])
+            content = basic_sanitize_input(request.form["content"])
+            code_snippet = basic_sanitize_input(request.form["code_snippet"])
+            repository = basic_sanitize_input(request.form.get("repository_link"))
             
             dbHandler.add_log(date, developer_name, project, content, code_snippet, repository)
             flash("Log created successfully!")
@@ -95,11 +95,11 @@ def register_main_routes(app):
             flash("You need to log in first.")
             return redirect(url_for('login'))
         
-        developer = request.args.get('developer')
-        date = request.args.get('date')
-        project = request.args.get('project')
-        sort_by = request.args.get('sort_by', 'date')
-        sort_order = request.args.get('sort_order', 'asc')
+        developer = basic_sanitize_input(request.args.get('developer'))
+        date = basic_sanitize_input(request.args.get('date'))
+        project = basic_sanitize_input(request.args.get('project'))
+        sort_by = basic_sanitize_input(request.args.get('sort_by', 'date'))
+        sort_order = basic_sanitize_input(request.args.get('sort_order', 'asc'))
         
         page = request.args.get('page', 1, type=int)
         per_page = 5
@@ -122,9 +122,9 @@ def register_main_routes(app):
         if request.method == "GET":
             return render_template("edit_log.html", log=log)
         if request.method == "POST":
-            project = request.form["project"]
-            content = request.form["content"]
-            code_snippet = request.form["code_snippet"]
+            project = basic_sanitize_input(request.form["project"])
+            content = basic_sanitize_input(request.form["content"])
+            code_snippet = basic_sanitize_input(request.form["code_snippet"])
             
             dbHandler.update_log(log_id, project, content, code_snippet)
             flash("Log updated successfully!")
@@ -159,9 +159,9 @@ def register_main_routes(app):
             flash("You need to log in first.")
             return redirect(url_for('login'))
         
-        email = request.form["email"]
-        new_username = request.form["username"]
-        new_password = request.form["password"]
+        email = basic_sanitize_input(request.form["email"])
+        new_username = basic_sanitize_input(request.form["username"])
+        new_password = request.form["password"]  # Password validation is done separately
         current_username = session['username']
         
         username_error = None

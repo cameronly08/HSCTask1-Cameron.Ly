@@ -1,16 +1,17 @@
-from flask import render_template, request, redirect, url_for, flash, session, current_app
+import os
+import logging
+import secrets
+from datetime import datetime, timedelta
+import sqlite3
+
 import bcrypt
 import pyotp
-import os
 import qrcode
-import logging
-from flask_mail import Mail
-from utils import validate_password
+from flask import render_template, request, redirect, url_for, flash, session, current_app
+from flask_mail import Mail, Message
+from flask_wtf.csrf import validate_csrf
+from utils import validate_password, basic_sanitize_input, validate_email, validate_username
 import userManagement as dbHandler
-import sqlite3
-from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import DataRequired, Email
 
 app_log = logging.getLogger(__name__)
 
@@ -21,33 +22,42 @@ def init_mail(app):
     app.config['MAIL_SERVER'] = 'smtp.gmail.com'
     app.config['MAIL_PORT'] = 587
     app.config['MAIL_USE_TLS'] = True
-    app.config['MAIL_USERNAME'] = 'pixelpigeon82@gmail.com'  
-    app.config['MAIL_PASSWORD'] = 'PigeonPasswordEats'  
+    app.config['MAIL_USERNAME'] = 'pixelpigeon82@gmail.com'
+    app.config['MAIL_PASSWORD'] = 'PigeonPasswordEats'
     mail.init_app(app)
 
 def register_auth_routes(app):
-
-    class LoginForm(FlaskForm):
-        email = StringField('Email', validators=[DataRequired(), Email()])
-        password = PasswordField('Password', validators=[DataRequired()])
-        submit = SubmitField('Login')
-
     @app.route("/signup", methods=["GET", "POST"])
     def signup():
         """Handle user signup."""
         if request.method == "GET":
             return render_template("signup.html")
         if request.method == "POST":
-            email = request.form["email"]
-            username = request.form["username"]
+            try:
+                validate_csrf(request.form['csrf_token'])
+            except ValueError:
+                flash("CSRF token is missing or invalid.")
+                return render_template("signup.html", error="CSRF token is missing or invalid.")
+
+            email = basic_sanitize_input(request.form["email"])
+            username = basic_sanitize_input(request.form["username"])
             password = request.form["password"]
-            role = request.form["role"]
-            
+            role = basic_sanitize_input(request.form["role"])
+
+            # Validate inputs
+            if not validate_email(email):
+                flash("Invalid email format.")
+                return render_template("signup.html", error="Invalid email format.")
+
+            if not validate_username(username):
+                flash("Invalid username format. Use only letters, numbers, and underscores.")
+                return render_template("signup.html", error="Invalid username format.")
+
             existing_user = dbHandler.get_user_by_email(email)
             if existing_user:
                 flash("This email is already associated with an account. Please log in instead.")
                 return render_template("signup.html", error="This email is already associated with an account. Please log in instead.")
-            
+
             # Check if the username already exists
             existing_user_by_username = dbHandler.get_user(username)
             if existing_user_by_username:
@@ -78,15 +88,20 @@ def register_auth_routes(app):
     @app.route("/login", methods=["GET", "POST"])
     def login():
         """Handle user login."""
-        form = LoginForm()
-        if form.validate_on_submit():
-            username_or_email = form.email.data
-            password = form.password.data
+        if request.method == "POST":
+            try:
+                validate_csrf(request.form['csrf_token'])
+            except ValueError:
+                flash("CSRF token is missing or invalid.")
+                return render_template("login.html", error="CSRF token is missing or invalid.")
+
+            username_or_email = basic_sanitize_input(request.form["username_or_email"])
+            password = request.form["password"]
             if "@" in username_or_email:
                 user = dbHandler.get_user_by_email(username_or_email)
             else:
                 user = dbHandler.get_user(username_or_email)
-            
+
             if user and bcrypt.checkpw(password.encode('utf-8'), user["password"].encode('utf-8')):
                 session['username'] = user['username']
                 session['email'] = user['email']
@@ -96,16 +111,20 @@ def register_auth_routes(app):
                 return redirect(url_for('verify_2fa'))
             else:
                 flash("Invalid username/email or password")
-                return render_template("login.html", form=form, error="Invalid username/email or password")
-        return render_template("login.html", form=form)
+                return render_template("login.html", error="Invalid username/email or password")
+        return render_template("login.html")
 
     @app.route("/verify_2fa", methods=["GET", "POST"])
     def verify_2fa():
         """Handle 2FA verification."""
-        if request.method == "GET":
-            return render_template("verify_2fa.html")
         if request.method == "POST":
-            code = request.form["code"]
+            try:
+                validate_csrf(request.form['csrf_token'])
+            except ValueError:
+                flash("CSRF token is missing or invalid.")
+                return render_template("verify_2fa.html", error="CSRF token is missing or invalid.")
+
+            code = basic_sanitize_input(request.form["code"])
             username = session.get('username')
             user = dbHandler.get_user(username)
             totp = pyotp.TOTP(user['totp_secret'])
@@ -119,6 +138,7 @@ def register_auth_routes(app):
             else:
                 flash("Invalid 2FA code")
                 return render_template("verify_2fa.html", error="Invalid 2FA code")
+        return render_template("verify_2fa.html")
 
     @app.route("/logout")
     def logout():
@@ -128,6 +148,75 @@ def register_auth_routes(app):
         session.pop('role', None)
         flash("You have been logged out.")
         return redirect(url_for('login'))
+
+    @app.route("/forgot_password", methods=["GET", "POST"])
+    def forgot_password():
+        if request.method == "POST":
+            email = basic_sanitize_input(request.form["email"])
+            try:
+                if not validate_email(email):
+                    flash("Invalid email format.")
+                    return render_template("forgot_password.html")
+
+                user = dbHandler.get_user_by_email(email)
+                if user:
+                    token = secrets.token_urlsafe(16)
+                    expiration = datetime.now() + timedelta(hours=1)
+                    dbHandler.store_reset_token(email, token, expiration)
+                    reset_link = url_for('reset_password', token=token, _external=True)
+                    msg = Message('Password Reset Request', sender='your-email@gmail.com', recipients=[email])
+                    msg.body = f'Click the link to reset your password: {reset_link}'
+                    mail.send(msg)
+                    flash("Password reset link has been sent to your email.")
+                else:
+                    flash("Email not found.")
+            except sqlite3.Error as e:
+                app_log.error("Database error during password reset request: %s", e)
+                flash("A database error occurred. Please try again later.")
+            except (ConnectionError, TimeoutError) as e:
+                app_log.error("Network error during password reset request: %s", e)
+                flash("A network error occurred. Please try again later.")
+            except ValueError as e:
+                app_log.error("Value error during password reset request: %s", e)
+                flash("An unexpected error occurred. Please try again later.")
+        return render_template("forgot_password.html")
+
+    @app.route("/reset_password/<token>", methods=["GET", "POST"])
+    def reset_password(token):
+        try:
+            reset = dbHandler.get_reset_token(token)
+            if not reset or datetime.now() > reset["expiration"]:
+                flash("Invalid or expired token.")
+                return redirect(url_for('forgot_password'))
+
+            if request.method == "POST":
+                try:
+                    validate_csrf(request.form['csrf_token'])
+                except ValueError:
+                    flash("CSRF token is missing or invalid.")
+                    return render_template("reset_password.html", token=token, error="CSRF token is missing or invalid.")
+
+                new_password = request.form["password"]
+                validation_result = validate_password(new_password)
+                if validation_result != "Password is valid.":
+                    flash(validation_result)
+                    return render_template("reset_password.html", token=token)
+
+                hashed_password = bcrypt.hashpw(new_password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+                dbHandler.update_password(reset["email"], hashed_password)
+                flash("Your password has been reset successfully.")
+                return redirect(url_for('login'))
+        except sqlite3.Error as e:
+            app_log.error("Database error during password reset: %s", e)
+            flash("A database error occurred. Please try again later.")
+        except ValueError as e:
+            app_log.error("Value error during password reset: %s", e)
+            flash("An unexpected error occurred. Please try again later.")
+        except (ConnectionError, TimeoutError) as e:
+            app_log.error("Network error during password reset: %s", e)
+            flash("A network error occurred. Please try again later.")
+
+        return render_template("reset_password.html", token=token)
 
     def log_user_login(username):
         conn = sqlite3.connect('.databaseFiles/database.db')
