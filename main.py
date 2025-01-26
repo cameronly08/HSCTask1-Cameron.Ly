@@ -35,6 +35,23 @@ main_routes.register_main_routes(app)
 # Register API routes for data sharing
 api_routes.api.init_app(app)
 
+# Set Content Security Policy (CSP) headers
+@app.after_request
+def set_csp(response):
+    response.headers['Content-Security-Policy'] = (
+        "default-src 'self'; "
+        "script-src 'self' https://code.jquery.com https://cdn.jsdelivr.net; "
+        "style-src 'self' https://stackpath.bootstrapcdn.com; "
+        "img-src 'self'; "
+        "font-src 'self'; "
+        "connect-src 'self'; "
+        "frame-src 'self'; "
+        "object-src 'none'; "
+        "base-uri 'self'; "
+        "form-action 'self';"
+    )
+    return response
+
 if __name__ == '__main__':
     app.config["TEMPLATES_AUTO_RELOAD"] = True
     app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 0

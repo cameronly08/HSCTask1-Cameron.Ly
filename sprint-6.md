@@ -23,7 +23,7 @@ In this sprint, we focus on ensuring the absolute security of the application by
 
 ---
 
-### **2. XSS Mitigation**
+### ~~**2. XSS Mitigation**~~
 
 - Sanitize and escape all user input to prevent malicious script injection.
 - Use template rendering with safe escape mechanisms.
@@ -32,7 +32,7 @@ In this sprint, we focus on ensuring the absolute security of the application by
 
 ---
 
-### **3. Strengthening Authentication and Session Management**
+### ~~**3. Strengthening Authentication and Session Management**~~
 
 - Use password hashing libraries (e.g., bcrypt).
 - Configure secure session cookie settings.
