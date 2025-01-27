@@ -10,6 +10,8 @@ import qrcode
 from flask import render_template, request, redirect, url_for, flash, session, current_app
 from flask_mail import Mail, Message
 from flask_wtf.csrf import validate_csrf
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 from utils import validate_password, basic_sanitize_input, validate_email, validate_username
 import userManagement as dbHandler
 
@@ -27,6 +29,12 @@ def init_mail(app):
     mail.init_app(app)
 
 def register_auth_routes(app):
+    limiter = Limiter(
+        get_remote_address,
+        app=app,
+        default_limits=["100 per day", "10 per hour"]
+    )
+
     @app.route("/signup", methods=["GET", "POST"])
     def signup():
         """Handle user signup."""
@@ -86,6 +94,7 @@ def register_auth_routes(app):
             return render_template("signup_success.html", username=username)
 
     @app.route("/login", methods=["GET", "POST"])
+    @limiter.limit("5 per minute")
     def login():
         """Handle user login."""
         if request.method == "POST":

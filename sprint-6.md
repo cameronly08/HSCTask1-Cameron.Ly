@@ -39,7 +39,7 @@ In this sprint, we focus on ensuring the absolute security of the application by
 
 ---
 
-### **4. Brute Force Attack Prevention**
+### ~~**4. Brute Force Attack Prevention**~~
 
 - Implement account lockout after repeated failed login attempts.
 - Introduce CAPTCHA or other mechanisms for persistent failures.

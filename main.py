@@ -3,6 +3,8 @@ from datetime import timedelta
 from flask import Flask
 from flask_wtf.csrf import CSRFProtect
 from flask_mail import Mail
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 import auth_routes
 import main_routes
 import api_routes
@@ -34,6 +36,13 @@ main_routes.register_main_routes(app)
 
 # Register API routes for data sharing
 api_routes.api.init_app(app)
+
+# Initialize rate limiting
+limiter = Limiter(
+    get_remote_address,
+    app=app,
+    default_limits=["200 per day", "50 per hour"]
+)
 
 # Set Content Security Policy (CSP) headers
 @app.after_request

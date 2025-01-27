@@ -3459,3 +3459,66 @@
 2025-01-26 05:41:10,826 INFO: 127.0.0.1 - - [26/Jan/2025 05:41:10] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
 2025-01-26 05:41:10,877 INFO: 127.0.0.1 - - [26/Jan/2025 05:41:10] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
 2025-01-26 05:41:11,628 INFO: 127.0.0.1 - - [26/Jan/2025 05:41:11] "GET /dashboard HTTP/1.1" 200 -
+2025-01-26 05:59:12,822 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.129:5000
+2025-01-26 05:59:12,822 INFO: [33mPress CTRL+C to quit[0m
+2025-01-26 05:59:12,822 INFO:  * Restarting with stat
+2025-01-26 05:59:13,143 WARNING:  * Debugger is active!
+2025-01-26 05:59:13,143 INFO:  * Debugger PIN: 488-356-457
+2025-01-26 05:59:16,635 INFO: 127.0.0.1 - - [26/Jan/2025 05:59:16] "[32mGET /?vscodeBrowserReqId=1737871166492 HTTP/1.1[0m" 302 -
+2025-01-26 05:59:16,940 INFO: 127.0.0.1 - - [26/Jan/2025 05:59:16] "GET /home_logged_in HTTP/1.1" 200 -
+2025-01-26 05:59:17,341 INFO: 127.0.0.1 - - [26/Jan/2025 05:59:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-26 05:59:17,396 INFO: 127.0.0.1 - - [26/Jan/2025 05:59:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-26 05:59:17,396 INFO: 127.0.0.1 - - [26/Jan/2025 05:59:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-26 05:59:17,737 INFO: 127.0.0.1 - - [26/Jan/2025 05:59:17] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-26 05:59:17,826 INFO: 127.0.0.1 - - [26/Jan/2025 05:59:17] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-26 05:59:34,206 INFO: 127.0.0.1 - - [26/Jan/2025 05:59:34] "GET /create_log HTTP/1.1" 200 -
+2025-01-26 05:59:34,555 INFO: 127.0.0.1 - - [26/Jan/2025 05:59:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-26 05:59:34,556 INFO: 127.0.0.1 - - [26/Jan/2025 05:59:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-26 05:59:34,684 INFO: 127.0.0.1 - - [26/Jan/2025 05:59:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-26 05:59:34,827 INFO: 127.0.0.1 - - [26/Jan/2025 05:59:34] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-26 05:59:34,875 INFO: 127.0.0.1 - - [26/Jan/2025 05:59:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-26 05:59:35,360 INFO: 127.0.0.1 - - [26/Jan/2025 05:59:35] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-26 05:59:36,388 INFO: 127.0.0.1 - - [26/Jan/2025 05:59:36] "GET /dashboard HTTP/1.1" 200 -
+2025-01-26 06:04:25,370 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:25] "GET /dashboard HTTP/1.1" 200 -
+2025-01-26 06:04:26,913 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:26] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-01-26 06:04:27,164 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:27] "GET /login HTTP/1.1" 200 -
+2025-01-26 06:04:27,420 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-26 06:04:27,440 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-26 06:04:27,658 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:27] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-26 06:04:27,862 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:27] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-26 06:04:27,917 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:27] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-26 06:04:31,094 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:31] "POST /login HTTP/1.1" 200 -
+2025-01-26 06:04:31,235 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-26 06:04:31,237 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:31] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-26 06:04:31,369 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-26 06:04:31,464 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:31] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-26 06:04:31,520 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-26 06:04:34,633 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:34] "POST /login HTTP/1.1" 200 -
+2025-01-26 06:04:34,769 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-26 06:04:34,771 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-26 06:04:34,773 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-26 06:04:34,854 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:34] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-26 06:04:34,901 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-26 06:04:38,148 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:38] "POST /login HTTP/1.1" 200 -
+2025-01-26 06:04:38,304 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-26 06:04:38,306 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-26 06:04:38,308 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-26 06:04:38,374 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:38] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-26 06:04:38,423 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:38] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-26 06:04:44,665 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:44] "POST /login HTTP/1.1" 200 -
+2025-01-26 06:04:44,834 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-26 06:04:44,836 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-26 06:04:44,836 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-26 06:04:44,912 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:44] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-26 06:04:44,959 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-26 06:04:47,603 INFO: ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+2025-01-26 06:04:47,603 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:47] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+2025-01-26 06:04:50,095 INFO: ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+2025-01-26 06:04:50,096 INFO: 127.0.0.1 - - [26/Jan/2025 06:04:50] "[31m[1mGET /login HTTP/1.1[0m" 429 -
+2025-01-26 06:05:19,263 INFO:  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/auth_routes.py', reloading
+2025-01-26 06:05:19,306 INFO:  * Restarting with stat
+2025-01-26 06:05:19,657 WARNING:  * Debugger is active!
+2025-01-26 06:05:19,657 INFO:  * Debugger PIN: 488-356-457
