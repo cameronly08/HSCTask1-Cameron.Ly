@@ -4270,3 +4270,17 @@
 2025-01-29 04:28:34,674 INFO: 127.0.0.1 - - [29/Jan/2025 04:28:34] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
 2025-01-29 04:28:34,723 INFO: 127.0.0.1 - - [29/Jan/2025 04:28:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
 2025-01-29 04:28:35,809 INFO: 127.0.0.1 - - [29/Jan/2025 04:28:35] "GET /dashboard HTTP/1.1" 200 -
+2025-01-29 04:32:23,812 INFO: 127.0.0.1 - - [29/Jan/2025 04:32:23] "GET /dashboard HTTP/1.1" 200 -
+2025-01-29 04:32:26,131 INFO: 127.0.0.1 - - [29/Jan/2025 04:32:26] "GET /home_logged_in HTTP/1.1" 200 -
+2025-01-29 04:32:26,538 INFO: 127.0.0.1 - - [29/Jan/2025 04:32:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 04:32:26,540 INFO: 127.0.0.1 - - [29/Jan/2025 04:32:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 04:32:26,601 INFO: 127.0.0.1 - - [29/Jan/2025 04:32:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 04:32:26,745 INFO: 127.0.0.1 - - [29/Jan/2025 04:32:26] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 04:32:26,951 INFO: 127.0.0.1 - - [29/Jan/2025 04:32:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 04:32:28,260 INFO: 127.0.0.1 - - [29/Jan/2025 04:32:28] "GET /dashboard HTTP/1.1" 200 -
+2025-01-29 04:34:33,924 INFO: 127.0.0.1 - - [29/Jan/2025 04:34:33] "GET /analytics HTTP/1.1" 200 -
+2025-01-29 04:34:34,131 INFO: 127.0.0.1 - - [29/Jan/2025 04:34:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 04:34:34,283 INFO: 127.0.0.1 - - [29/Jan/2025 04:34:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 04:34:34,369 INFO: 127.0.0.1 - - [29/Jan/2025 04:34:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 04:34:34,514 INFO: 127.0.0.1 - - [29/Jan/2025 04:34:34] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 04:34:34,630 INFO: 127.0.0.1 - - [29/Jan/2025 04:34:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
