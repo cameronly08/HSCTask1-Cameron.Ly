@@ -4,6 +4,7 @@ content %}
   <h1>Profile</h1>
   {% if user %}
   <form method="POST" action="{{ url_for('update_profile') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
     <div class="form-group">
       <label for="email">Email</label>
       <input
