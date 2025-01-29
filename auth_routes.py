@@ -7,12 +7,13 @@ import sqlite3
 import bcrypt
 import pyotp
 import qrcode
-from flask import render_template, request, redirect, url_for, flash, session, current_app
+from flask import render_template, request, redirect, url_for, flash, session, current_app, send_file
 from flask_mail import Mail, Message
 from flask_wtf.csrf import validate_csrf
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from urllib.parse import urlparse, urljoin
+from io import BytesIO
 from utils import validate_password, basic_sanitize_input, validate_email, validate_username
 import userManagement as dbHandler
 
@@ -256,3 +257,79 @@ def register_auth_routes(app):
         cursor.execute("INSERT INTO logins (username) VALUES (?)", (username,))
         conn.commit()
         conn.close()
+    
+    @app.route("/privacy")
+    def privacy():
+        return render_template("privacy.html")
+    
+
+    @app.route("/settings")
+    def settings():
+        """Render the settings page."""
+        if 'username' not in session:
+            flash("You must be logged in to access settings.")
+            return redirect(url_for('login'))
+        
+        user = dbHandler.get_user(session['username'])  # Get user from DB
+        if not user:
+            flash("User not found.")
+            return redirect(url_for('login'))
+
+        return render_template("settings.html", user=user)
+
+    @app.route("/download_data", methods=["GET"])
+    def download_data():
+        """Allow users to download their personal data."""
+        if 'username' not in session:
+            flash("You must be logged in to download data.")
+            return redirect(url_for('login'))
+
+        user = dbHandler.get_user(session['username'])
+        if not user:
+            flash("User not found.")
+            return redirect(url_for('login'))
+
+        # Fetch user logs
+        logs = dbHandler.get_logs_by_user(user['username'])
+
+        # Create a text file in memory
+        output = BytesIO()
+        output.write(f"Username: {user['username']}\n".encode())
+        output.write(f"Email: {user['email']}\n".encode())
+        output.write(f"Role: {user['role']}\n\n".encode())
+        output.write("Logs:\n".encode())
+
+        for log in logs:
+            output.write(f"- {log['date']}: {log['project']} - {log['content']}\n".encode())
+
+        output.seek(0)  # Move cursor to the start
+
+        return send_file(output, as_attachment=True, download_name=f"{user['username']}_data.txt", mimetype="text/plain")
+
+    @app.route("/delete_data", methods=["POST"])
+    def delete_data():
+        """Allow users to delete their personal data (e.g., logs, projects)."""
+        if 'username' not in session:
+            flash("You must be logged in to delete your data.")
+            return redirect(url_for('login'))
+
+        user = dbHandler.get_user(session['username'])
+        if not user:
+            flash("User not found.")
+            return redirect(url_for('login'))
+
+        # Ensure that user confirms their action
+        confirm = request.form.get('confirm_delete')
+        if confirm != 'YES':
+            flash("You must confirm your action to delete your data.")
+            return redirect(url_for('settings'))
+
+        # Delete user data (logs, projects, etc.) but leave account intact
+        try:
+            dbHandler.delete_user_data(user['username']) 
+            flash("Your data has been successfully deleted.")
+            return redirect(url_for('settings'))
+        except Exception as e:
+            app_log.error(f"Error deleting user data: {e}")
+            flash("An error occurred while deleting your data. Please try again.")
+            return redirect(url_for('settings'))

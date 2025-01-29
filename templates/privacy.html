@@ -1,11 +1,97 @@
-{% extends 'layout.html' %}
-{% block content %}
-<div class="container">
-    <div class="row">
-        <h1 class="display-1">Privacy Policy</h1>
-    </div>
-    <div class="row">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('home_logged_in') }}">Home</a></li>
+          <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
 
+    <div class="container">
+      <h1>Privacy Policy</h1>
+
+      <p>Effective date: January 29, 2025</p>
+
+      <p>
+        We value your privacy and want to be transparent about the data we
+        collect. This privacy policy explains the types of information we
+        collect, how we use it, and your rights regarding your personal data.
+      </p>
+
+      <h2>Information We Collect</h2>
+      <p>We collect the following types of data:</p>
+      <ul>
+        <li>
+          Personal information: such as your name, email address, and username
+          when you create an account.
+        </li>
+        <li>
+          Usage data: such as your IP address, browser type, and pages visited
+          on our website.
+        </li>
+      </ul>
+
+      <h2>How We Use Your Data</h2>
+      <p>We use your data for the following purposes:</p>
+      <ul>
+        <li>To provide and improve our services.</li>
+        <li>
+          To send you relevant updates, emails, or newsletters (if you have
+          opted in).
+        </li>
+        <li>To monitor and analyze usage to enhance user experience.</li>
+      </ul>
+
+      <h2>Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Access, correct, or delete your personal information.</li>
+        <li>Opt-out of marketing emails.</li>
+        <li>Request information about how we handle your data.</li>
+      </ul>
+
+      <h2>Third-Party Services</h2>
+      <p>
+        We may share your information with third-party services for
+        functionality such as email marketing or payment processing. We ensure
+        that these third parties comply with our privacy standards.
+      </p>
+
+      <h2>Cookies</h2>
+      <p>
+        We use cookies to improve user experience. You can disable cookies in
+        your browser settings, but this may affect your ability to use some
+        features of the website.
+      </p>
+
+      <h2>Changes to This Privacy Policy</h2>
+      <p>
+        We may update our privacy policy from time to time. Any changes will be
+        posted here with an updated "Effective date".
+      </p>
+
+      <h2>Contact Us</h2>
+      <p>
+        If you have any questions or concerns about this privacy policy, please
+        contact us at
+        <a href="mailto:your-email@example.com">your-email@example.com</a>.
+      </p>
     </div>
-</div>
-{% endblock %}
+
+    <footer>
+      <p>&copy; 2025 Your Company</p>
+    </footer>
+  </body>
+</html>

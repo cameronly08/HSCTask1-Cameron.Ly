@@ -318,3 +318,44 @@ def get_top_projects(username):
     project_list = [(project[0], project[1]) for project in projects]
     
     return project_list
+
+
+def get_logs_by_user(username):
+    """Retrieve all logs associated with a specific user."""
+    try:
+        conn = sqlite3.connect('.databaseFiles/database.db')
+        cursor = conn.cursor()
+        
+        # Query to fetch all logs for the user
+        cursor.execute("SELECT * FROM logs WHERE developer_name = ?", (username,))
+        logs = cursor.fetchall()
+        
+        conn.close()
+        
+        # Convert logs to a list of dictionaries
+        column_names = ["id", "date", "developer_name", "project", "content", "code_snippet", "last_edited", "repository_link"]
+        logs_as_dicts = [dict(zip(column_names, log)) for log in logs]
+        
+        return logs_as_dicts
+
+    except sqlite3.Error as e:
+        raise DatabaseError(f"Database error: {e}") from e
+
+
+def delete_user_data(username):
+    """Delete all user-related data except the account itself."""
+    try:
+        conn = sqlite3.connect('.databaseFiles/database.db')
+        cursor = conn.cursor()
+        
+        # Delete logs created by the user
+        cursor.execute("DELETE FROM logs WHERE developer_name = ?", (username,))
+        
+        # Delete login history for the user (if applicable)
+        cursor.execute("DELETE FROM logins WHERE username = ?", (username,))
+        
+        conn.commit()
+        conn.close()
+        
+    except sqlite3.Error as e:
+        raise DatabaseError(f"Database error: {e}") from e

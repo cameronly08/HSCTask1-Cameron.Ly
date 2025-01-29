@@ -1,13 +1,150 @@
-*   {
-
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-
+  font-family: "Roboto", Arial, sans-serif; /* Modern, clean font */
+  background-color: #f8f9fa; /* Light background for better contrast */
+  color: #333; /* Dark text color for good readability */
+  line-height: 1.6;
 }
+
 .container {
-
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.row {
-    
+/* Navigation Bar Styling */
+.navbar {
+  background-color: #ffffff; /* White background for navbar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.navbar-brand {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #333; /* Darker color for better contrast */
+  font-size: 1.1em;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #007bff; /* Blue hover effect for clarity */
+}
+
+.navbar-toggler {
+  border-color: #007bff;
+}
+
+.navbar-toggler-icon {
+  background-color: #007bff;
+}
+
+/* Button Customization */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+/* Form Elements */
+.form-control {
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Pagination Styling */
+.pagination {
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.pagination .page-item .page-link {
+  color: #007bff;
+  border-color: #007bff;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.pagination .page-item .page-link:hover {
+  color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* List Group Styling for Logs */
+.list-group-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.list-group-item .log-content {
+  margin-top: 10px;
+  /* No truncation, make sure content expands fully */
+  max-height: none; /* No height limitation */
+}
+
+.list-group-item pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.list-group-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.list-group-item a:hover {
+  text-decoration: underline;
+}
+
+/* Media Query for Smaller Devices */
+@media (max-width: 767px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+}
+
+/* Remove Read more styles */
+.read-more {
+  display: none; /* Hide the Read more button */
+}
+
+/* Default log content (no truncation, full visibility) */
+.log-content {
+  max-height: none; /* No max-height, show full content */
+  overflow: visible; /* Ensure full content is visible */
 }

@@ -1,0 +1,48 @@
+{% extends "layout.html" %} {% block title %} Settings {% endblock %} {% block
+content %}
+<div class="container mt-5">
+  <h1>Account Settings</h1>
+
+  <!-- Section for Data Management -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h4>Manage Your Data</h4>
+    </div>
+    <div class="card-body">
+      <!-- Download Data -->
+      <h5>Download Your Data</h5>
+      <p>
+        If you'd like to download your account data, click the button below:
+      </p>
+      <form action="{{ url_for('download_data') }}" method="GET">
+        <button type="submit" class="btn btn-primary">Download Data</button>
+      </form>
+
+      <hr />
+
+      <!-- Delete Data -->
+      <h5>Delete Your Data</h5>
+      <p>
+        If you wish to delete all logs and associated data but keep your
+        account, click the button below. This action cannot be undone.
+      </p>
+      <form
+        action="{{ url_for('delete_data') }}"
+        method="POST"
+        onsubmit="return confirmDeleteData()"
+      >
+        <button type="submit" class="btn btn-warning">Delete My Data</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Confirmation Script -->
+  <script>
+    function confirmDeleteData() {
+      return confirm(
+        "Are you sure you want to delete all your data? Your account will remain, but logs and related information will be removed. This action cannot be undone."
+      );
+    }
+  </script>
+</div>
+{% endblock %}
