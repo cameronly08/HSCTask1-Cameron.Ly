@@ -12,6 +12,7 @@ from flask_mail import Mail, Message
 from flask_wtf.csrf import validate_csrf
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
+from urllib.parse import urlparse, urljoin
 from utils import validate_password, basic_sanitize_input, validate_email, validate_username
 import userManagement as dbHandler
 
@@ -28,6 +29,28 @@ def init_mail(app):
     app.config['MAIL_PASSWORD'] = 'PigeonPasswordEats'
     mail.init_app(app)
 
+SAFE_DIRECT_URLS = [
+    "/login",
+    "/signup",
+    "/forgot_password",
+    "/reset_password",
+    "/verify_2fa"
+    "/dashboard",
+    "/create_log",
+    "/edit_log",
+    "/update_profile"
+]
+
+def is_safe_url(target):
+    ref_url = urlparse(request.host_url)
+    test_url = urlparse(urljoin(request.host_url, target))
+    return test_url.scheme in ('http', 'https') and ref_url.netloc == test_url.netloc
+
+def get_safe_redirect(target):
+    if is_safe_url(target) and target in SAFE_DIRECT_URLS:
+        return target
+    return url_for('home_logged_in')
+    
 def register_auth_routes(app):
     limiter = Limiter(
         get_remote_address,

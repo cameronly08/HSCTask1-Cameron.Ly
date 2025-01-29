@@ -3,6 +3,7 @@ content %}
 <div class="container mt-5">
   <h1>Edit Log</h1>
   <form method="POST" action="{{ url_for('edit_log', log_id=log.id) }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
     <div class="form-group">
       <label for="project">Project</label>
       <input

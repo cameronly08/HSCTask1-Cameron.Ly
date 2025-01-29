@@ -48,7 +48,7 @@ In this sprint, we focus on ensuring the absolute security of the application by
 
 ---
 
-### **5. Preventing Invalid Forwarding and Redirection**
+### ~~**5. Preventing Invalid Forwarding and Redirection**~~
 
 - Validate and sanitize all redirect URLs to ensure they are trusted.
 - Use a fixed list of known, safe destinations rather than user-provided URLs.

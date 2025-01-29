@@ -3,6 +3,7 @@ from datetime import datetime
 import userManagement as dbHandler
 import bcrypt
 from utils import validate_password, basic_sanitize_input
+from flask_wtf.csrf import validate_csrf
 
 def register_main_routes(app):
     @app.route("/", methods=["GET"])
@@ -53,6 +54,12 @@ def register_main_routes(app):
             current_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             return render_template("create_log.html", current_datetime=current_datetime, username=session['username'])
         if request.method == "POST":
+            try:
+                validate_csrf(request.form['csrf_token'])
+            except ValueError:
+                flash("CSRF token is missing or invalid.")
+                return redirect(url_for('create_log'))
+
             date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             developer_name = session['username']
             project = basic_sanitize_input(request.form["project"])
@@ -122,6 +129,12 @@ def register_main_routes(app):
         if request.method == "GET":
             return render_template("edit_log.html", log=log)
         if request.method == "POST":
+            try:
+                validate_csrf(request.form['csrf_token'])
+            except ValueError:
+                flash("CSRF token is missing or invalid.")
+                return render_template("edit_log.html", log=log, error="CSRF token is missing or invalid.")
+
             project = basic_sanitize_input(request.form["project"])
             content = basic_sanitize_input(request.form["content"])
             code_snippet = basic_sanitize_input(request.form["code_snippet"])
@@ -135,6 +148,12 @@ def register_main_routes(app):
         if 'username' not in session:
             flash("You need to log in first.")
             return redirect(url_for('login'))
+
+        try:
+            validate_csrf(request.form['csrf_token'])
+        except ValueError:
+            flash("CSRF token is missing or invalid.")
+            return redirect(url_for('dashboard'))
 
         if not dbHandler.is_log_deletable(log_id, session['username']):
             flash("You do not have permission to delete this log.")
@@ -158,6 +177,12 @@ def register_main_routes(app):
         if 'username' not in session:
             flash("You need to log in first.")
             return redirect(url_for('login'))
+
+        try:
+            validate_csrf(request.form['csrf_token'])
+        except ValueError:
+            flash("CSRF token is missing or invalid.")
+            return redirect(url_for('profile'))
         
         email = basic_sanitize_input(request.form["email"])
         new_username = basic_sanitize_input(request.form["username"])
@@ -185,6 +210,11 @@ def register_main_routes(app):
                 return render_template("profile.html", user=user, username_error=username_error, password_error=password_error)
             
             dbHandler.update_user_profile(current_username, email, new_username, hashed_password)
+            if new_username != current_username:
+                flash("Username updated successfully.")
+                session['username'] = new_username  # Update session username if changed
+            if new_password:
+                flash("Password updated successfully.")
             flash("Profile updated successfully.")
             session['username'] = new_username  # Update session username if changed
         except ValueError as e:
