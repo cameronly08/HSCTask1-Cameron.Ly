@@ -30,11 +30,10 @@ Provide a button to switch between themes.
 
 ---
 
-#### 2. **Accessibility Enhancements**
+#### 2. ~~**Accessibility Enhancements**~~
 
 ##### Subtasks:
 
-- Enable full keyboard navigation.
 - Ensure adequate color contrast.
 - Add ARIA labels where necessary.
 - Verify focusable elements.
