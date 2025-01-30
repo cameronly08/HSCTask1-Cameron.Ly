@@ -27,7 +27,7 @@ def init_mail(app):
     app.config['MAIL_PORT'] = 587
     app.config['MAIL_USE_TLS'] = True
     app.config['MAIL_USERNAME'] = 'pixelpigeon82@gmail.com'
-    app.config['MAIL_PASSWORD'] = 'PigeonPasswordEats'
+    app.config['MAIL_PASSWORD'] = 'nofj qhxx tmkt kqlw'
     mail.init_app(app)
 
 SAFE_DIRECT_URLS = [
@@ -196,7 +196,7 @@ def register_auth_routes(app):
                     token = secrets.token_urlsafe(16)
                     expiration = datetime.now() + timedelta(hours=1)
                     dbHandler.store_reset_token(email, token, expiration)
-                    reset_link = url_for('reset_password', token=token, _external=True)
+                    reset_link = f'https://sturdy-carnival-qr5gr9qxr5xh9qpq.github.dev/reset_password?token={token}'
                     msg = Message('Password Reset Request', sender='your-email@gmail.com', recipients=[email])
                     msg.body = f'Click the link to reset your password: {reset_link}'
                     mail.send(msg)

@@ -15,7 +15,7 @@
 
 ##### Description:
 
-Provide a button to switch between themes. If not implemented, default to Dark Mode.
+Provide a button to switch between themes.
 
 ##### Subtasks:
 
@@ -26,7 +26,7 @@ Provide a button to switch between themes. If not implemented, default to Dark M
 
 - Users can toggle between modes (if implemented).
 - Theme selection persists across sessions.
-- If not implemented, Dark Mode is the default.
+- If not implemented, Improved UI/UX
 
 ---
 
@@ -46,7 +46,7 @@ Provide a button to switch between themes. If not implemented, default to Dark M
 
 ---
 
-#### 3. **UI Consistency and Feedback**
+#### 3. ~~**UI Consistency and Feedback**~~
 
 ##### Description:
 
@@ -65,9 +65,9 @@ Enhance visual consistency and user feedback.
 
 ---
 
-### **Deliverables**
+###~~ **Deliverables**~~
 
-- A theme toggle button with persistent settings (if implemented; otherwise, Dark Mode default).
+- A theme toggle button with persistent settings (if implemented)).
 - Improved accessibility and navigation.
 - Enhanced UI consistency and feedback mechanisms.
 - Functional data download and deletion features.
