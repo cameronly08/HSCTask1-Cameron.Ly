@@ -155,7 +155,7 @@ def register_auth_routes(app):
                 validate_csrf(request.form['csrf_token'])
             except ValueError:
                 flash("CSRF token is missing or invalid.")
-                return render_template("verify_2fa.html", error="CSRF token is missing or invalid.")
+                return render_template("verify_2fa.html", error="CSRF token is missing or invalid.", hide_navbar=True)
 
             code = basic_sanitize_input(request.form["code"])
             username = session.get('username')
@@ -170,8 +170,8 @@ def register_auth_routes(app):
                 return redirect(url_for('dashboard'))
             else:
                 flash("Invalid 2FA code")
-                return render_template("verify_2fa.html", error="Invalid 2FA code")
-        return render_template("verify_2fa.html")
+                return render_template("verify_2fa.html", error="Invalid 2FA code", hide_navbar=True)
+        return render_template("verify_2fa.html", hide_navbar=True)
 
     @app.route("/logout")
     def logout():

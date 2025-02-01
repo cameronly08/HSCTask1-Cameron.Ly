@@ -4325,3 +4325,334 @@
 2025-01-30 09:56:25,238 INFO: 127.0.0.1 - - [30/Jan/2025 09:56:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
 2025-01-30 09:56:25,256 INFO: 127.0.0.1 - - [30/Jan/2025 09:56:25] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
 2025-01-30 09:56:25,257 INFO: 127.0.0.1 - - [30/Jan/2025 09:56:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-31 00:14:55,376 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.243:5000
+2025-01-31 00:14:55,376 INFO: [33mPress CTRL+C to quit[0m
+2025-01-31 00:14:55,377 INFO:  * Restarting with stat
+2025-01-31 00:14:55,727 WARNING:  * Debugger is active!
+2025-01-31 00:14:55,733 INFO:  * Debugger PIN: 724-143-699
+2025-01-31 00:14:59,257 INFO: 127.0.0.1 - - [31/Jan/2025 00:14:59] "GET /?vscodeBrowserReqId=1738282499802 HTTP/1.1" 200 -
+2025-01-31 00:14:59,492 INFO: 127.0.0.1 - - [31/Jan/2025 00:14:59] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-01-31 00:14:59,588 INFO: 127.0.0.1 - - [31/Jan/2025 00:14:59] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-01-31 00:14:59,593 INFO: 127.0.0.1 - - [31/Jan/2025 00:14:59] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-01-31 00:14:59,811 INFO: 127.0.0.1 - - [31/Jan/2025 00:14:59] "GET / HTTP/1.1" 200 -
+2025-01-31 00:14:59,902 INFO: 127.0.0.1 - - [31/Jan/2025 00:14:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-31 00:14:59,942 INFO: 127.0.0.1 - - [31/Jan/2025 00:14:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-31 00:15:00,058 INFO: 127.0.0.1 - - [31/Jan/2025 00:15:00] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-31 00:15:01,751 INFO: 127.0.0.1 - - [31/Jan/2025 00:15:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-31 00:15:09,229 INFO: 127.0.0.1 - - [31/Jan/2025 00:15:09] "GET /login HTTP/1.1" 200 -
+2025-01-31 00:15:09,342 INFO: 127.0.0.1 - - [31/Jan/2025 00:15:09] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-31 00:15:09,351 INFO: 127.0.0.1 - - [31/Jan/2025 00:15:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-31 00:15:09,360 INFO: 127.0.0.1 - - [31/Jan/2025 00:15:09] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-31 00:17:04,442 INFO: 127.0.0.1 - - [31/Jan/2025 00:17:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-31 00:17:04,538 INFO: 127.0.0.1 - - [31/Jan/2025 00:17:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-31 00:17:05,251 INFO: 127.0.0.1 - - [31/Jan/2025 00:17:05] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-01-31 00:17:05,310 INFO: 127.0.0.1 - - [31/Jan/2025 00:17:05] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2025-01-31 00:21:55,485 INFO: 127.0.0.1 - - [31/Jan/2025 00:21:55] "GET /login HTTP/1.1" 200 -
+2025-01-31 00:21:55,826 INFO: 127.0.0.1 - - [31/Jan/2025 00:21:55] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-01-31 00:21:55,848 INFO: 127.0.0.1 - - [31/Jan/2025 00:21:55] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-02-01 00:37:06,313 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.134:5000
+2025-02-01 00:37:06,314 INFO: [33mPress CTRL+C to quit[0m
+2025-02-01 00:37:06,314 INFO:  * Restarting with stat
+2025-02-01 00:37:06,637 WARNING:  * Debugger is active!
+2025-02-01 00:37:06,638 INFO:  * Debugger PIN: 102-195-432
+2025-02-01 00:37:30,532 INFO: 127.0.0.1 - - [01/Feb/2025 00:37:30] "GET / HTTP/1.1" 200 -
+2025-02-01 00:37:30,715 INFO: 127.0.0.1 - - [01/Feb/2025 00:37:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 00:37:30,848 INFO: 127.0.0.1 - - [01/Feb/2025 00:37:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 00:37:30,848 INFO: 127.0.0.1 - - [01/Feb/2025 00:37:30] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 00:37:31,378 INFO: 127.0.0.1 - - [01/Feb/2025 00:37:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-01 00:37:34,399 INFO: 127.0.0.1 - - [01/Feb/2025 00:37:34] "GET / HTTP/1.1" 200 -
+2025-02-01 00:37:34,552 INFO: 127.0.0.1 - - [01/Feb/2025 00:37:34] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-02-01 00:37:34,671 INFO: 127.0.0.1 - - [01/Feb/2025 00:37:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 00:37:34,704 INFO: 127.0.0.1 - - [01/Feb/2025 00:37:34] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-02-01 00:37:39,277 INFO: 127.0.0.1 - - [01/Feb/2025 00:37:39] "GET /signup HTTP/1.1" 200 -
+2025-02-01 00:37:39,409 INFO: 127.0.0.1 - - [01/Feb/2025 00:37:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 00:37:39,415 INFO: 127.0.0.1 - - [01/Feb/2025 00:37:39] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 00:37:39,417 INFO: 127.0.0.1 - - [01/Feb/2025 00:37:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 00:38:13,827 INFO: 127.0.0.1 - - [01/Feb/2025 00:38:13] "POST /signup HTTP/1.1" 200 -
+2025-02-01 00:38:13,954 INFO: 127.0.0.1 - - [01/Feb/2025 00:38:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 00:38:13,964 INFO: 127.0.0.1 - - [01/Feb/2025 00:38:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 00:38:13,966 INFO: 127.0.0.1 - - [01/Feb/2025 00:38:13] "GET /static/qr_codes/testuser22.png HTTP/1.1" 200 -
+2025-02-01 00:38:14,104 INFO: 127.0.0.1 - - [01/Feb/2025 00:38:14] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 00:38:41,187 INFO: 127.0.0.1 - - [01/Feb/2025 00:38:41] "GET /signup HTTP/1.1" 200 -
+2025-02-01 00:38:45,085 INFO: 127.0.0.1 - - [01/Feb/2025 00:38:45] "GET /signup HTTP/1.1" 200 -
+2025-02-01 00:38:45,224 INFO: 127.0.0.1 - - [01/Feb/2025 00:38:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 00:38:45,239 INFO: 127.0.0.1 - - [01/Feb/2025 00:38:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 00:38:45,240 INFO: 127.0.0.1 - - [01/Feb/2025 00:38:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 00:39:14,604 INFO: 127.0.0.1 - - [01/Feb/2025 00:39:14] "GET /login HTTP/1.1" 200 -
+2025-02-01 00:39:14,696 INFO: 127.0.0.1 - - [01/Feb/2025 00:39:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 00:39:14,710 INFO: 127.0.0.1 - - [01/Feb/2025 00:39:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 00:39:14,719 INFO: 127.0.0.1 - - [01/Feb/2025 00:39:14] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 00:52:30,997 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.134:5000
+2025-02-01 00:52:30,997 INFO: [33mPress CTRL+C to quit[0m
+2025-02-01 00:52:30,998 INFO:  * Restarting with stat
+2025-02-01 00:52:31,323 WARNING:  * Debugger is active!
+2025-02-01 00:52:31,324 INFO:  * Debugger PIN: 102-195-432
+2025-02-01 00:52:34,056 INFO: 127.0.0.1 - - [01/Feb/2025 00:52:34] "GET /?vscodeBrowserReqId=1738371156190 HTTP/1.1" 200 -
+2025-02-01 00:52:34,204 INFO: 127.0.0.1 - - [01/Feb/2025 00:52:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 00:52:34,364 INFO: 127.0.0.1 - - [01/Feb/2025 00:52:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 00:52:34,366 INFO: 127.0.0.1 - - [01/Feb/2025 00:52:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 00:52:36,864 INFO: 127.0.0.1 - - [01/Feb/2025 00:52:36] "GET / HTTP/1.1" 200 -
+2025-02-01 00:52:37,001 INFO: 127.0.0.1 - - [01/Feb/2025 00:52:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 00:52:37,151 INFO: 127.0.0.1 - - [01/Feb/2025 00:52:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 00:52:37,158 INFO: 127.0.0.1 - - [01/Feb/2025 00:52:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 00:52:39,051 INFO: 127.0.0.1 - - [01/Feb/2025 00:52:39] "GET /signup HTTP/1.1" 200 -
+2025-02-01 00:52:39,186 INFO: 127.0.0.1 - - [01/Feb/2025 00:52:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 00:52:39,190 INFO: 127.0.0.1 - - [01/Feb/2025 00:52:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 00:52:39,191 INFO: 127.0.0.1 - - [01/Feb/2025 00:52:39] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 00:54:34,925 INFO: 127.0.0.1 - - [01/Feb/2025 00:54:34] "GET /login HTTP/1.1" 200 -
+2025-02-01 00:54:35,170 INFO: 127.0.0.1 - - [01/Feb/2025 00:54:35] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 00:54:35,314 INFO: 127.0.0.1 - - [01/Feb/2025 00:54:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 00:54:35,325 INFO: 127.0.0.1 - - [01/Feb/2025 00:54:35] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 00:54:41,804 INFO: 127.0.0.1 - - [01/Feb/2025 00:54:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-01 00:54:42,014 INFO: 127.0.0.1 - - [01/Feb/2025 00:54:42] "GET /verify_2fa HTTP/1.1" 200 -
+2025-02-01 00:54:42,127 INFO: 127.0.0.1 - - [01/Feb/2025 00:54:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 00:54:42,146 INFO: 127.0.0.1 - - [01/Feb/2025 00:54:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 00:54:42,148 INFO: 127.0.0.1 - - [01/Feb/2025 00:54:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 00:54:53,085 INFO: 127.0.0.1 - - [01/Feb/2025 00:54:53] "GET /dashboard HTTP/1.1" 200 -
+2025-02-01 00:54:53,222 INFO: 127.0.0.1 - - [01/Feb/2025 00:54:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 00:54:53,232 INFO: 127.0.0.1 - - [01/Feb/2025 00:54:53] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 00:54:53,351 INFO: 127.0.0.1 - - [01/Feb/2025 00:54:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 00:54:55,340 INFO: 127.0.0.1 - - [01/Feb/2025 00:54:55] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-01 00:54:55,407 INFO: 127.0.0.1 - - [01/Feb/2025 00:54:55] "GET /login HTTP/1.1" 200 -
+2025-02-01 00:54:55,504 INFO: 127.0.0.1 - - [01/Feb/2025 00:54:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 00:54:55,507 INFO: 127.0.0.1 - - [01/Feb/2025 00:54:55] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 00:54:55,509 INFO: 127.0.0.1 - - [01/Feb/2025 00:54:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:00:52,940 INFO:  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/auth_routes.py', reloading
+2025-02-01 01:00:52,993 INFO:  * Restarting with stat
+2025-02-01 01:00:53,347 WARNING:  * Debugger is active!
+2025-02-01 01:00:53,347 INFO:  * Debugger PIN: 102-195-432
+2025-02-01 01:01:13,125 INFO: 127.0.0.1 - - [01/Feb/2025 01:01:13] "POST /login HTTP/1.1" 200 -
+2025-02-01 01:01:13,445 INFO: 127.0.0.1 - - [01/Feb/2025 01:01:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:01:13,456 INFO: 127.0.0.1 - - [01/Feb/2025 01:01:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:01:13,545 INFO: 127.0.0.1 - - [01/Feb/2025 01:01:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:01:19,507 INFO: 127.0.0.1 - - [01/Feb/2025 01:01:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-01 01:01:19,718 INFO: 127.0.0.1 - - [01/Feb/2025 01:01:19] "GET /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:01:19,852 INFO: 127.0.0.1 - - [01/Feb/2025 01:01:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:01:19,853 INFO: 127.0.0.1 - - [01/Feb/2025 01:01:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:01:19,862 INFO: 127.0.0.1 - - [01/Feb/2025 01:01:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:01:21,444 INFO: 127.0.0.1 - - [01/Feb/2025 01:01:21] "GET /dashboard HTTP/1.1" 200 -
+2025-02-01 01:01:21,587 INFO: 127.0.0.1 - - [01/Feb/2025 01:01:21] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:01:21,727 INFO: 127.0.0.1 - - [01/Feb/2025 01:01:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:01:21,736 INFO: 127.0.0.1 - - [01/Feb/2025 01:01:21] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:24,272 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:24] "GET /dashboard HTTP/1.1" 200 -
+2025-02-01 01:04:24,466 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:24,592 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:24,826 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:04:25,952 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:25] "GET /dashboard HTTP/1.1" 200 -
+2025-02-01 01:04:26,059 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:26,108 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:26,226 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:04:27,550 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:27] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-01 01:04:27,747 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:27] "GET /login HTTP/1.1" 200 -
+2025-02-01 01:04:27,895 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:27,897 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:27,897 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:27] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:04:34,730 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:34] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-01 01:04:34,798 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:34] "GET /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:04:34,919 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:34,930 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:34,939 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:04:36,479 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:36] "GET /dashboard HTTP/1.1" 200 -
+2025-02-01 01:04:36,573 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:36,574 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:36,639 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:04:37,535 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:37] "GET /dashboard HTTP/1.1" 200 -
+2025-02-01 01:04:37,617 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:37,631 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:37,635 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:04:38,051 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:38] "[32mGET /index.html HTTP/1.1[0m" 302 -
+2025-02-01 01:04:38,119 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:38] "GET /home_logged_in HTTP/1.1" 200 -
+2025-02-01 01:04:38,239 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:38,240 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:38,422 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:04:46,035 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.134:5000
+2025-02-01 01:04:46,035 INFO: [33mPress CTRL+C to quit[0m
+2025-02-01 01:04:46,036 INFO:  * Restarting with stat
+2025-02-01 01:04:46,366 WARNING:  * Debugger is active!
+2025-02-01 01:04:46,367 INFO:  * Debugger PIN: 102-195-432
+2025-02-01 01:04:49,313 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:49] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-01 01:04:49,388 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:49] "GET /login HTTP/1.1" 200 -
+2025-02-01 01:04:49,491 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:49,492 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:49,493 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:04:50,028 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:50] "GET /?vscodeBrowserReqId=1738371892245 HTTP/1.1" 200 -
+2025-02-01 01:04:50,124 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:50,125 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:50,209 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:04:50,453 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:50] "GET /login HTTP/1.1" 200 -
+2025-02-01 01:04:50,546 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:50,550 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:04:50,551 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:55,160 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-01 01:04:55,228 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:55] "GET /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:04:55,309 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:04:55,311 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:55] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:04:55,312 INFO: 127.0.0.1 - - [01/Feb/2025 01:04:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:05:25,929 INFO: 127.0.0.1 - - [01/Feb/2025 01:05:25] "POST /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:05:26,040 INFO: 127.0.0.1 - - [01/Feb/2025 01:05:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:05:26,053 INFO: 127.0.0.1 - - [01/Feb/2025 01:05:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:05:26,072 INFO: 127.0.0.1 - - [01/Feb/2025 01:05:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:05:29,474 INFO: 127.0.0.1 - - [01/Feb/2025 01:05:29] "POST /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:05:29,577 INFO: 127.0.0.1 - - [01/Feb/2025 01:05:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:05:29,590 INFO: 127.0.0.1 - - [01/Feb/2025 01:05:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:05:29,591 INFO: 127.0.0.1 - - [01/Feb/2025 01:05:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:05:31,336 INFO: 127.0.0.1 - - [01/Feb/2025 01:05:31] "POST /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:05:31,435 INFO: 127.0.0.1 - - [01/Feb/2025 01:05:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:05:31,454 INFO: 127.0.0.1 - - [01/Feb/2025 01:05:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:05:31,454 INFO: 127.0.0.1 - - [01/Feb/2025 01:05:31] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:06:09,780 INFO: 127.0.0.1 - - [01/Feb/2025 01:06:09] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-01 01:06:09,839 INFO: 127.0.0.1 - - [01/Feb/2025 01:06:09] "GET /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:06:09,955 INFO: 127.0.0.1 - - [01/Feb/2025 01:06:09] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:06:09,964 INFO: 127.0.0.1 - - [01/Feb/2025 01:06:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:06:09,973 INFO: 127.0.0.1 - - [01/Feb/2025 01:06:09] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:06:20,016 INFO: 127.0.0.1 - - [01/Feb/2025 01:06:20] "GET /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:06:20,109 INFO: 127.0.0.1 - - [01/Feb/2025 01:06:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:06:20,125 INFO: 127.0.0.1 - - [01/Feb/2025 01:06:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:06:20,136 INFO: 127.0.0.1 - - [01/Feb/2025 01:06:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:06:21,483 INFO: 127.0.0.1 - - [01/Feb/2025 01:06:21] "GET /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:06:21,594 INFO: 127.0.0.1 - - [01/Feb/2025 01:06:21] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:06:21,607 INFO: 127.0.0.1 - - [01/Feb/2025 01:06:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:06:21,609 INFO: 127.0.0.1 - - [01/Feb/2025 01:06:21] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:07:25,795 INFO:  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/auth_routes.py', reloading
+2025-02-01 01:07:25,839 INFO:  * Restarting with stat
+2025-02-01 01:07:26,199 WARNING:  * Debugger is active!
+2025-02-01 01:07:26,223 INFO:  * Debugger PIN: 102-195-432
+2025-02-01 01:07:45,005 INFO: 127.0.0.1 - - [01/Feb/2025 01:07:45] "POST /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:07:45,187 INFO: 127.0.0.1 - - [01/Feb/2025 01:07:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:07:45,188 INFO: 127.0.0.1 - - [01/Feb/2025 01:07:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:07:45,448 INFO: 127.0.0.1 - - [01/Feb/2025 01:07:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:10:37,902 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:37] "GET /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:10:38,124 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:10:38,195 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:10:38,243 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:10:40,919 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:40] "POST /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:10:41,026 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:10:41,040 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:41] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:10:41,078 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:10:48,053 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.134:5000
+2025-02-01 01:10:48,054 INFO: [33mPress CTRL+C to quit[0m
+2025-02-01 01:10:48,054 INFO:  * Restarting with stat
+2025-02-01 01:10:48,386 WARNING:  * Debugger is active!
+2025-02-01 01:10:48,386 INFO:  * Debugger PIN: 102-195-432
+2025-02-01 01:10:50,879 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:50] "GET /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:10:51,088 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:51] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:10:51,263 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:10:51,263 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:51] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:10:52,885 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:52] "[32mGET /?vscodeBrowserReqId=1738372255075 HTTP/1.1[0m" 302 -
+2025-02-01 01:10:52,946 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:52] "GET /home_logged_in HTTP/1.1" 200 -
+2025-02-01 01:10:53,049 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:10:53,187 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:10:53,188 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:53] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:10:58,721 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:58] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-01 01:10:58,781 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:58] "GET /home_logged_in HTTP/1.1" 200 -
+2025-02-01 01:10:58,881 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:10:58,883 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:10:59,149 INFO: 127.0.0.1 - - [01/Feb/2025 01:10:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:11:02,818 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:02] "GET /dashboard HTTP/1.1" 200 -
+2025-02-01 01:11:02,943 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:02,956 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:03,015 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:03] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:11:04,178 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:04] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-01 01:11:04,243 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:04] "GET /login HTTP/1.1" 200 -
+2025-02-01 01:11:04,339 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:04,341 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:04,343 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:04] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:11:06,885 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:06] "GET /forgot_password HTTP/1.1" 200 -
+2025-02-01 01:11:07,013 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:07] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:07,020 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:07,022 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:07] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:11:12,671 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:12] "GET /index.html HTTP/1.1" 200 -
+2025-02-01 01:11:12,755 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:12] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-02-01 01:11:12,769 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:12] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-02-01 01:11:12,782 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:12] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-02-01 01:11:17,196 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:17] "GET /signup HTTP/1.1" 200 -
+2025-02-01 01:11:17,319 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:17,331 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:17,332 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:11:17,976 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:17] "GET /login HTTP/1.1" 200 -
+2025-02-01 01:11:18,103 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:18] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:18,108 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:18,109 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:18] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:11:19,136 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:19] "GET /forgot_password HTTP/1.1" 200 -
+2025-02-01 01:11:19,254 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:19,264 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:19,272 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:11:22,135 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:22] "GET /index.html HTTP/1.1" 200 -
+2025-02-01 01:11:22,248 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:22,273 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:22,276 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:11:24,127 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:24] "GET /signup HTTP/1.1" 200 -
+2025-02-01 01:11:24,247 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:24,258 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:24,260 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:11:25,348 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:25] "GET /login HTTP/1.1" 200 -
+2025-02-01 01:11:25,484 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:25,486 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:25,501 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:25] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:11:32,072 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:32] "POST /login HTTP/1.1" 200 -
+2025-02-01 01:11:32,207 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:32,208 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:11:32,209 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:36,464 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:36] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-01 01:11:36,558 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:36] "GET /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:11:36,645 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:36,650 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:11:36,652 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:38,797 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:38] "POST /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:11:38,893 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:38,902 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:11:38,903 INFO: 127.0.0.1 - - [01/Feb/2025 01:11:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:12:47,178 INFO:  * Detected change in '/workspaces/HSCTask1-Cameron.Ly/auth_routes.py', reloading
+2025-02-01 01:12:47,228 INFO:  * Restarting with stat
+2025-02-01 01:12:47,639 WARNING:  * Debugger is active!
+2025-02-01 01:12:47,639 INFO:  * Debugger PIN: 102-195-432
+2025-02-01 01:12:48,089 INFO: 127.0.0.1 - - [01/Feb/2025 01:12:48] "GET /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:12:48,184 INFO: 127.0.0.1 - - [01/Feb/2025 01:12:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:12:48,199 INFO: 127.0.0.1 - - [01/Feb/2025 01:12:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:12:48,263 INFO: 127.0.0.1 - - [01/Feb/2025 01:12:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:12:49,604 INFO: 127.0.0.1 - - [01/Feb/2025 01:12:49] "POST /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:12:49,710 INFO: 127.0.0.1 - - [01/Feb/2025 01:12:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:12:49,731 INFO: 127.0.0.1 - - [01/Feb/2025 01:12:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:12:49,735 INFO: 127.0.0.1 - - [01/Feb/2025 01:12:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:15:41,691 INFO: 127.0.0.1 - - [01/Feb/2025 01:15:41] "[32mGET /index.html HTTP/1.1[0m" 302 -
+2025-02-01 01:15:42,050 INFO: 127.0.0.1 - - [01/Feb/2025 01:15:42] "GET /home_logged_in HTTP/1.1" 200 -
+2025-02-01 01:15:42,230 INFO: 127.0.0.1 - - [01/Feb/2025 01:15:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:15:42,381 INFO: 127.0.0.1 - - [01/Feb/2025 01:15:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:15:42,384 INFO: 127.0.0.1 - - [01/Feb/2025 01:15:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:16:27,884 INFO: 127.0.0.1 - - [01/Feb/2025 01:16:27] "GET /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:16:27,977 INFO: 127.0.0.1 - - [01/Feb/2025 01:16:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:16:27,983 INFO: 127.0.0.1 - - [01/Feb/2025 01:16:27] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:16:27,985 INFO: 127.0.0.1 - - [01/Feb/2025 01:16:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:16:29,084 INFO: 127.0.0.1 - - [01/Feb/2025 01:16:29] "GET /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:16:29,222 INFO: 127.0.0.1 - - [01/Feb/2025 01:16:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:16:29,372 INFO: 127.0.0.1 - - [01/Feb/2025 01:16:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:16:29,372 INFO: 127.0.0.1 - - [01/Feb/2025 01:16:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:16:33,253 INFO: 127.0.0.1 - - [01/Feb/2025 01:16:33] "POST /verify_2fa HTTP/1.1" 200 -
+2025-02-01 01:16:33,354 INFO: 127.0.0.1 - - [01/Feb/2025 01:16:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:16:33,357 INFO: 127.0.0.1 - - [01/Feb/2025 01:16:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:16:33,358 INFO: 127.0.0.1 - - [01/Feb/2025 01:16:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:19:36,064 INFO: 127.0.0.1 - - [01/Feb/2025 01:19:36] "[32mGET /index.html HTTP/1.1[0m" 302 -
+2025-02-01 01:19:36,328 INFO: 127.0.0.1 - - [01/Feb/2025 01:19:36] "GET /home_logged_in HTTP/1.1" 200 -
+2025-02-01 01:19:36,710 INFO: 127.0.0.1 - - [01/Feb/2025 01:19:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:19:36,731 INFO: 127.0.0.1 - - [01/Feb/2025 01:19:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 01:19:36,732 INFO: 127.0.0.1 - - [01/Feb/2025 01:19:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:19:37,952 INFO: 127.0.0.1 - - [01/Feb/2025 01:19:37] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-01 01:19:38,037 INFO: 127.0.0.1 - - [01/Feb/2025 01:19:38] "GET /login HTTP/1.1" 200 -
+2025-02-01 01:19:38,142 INFO: 127.0.0.1 - - [01/Feb/2025 01:19:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 01:19:38,160 INFO: 127.0.0.1 - - [01/Feb/2025 01:19:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 01:19:38,298 INFO: 127.0.0.1 - - [01/Feb/2025 01:19:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -

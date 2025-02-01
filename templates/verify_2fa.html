@@ -2,6 +2,9 @@
 content %}
 <div class="container mt-5">
   <h1>Verify 2FA</h1>
+  {% if error %}
+  <div class="alert alert-danger" role="alert">{{ error }}</div>
+  {% endif %}
   <form method="POST" action="{{ url_for('verify_2fa') }}">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
     <div class="form-group">
